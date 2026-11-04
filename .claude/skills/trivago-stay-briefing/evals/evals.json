@@ -1,0 +1,23 @@
+{
+  "skill_name": "trivago-stay-briefing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "다음 달 말에 도쿄 시부야 근처로 2명이서 3박 갈 건데, 1박에 15만원 이하로 제일 싼 숙소 비교해주고 후기랑 3박 일정까지 브리핑해줘. 날짜는 2026-12-18부터 12-21까지.",
+      "expected_output": "Price-ranked table of Shibuya-area stays under 150,000 KRW/night, review summary of top picks, 3-night itinerary, in Korean.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "내년 봄에 오사카 가고 싶은데 언제가 제일 숙박비 싼 달이야? 4성급 기준으로 알려주고, 가장 싼 달에 2박 하면 어떤 호텔이 좋을지도 추천해줘.",
+      "expected_output": "Price-trend comparison across spring months for 4-star, cheapest month identified as a forecast, then a live search and recommendation for a 2-night stay.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "제주 신라호텔 2026-11-20부터 22일까지 2명 가격 좀 확인해주고, 근처에 비슷한 급인데 더 싼 곳 있으면 비교해줘.",
+      "expected_output": "Specific-property lookup via name search, comparison against cheaper nearby alternatives, reviews summary.",
+      "files": []
+    }
+  ]
+}
