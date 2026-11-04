@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "eval_name": "jeju-named-property",
+  "prompt": "제주 신라호텔 2026-11-20부터 22일까지 2명 가격 좀 확인해주고, 근처에 비슷한 급인데 더 싼 곳 있으면 비교해줘.",
+  "assertions": [
+    {
+      "text": "Uses name search (accommodation-search) for Shilla Jeju with dates 2026-11-20 to 2026-11-22"
+    },
+    {
+      "text": "Reports the Shilla price for the stay with 2 adults"
+    },
+    {
+      "text": "Searches nearby alternatives (radius search near Jeju Jungmun) of similar star level"
+    },
+    {
+      "text": "Comparison table shows alternatives vs Shilla with price difference"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output"
+    },
+    {
+      "text": "Written in Korean"
+    },
+    {
+      "text": "Falls back to radius search when name search returns the wrong city, and says so"
+    },
+    {
+      "text": "Does not produce an itinerary because the user asked only for prices and comparison"
+    }
+  ]
+}

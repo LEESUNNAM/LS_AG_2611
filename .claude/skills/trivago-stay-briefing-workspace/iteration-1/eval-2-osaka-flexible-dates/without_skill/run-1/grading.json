@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Calls destination-price-trends for Osaka with 4-star rating selected and a spring 2027 month window",
+      "passed": true,
+      "evidence": "Trends table 2027-03..05, 4-star"
+    },
+    {
+      "text": "Identifies the cheapest month and labels the data as a forecast",
+      "passed": true,
+      "evidence": "May cheapest; headed as trivago 예측"
+    },
+    {
+      "text": "Runs a live search for a 2-night stay in the identified cheapest month",
+      "passed": true,
+      "evidence": "Live search 2027-05-11~13, 2 nights"
+    },
+    {
+      "text": "Recommends a specific hotel with price and rating from tool results",
+      "passed": true,
+      "evidence": "Hotel Keihan Tenmabashi Ekimae 89,343원/박, 8.8"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output",
+      "passed": true,
+      "evidence": "Prices and ratings all from tool output; cherry-blossom remark hedged but not labeled as inference"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Korean"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  }
+}

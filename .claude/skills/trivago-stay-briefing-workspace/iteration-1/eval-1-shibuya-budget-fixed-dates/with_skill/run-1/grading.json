@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search",
+      "passed": true,
+      "evidence": "Radius search at 35.6595,139.7005 (Shibuya Station), per Notes section"
+    },
+    {
+      "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW",
+      "passed": true,
+      "evidence": "Header states 2 adults, 2026-12-18 to 12-21, KRW"
+    },
+    {
+      "text": "Applies a per-night price cap of 150000 KRW",
+      "passed": true,
+      "evidence": "Header states 1박 15만원 이하"
+    },
+    {
+      "text": "Comparison table lists properties sorted by total price with both per-night and total price",
+      "passed": true,
+      "evidence": "Table sorted by 3박 총액 with 1박 and 총액 columns"
+    },
+    {
+      "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used",
+      "passed": true,
+      "evidence": "Disclosed 7.5+ floor in 참고 as a quality floor the user did not request"
+    },
+    {
+      "text": "Includes a review summary section for at least 2 top properties without fabricated quotes",
+      "passed": true,
+      "evidence": "Review section for 3 properties; states only scores and counts, explicitly no review text. Passes as written but contains no real review content"
+    },
+    {
+      "text": "Includes a 3-night day-by-day itinerary",
+      "passed": true,
+      "evidence": "4-day itinerary, check-in/out days treated as partial"
+    },
+    {
+      "text": "Names a single recommended pick with a one-line reason",
+      "passed": true,
+      "evidence": "추천 pick named in 한눈에 보기: 와이즈 아울"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Entire briefing in Korean"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1
+  }
+}

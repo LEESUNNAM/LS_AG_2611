@@ -1,0 +1,25 @@
+{
+  "eval_id": 2,
+  "eval_name": "osaka-flexible-dates",
+  "prompt": "내년 봄에 오사카 가고 싶은데 언제가 제일 숙박비 싼 달이야? 4성급 기준으로 알려주고, 가장 싼 달에 2박 하면 어떤 호텔이 좋을지도 추천해줘.",
+  "assertions": [
+    {
+      "text": "Calls destination-price-trends for Osaka with 4-star rating selected and a spring 2027 month window"
+    },
+    {
+      "text": "Identifies the cheapest month and labels the data as a forecast"
+    },
+    {
+      "text": "Runs a live search for a 2-night stay in the identified cheapest month"
+    },
+    {
+      "text": "Recommends a specific hotel with price and rating from tool results"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output"
+    },
+    {
+      "text": "Written in Korean"
+    }
+  ]
+}

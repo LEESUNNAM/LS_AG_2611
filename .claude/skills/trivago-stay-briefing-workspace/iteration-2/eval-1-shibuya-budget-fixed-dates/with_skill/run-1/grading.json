@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search",
+      "passed": true,
+      "evidence": "Radius search at Shibuya Station per 참고"
+    },
+    {
+      "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW",
+      "passed": true,
+      "evidence": "Header: 2026-12-18~12-21, 성인 2명, 원화"
+    },
+    {
+      "text": "Applies a per-night price cap of 150000 KRW",
+      "passed": true,
+      "evidence": "Header: 1박 15만원 이하"
+    },
+    {
+      "text": "Comparison table lists properties sorted by total price with both per-night and total price",
+      "passed": true,
+      "evidence": "Table sorted by 3박 총액 with 1박 and 총액"
+    },
+    {
+      "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used",
+      "passed": true,
+      "evidence": "7.5+ floor disclosed as applied by assistant"
+    },
+    {
+      "text": "Includes a review summary section for at least 2 top properties without fabricated quotes",
+      "passed": true,
+      "evidence": "Review section for 2 properties plus an explicit no-details note for the rest"
+    },
+    {
+      "text": "Includes a 3-night day-by-day itinerary",
+      "passed": true,
+      "evidence": "4-day itinerary"
+    },
+    {
+      "text": "Names a single recommended pick with a one-line reason",
+      "passed": true,
+      "evidence": "Single recommendation: 와이즈 아울"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Korean"
+    },
+    {
+      "text": "Review section gives at least 2 concrete strengths or weaknesses per top property, labeled as sourced from the web",
+      "passed": true,
+      "evidence": "Wise Owl and almond each have 2+ strengths and weaknesses from web, labeled as web with sources listed"
+    },
+    {
+      "text": "Itinerary was checked with a web search for at least one date-specific item (hours, closures, or events)",
+      "passed": true,
+      "evidence": "Web search found Dec 2026 illumination dates (12/1-25) and flagged them provisional; Shibuya Sky hours not found and said so"
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1
+  }
+}

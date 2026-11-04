@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Uses name search (accommodation-search) for Shilla Jeju with dates 2026-11-20 to 2026-11-22",
+      "passed": false,
+      "evidence": "Skipped name search entirely; ran radius search directly at Shilla coordinates. Result is correct, so this reflects assertion wording rather than output quality"
+    },
+    {
+      "text": "Reports the Shilla price for the stay with 2 adults",
+      "passed": true,
+      "evidence": "Shilla 580,201원/박, 1,160,402원 for 2 adults, 2 nights"
+    },
+    {
+      "text": "Searches nearby alternatives (radius search near Jeju Jungmun) of similar star level",
+      "passed": true,
+      "evidence": "Radius search at 33.2472,126.408 (Jungmun), 4-5 star"
+    },
+    {
+      "text": "Comparison table shows alternatives vs Shilla with price difference",
+      "passed": true,
+      "evidence": "Table has vs 신라 column with amount and percent for all 7 alternatives"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output",
+      "passed": true,
+      "evidence": "Prices and ratings from tool output; proximity noted as coordinate based"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Korean"
+    },
+    {
+      "text": "Falls back to radius search when name search returns the wrong city, and says so",
+      "passed": false,
+      "evidence": "No name-search fallback happened and none was disclosed, because name search was never tried"
+    },
+    {
+      "text": "Does not produce an itinerary because the user asked only for prices and comparison",
+      "passed": true,
+      "evidence": "No itinerary; offered in one line"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  }
+}

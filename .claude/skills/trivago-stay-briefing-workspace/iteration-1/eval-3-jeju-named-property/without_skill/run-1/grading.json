@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Uses name search (accommodation-search) for Shilla Jeju with dates 2026-11-20 to 2026-11-22",
+      "passed": true,
+      "evidence": "Name search tried, Shilla not found, fell back to radius search, disclosed"
+    },
+    {
+      "text": "Reports the Shilla price for the stay with 2 adults",
+      "passed": true,
+      "evidence": "Shilla 580,201원/박, 1,160,402원 for 2 adults"
+    },
+    {
+      "text": "Searches nearby alternatives (radius search near Jeju Jungmun) of similar star level",
+      "passed": true,
+      "evidence": "Radius search near Jungmun, 8 alternatives"
+    },
+    {
+      "text": "Comparison table shows alternatives vs Shilla with price difference",
+      "passed": true,
+      "evidence": "Table has 신라 대비 (2박) column with amounts and percentages"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output",
+      "passed": true,
+      "evidence": "Prices and ratings from tool output; weekend-rate remark hedged"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Korean"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  }
+}

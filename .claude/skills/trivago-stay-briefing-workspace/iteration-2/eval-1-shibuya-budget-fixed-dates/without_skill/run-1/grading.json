@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search",
+      "passed": true,
+      "evidence": "Notes say Shibuya Station center coordinates"
+    },
+    {
+      "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW",
+      "passed": true,
+      "evidence": "Header: 2026-12-18~12-21, 성인 2명, 원화"
+    },
+    {
+      "text": "Applies a per-night price cap of 150000 KRW",
+      "passed": true,
+      "evidence": "Header: 1박 150,000원 이하"
+    },
+    {
+      "text": "Comparison table lists properties sorted by total price with both per-night and total price",
+      "passed": true,
+      "evidence": "Table ranked by 1박 with 3박 합계 column"
+    },
+    {
+      "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used",
+      "passed": false,
+      "evidence": "No rating floor applied or discussed; ranks include 6.9 and 7.2 rated hotels with no caution about quality floor"
+    },
+    {
+      "text": "Includes a review summary section for at least 2 top properties without fabricated quotes",
+      "passed": true,
+      "evidence": "Review section covers 5 properties, says tool gives no review text; one general-knowledge remark is labeled as such"
+    },
+    {
+      "text": "Includes a 3-night day-by-day itinerary",
+      "passed": true,
+      "evidence": "4-day itinerary, labeled as unverified"
+    },
+    {
+      "text": "Names a single recommended pick with a one-line reason",
+      "passed": false,
+      "evidence": "Gives four different picks by criterion (최저가, 호텔 느낌, 가성비, 점수) rather than one clear recommendation"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Entire briefing in Korean"
+    },
+    {
+      "text": "Review section gives at least 2 concrete strengths or weaknesses per top property, labeled as sourced from the web",
+      "passed": false,
+      "evidence": "Baseline review section used only scores and counts; no web search"
+    },
+    {
+      "text": "Itinerary was checked with a web search for at least one date-specific item (hours, closures, or events)",
+      "passed": false,
+      "evidence": "Baseline itinerary came from general knowledge and was labeled unverified"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 4,
+    "total": 11,
+    "pass_rate": 0.6363636363636364
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "eval_id": 1,
+  "eval_name": "shibuya-budget-fixed-dates",
+  "prompt": "다음 달 말에 도쿄 시부야 근처로 2명이서 3박 갈 건데, 1박에 15만원 이하로 제일 싼 숙소 비교해주고 후기랑 3박 일정까지 브리핑해줘. 날짜는 2026-12-18부터 12-21까지.",
+  "assertions": [
+    {
+      "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search"
+    },
+    {
+      "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW"
+    },
+    {
+      "text": "Applies a per-night price cap of 150000 KRW"
+    },
+    {
+      "text": "Comparison table lists properties sorted by total price with both per-night and total price"
+    },
+    {
+      "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used"
+    },
+    {
+      "text": "Includes a review summary section for at least 2 top properties without fabricated quotes"
+    },
+    {
+      "text": "Includes a 3-night day-by-day itinerary"
+    },
+    {
+      "text": "Names a single recommended pick with a one-line reason"
+    },
+    {
+      "text": "Written in Korean"
+    },
+    {
+      "text": "Review section gives at least 2 concrete strengths or weaknesses per top property, labeled as sourced from the web"
+    },
+    {
+      "text": "Itinerary was checked with a web search for at least one date-specific item (hours, closures, or events)"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Calls destination-price-trends for Osaka with 4-star rating selected and a spring 2027 month window",
+      "passed": true,
+      "evidence": "Trends for 2027-03..05, 4-star"
+    },
+    {
+      "text": "Identifies the cheapest month and labels the data as a forecast",
+      "passed": true,
+      "evidence": "May cheapest; labeled forecast"
+    },
+    {
+      "text": "Runs a live search for a 2-night stay in the identified cheapest month",
+      "passed": true,
+      "evidence": "Live search 2027-05-17~19, 2 nights"
+    },
+    {
+      "text": "Recommends a specific hotel with price and rating from tool results",
+      "passed": true,
+      "evidence": "Smile Hotel Premium Osaka Hommachi 64,428원/박, 8.6"
+    },
+    {
+      "text": "Does not invent prices or ratings absent from tool output",
+      "passed": true,
+      "evidence": "Prices and ratings from tool output; cherry-blossom remark hedged; truncation disclosed"
+    },
+    {
+      "text": "Written in Korean",
+      "passed": true,
+      "evidence": "Korean"
+    },
+    {
+      "text": "Review section gives concrete strengths or weaknesses for the recommended hotel, labeled as sourced from the web",
+      "passed": true,
+      "evidence": "Smile Hotel and Brighton City have web-sourced strengths and weaknesses, labeled as web"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "skill_name": "trivago-stay-briefing",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-11-04T02:59:34Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 47.6,
+        "tokens": 70508,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search",
+          "passed": true,
+          "evidence": "Radius search at 35.6595,139.7005 (Shibuya Station), per Notes section"
+        },
+        {
+          "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW",
+          "passed": true,
+          "evidence": "Header states 2 adults, 2026-12-18 to 12-21, KRW"
+        },
+        {
+          "text": "Applies a per-night price cap of 150000 KRW",
+          "passed": true,
+          "evidence": "Header states 1\ubc15 15\ub9cc\uc6d0 \uc774\ud558"
+        },
+        {
+          "text": "Comparison table lists properties sorted by total price with both per-night and total price",
+          "passed": true,
+          "evidence": "Table sorted by 3\ubc15 \ucd1d\uc561 with 1\ubc15 and \ucd1d\uc561 columns"
+        },
+        {
+          "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used",
+          "passed": true,
+          "evidence": "Disclosed 7.5+ floor in \ucc38\uace0 as a quality floor the user did not request"
+        },
+        {
+          "text": "Includes a review summary section for at least 2 top properties without fabricated quotes",
+          "passed": true,
+          "evidence": "Review section for 3 properties; states only scores and counts, explicitly no review text. Passes as written but contains no real review content"
+        },
+        {
+          "text": "Includes a 3-night day-by-day itinerary",
+          "passed": true,
+          "evidence": "4-day itinerary, check-in/out days treated as partial"
+        },
+        {
+          "text": "Names a single recommended pick with a one-line reason",
+          "passed": true,
+          "evidence": "\ucd94\ucc9c pick named in \ud55c\ub208\uc5d0 \ubcf4\uae30: \uc640\uc774\uc988 \uc544\uc6b8"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Entire briefing in Korean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 61.8,
+        "tokens": 95392,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Calls destination-price-trends for Osaka with 4-star rating selected and a spring 2027 month window",
+          "passed": true,
+          "evidence": "Price trends for 2027-03..05, 4-star (table in \ub0a0\uc9dc\ubcc4 \uac00\uaca9 \ub3d9\ud5a5)"
+        },
+        {
+          "text": "Identifies the cheapest month and labels the data as a forecast",
+          "passed": true,
+          "evidence": "May cheapest; explicitly says trivago forecast, not live availability"
+        },
+        {
+          "text": "Runs a live search for a 2-night stay in the identified cheapest month",
+          "passed": true,
+          "evidence": "Live search 2027-05-18~20, 2 nights"
+        },
+        {
+          "text": "Recommends a specific hotel with price and rating from tool results",
+          "passed": true,
+          "evidence": "Hotel Keihan Tenmabashi Ekimae 90,214\uc6d0/\ubc15, 8.8"
+        },
+        {
+          "text": "Does not invent prices or ratings absent from tool output",
+          "passed": true,
+          "evidence": "Cherry-blossom explanation is labeled as own guess; truncated search disclosed"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Korean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333333333333334,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 56.6,
+        "tokens": 88426,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses name search (accommodation-search) for Shilla Jeju with dates 2026-11-20 to 2026-11-22",
+          "passed": true,
+          "evidence": "Name search tried first, returned only Gyeongju Goodstay Shilla; disclosed"
+        },
+        {
+          "text": "Reports the Shilla price for the stay with 2 adults",
+          "passed": true,
+          "evidence": "Shilla 580,201\uc6d0/\ubc15, 1,160,402\uc6d0 for 2 adults, 2 nights"
+        },
+        {
+          "text": "Searches nearby alternatives (radius search near Jeju Jungmun) of similar star level",
+          "passed": true,
+          "evidence": "Radius search around Shilla Jungmun coordinates, 4-5 star"
+        },
+        {
+          "text": "Comparison table shows alternatives vs Shilla with price difference",
+          "passed": false,
+          "evidence": "Table has prices but no price-difference column; differences appear only in prose for two hotels"
+        },
+        {
+          "text": "Does not invent prices or ratings absent from tool output",
+          "passed": true,
+          "evidence": "Prices and ratings from tool output; proximity labeled as coordinate estimate"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Korean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7777777777777778,
+        "passed": 7,
+        "failed": 2,
+        "total": 9,
+        "time_seconds": 47.0,
+        "tokens": 70962,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses radius search with coordinates near Shibuya (lat ~35.66, lon ~139.70), not the name search",
+          "passed": true,
+          "evidence": "Notes say Shibuya Station center coordinates"
+        },
+        {
+          "text": "Searches with arrival 2026-12-18, departure 2026-12-21, 2 adults, currency KRW",
+          "passed": true,
+          "evidence": "Header: 2026-12-18~12-21, \uc131\uc778 2\uba85, \uc6d0\ud654"
+        },
+        {
+          "text": "Applies a per-night price cap of 150000 KRW",
+          "passed": true,
+          "evidence": "Header: 1\ubc15 150,000\uc6d0 \uc774\ud558"
+        },
+        {
+          "text": "Comparison table lists properties sorted by total price with both per-night and total price",
+          "passed": true,
+          "evidence": "Table ranked by 1\ubc15 with 3\ubc15 \ud569\uacc4 column"
+        },
+        {
+          "text": "Applies and discloses a guest-rating floor (7.5+) or explains why none was used",
+          "passed": false,
+          "evidence": "No rating floor applied or discussed; ranks include 6.9 and 7.2 rated hotels with no caution about quality floor"
+        },
+        {
+          "text": "Includes a review summary section for at least 2 top properties without fabricated quotes",
+          "passed": true,
+          "evidence": "Review section covers 5 properties, says tool gives no review text; one general-knowledge remark is labeled as such"
+        },
+        {
+          "text": "Includes a 3-night day-by-day itinerary",
+          "passed": true,
+          "evidence": "4-day itinerary, labeled as unverified"
+        },
+        {
+          "text": "Names a single recommended pick with a one-line reason",
+          "passed": false,
+          "evidence": "Gives four different picks by criterion (\ucd5c\uc800\uac00, \ud638\ud154 \ub290\ub08c, \uac00\uc131\ube44, \uc810\uc218) rather than one clear recommendation"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Entire briefing in Korean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 42.0,
+        "tokens": 90095,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Calls destination-price-trends for Osaka with 4-star rating selected and a spring 2027 month window",
+          "passed": true,
+          "evidence": "Trends table 2027-03..05, 4-star"
+        },
+        {
+          "text": "Identifies the cheapest month and labels the data as a forecast",
+          "passed": true,
+          "evidence": "May cheapest; headed as trivago \uc608\uce21"
+        },
+        {
+          "text": "Runs a live search for a 2-night stay in the identified cheapest month",
+          "passed": true,
+          "evidence": "Live search 2027-05-11~13, 2 nights"
+        },
+        {
+          "text": "Recommends a specific hotel with price and rating from tool results",
+          "passed": true,
+          "evidence": "Hotel Keihan Tenmabashi Ekimae 89,343\uc6d0/\ubc15, 8.8"
+        },
+        {
+          "text": "Does not invent prices or ratings absent from tool output",
+          "passed": true,
+          "evidence": "Prices and ratings all from tool output; cherry-blossom remark hedged but not labeled as inference"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Korean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 45.5,
+        "tokens": 85460,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses name search (accommodation-search) for Shilla Jeju with dates 2026-11-20 to 2026-11-22",
+          "passed": true,
+          "evidence": "Name search tried, Shilla not found, fell back to radius search, disclosed"
+        },
+        {
+          "text": "Reports the Shilla price for the stay with 2 adults",
+          "passed": true,
+          "evidence": "Shilla 580,201\uc6d0/\ubc15, 1,160,402\uc6d0 for 2 adults"
+        },
+        {
+          "text": "Searches nearby alternatives (radius search near Jeju Jungmun) of similar star level",
+          "passed": true,
+          "evidence": "Radius search near Jungmun, 8 alternatives"
+        },
+        {
+          "text": "Comparison table shows alternatives vs Shilla with price difference",
+          "passed": true,
+          "evidence": "Table has \uc2e0\ub77c \ub300\ube44 (2\ubc15) column with amounts and percentages"
+        },
+        {
+          "text": "Does not invent prices or ratings absent from tool output",
+          "passed": true,
+          "evidence": "Prices and ratings from tool output; weekend-rate remark hedged"
+        },
+        {
+          "text": "Written in Korean",
+          "passed": true,
+          "evidence": "Korean"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9444,
+        "stddev": 0.0962,
+        "min": 0.8333,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 55.3333,
+        "stddev": 7.1842,
+        "min": 47.6,
+        "max": 61.8
+      },
+      "tokens": {
+        "mean": 84775.3333,
+        "stddev": 12837.402,
+        "min": 70508,
+        "max": 95392
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.9259,
+        "stddev": 0.1283,
+        "min": 0.7778,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 44.8333,
+        "stddev": 2.5658,
+        "min": 42.0,
+        "max": 47.0
+      },
+      "tokens": {
+        "mean": 82172.3333,
+        "stddev": 9981.2067,
+        "min": 70962,
+        "max": 90095
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.02",
+      "time_seconds": "+10.5",
+      "tokens": "+2603"
+    }
+  },
+  "notes": []
+}
