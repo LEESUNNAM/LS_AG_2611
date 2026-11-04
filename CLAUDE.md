@@ -9,6 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Write and edit all `.md` files in English, whether creating a new one or modifying an existing one.
 - Keep each `.md` file in English, and save a translated `.txt` version of it in a separate, new folder (`translations/`).
 - When a `.md` file is modified, update the translated `.txt` file with the same base name as well.
+- Whatever task the user requests, first create a todo list and report it to the user, then wait for the user's approval before performing the task. Do not start the work until approval is given.
 - When a requested task is finished, upload (commit and push) the result to the connected Git repository.
 - Git repository link: https://github.com/LEESUNNAM/LS_AG_2611
 
