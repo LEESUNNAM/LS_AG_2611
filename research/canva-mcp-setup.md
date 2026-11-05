@@ -29,22 +29,7 @@ Two read-only calls succeeded on 2026-11-05:
 
 ## Available tools
 
-After authentication the server exposes about 45 tools, named `mcp__Canva__<tool>`:
-
-| Area | Tools |
-|---|---|
-| Find and read | `search-designs`, `read-design`, `get-design-dataset`, `list-folder-items`, `search-folders`, `resolve-shortlink`, `get-assets` |
-| Create | `create-design`, `generate-design`, `generate-design-structured`, `create-design-from-candidate`, `generate-image`, `create-video` |
-| Edit | `edit-design`, `resize-design`, `merge-designs`, `copy-design`, `remove-background`, `separate-image-layers` |
-| Import and upload | `import-design-from-url`, `upload-asset-from-url`, `create-upload-url`, `import-claude-motion-from-url` |
-| Export | `export-design`, `get-export-formats` |
-| Brand | `list-brand-kits`, `search-brand-templates`, `create-design-from-brand-template`, `get-brand-template-dataset`, `create-brand-template-draft`, `publish-brand-template` |
-| Folders | `create-folder`, `move-item-to-folder` |
-| Comments and review | `comment-on-design`, `list-comments`, `reply-to-comment`, `list-replies`, `request-outline-review` |
-| Job status | `get-create-design-async-job`, `get-generate-image-job`, `get-video-generation-status`, `get-motion-import-job-status`, `get-separate-image-layers-job` |
-| Help | `help`, `get-video-production-guide` |
-
-Many create and edit tools run as asynchronous jobs, so a follow-up status call is needed to get the result.
+After authentication the server exposes 45 tools, named `mcp__Canva__<tool>`. See `canva-mcp-tools.md` for the full list with purposes, required inputs, selection rules, and the asynchronous and editing workflows.
 
 ## Troubleshooting
 

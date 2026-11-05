@@ -1,0 +1,141 @@
+# Canva MCP 도구
+
+서버: `https://mcp.canva.com/mcp` (HTTP 전송 방식, `Canva`라는 이름으로 등록). 설정 방법은 `canva-mcp-setup.md`를 참고하세요.
+
+이 서버는 `mcp__Canva__<도구>` 형태의 도구 45개를 제공합니다. 이 문서는 2026-11-05에 로드한 도구 스키마를 바탕으로 작성했습니다. 실제로 실행한 것은 읽기 전용 호출인 `list-brand-kits`와 `search-designs`뿐이며, 나머지 도구는 스키마만 보고 설명했고 실행하지 않았습니다.
+
+## 도구 한눈에 보기
+
+| 영역 | 도구 | 용도 | 필수 입력 |
+|---|---|---|---|
+| 찾기·읽기 | `search-designs` | 내 디자인 또는 공유받은 디자인 검색 | 없음 |
+| | `read-design` | 텍스트, 메타데이터, 썸네일, 발표자 노트 읽기. 편집 트랜잭션 열기 가능 | `design_id` |
+| | `get-assets` | 디자인 안 이미지·동영상의 메타데이터와 썸네일 | `asset_ids` |
+| | `get-design-dataset` | 기존 디자인의 자동 채우기 필드 목록 | `design_id` |
+| | `search-folders` | 이름이나 태그로 폴더 찾기 | 없음 |
+| | `list-folder-items` | 폴더 안의 디자인, 폴더, 이미지 목록 | `folder_id` |
+| | `resolve-shortlink` | Canva 단축 링크를 전체 디자인 URL로 변환 | `shortlink_id` |
+| 디자인 생성 | `create-design` | 작성한 브리프로 디자인 생성 (기본 선택) | `brief` |
+| | `generate-design` | 레거시 생성기. 브랜드 적용 요청에 사용 | `query`, `design_type` |
+| | `generate-design-structured` | 승인된 아웃라인으로 프레젠테이션 생성 (레거시) | `topic`, `audience`, `style`, `length`, `design_type`, `presentation_outlines` |
+| | `request-outline-review` | 프레젠테이션 아웃라인 검토 위젯 (레거시) | `topic`, `pages` |
+| | `create-design-from-candidate` | `generate-design` 후보를 편집 가능한 디자인으로 변환 | `job_id`, `candidate_id` |
+| | `create-design-from-brand-template` | 브랜드 템플릿으로 디자인 생성 | `brand_template_id` |
+| | `import-design-from-url` | 공개 PDF/PPTX/DOCX/HTML 등의 URL을 디자인으로 변환 | `url`, `name` |
+| 미디어 | `generate-image` | 독립 이미지 생성 또는 스타일 변환 | `prompt` |
+| | `upload-asset-from-url` | 공개 이미지·동영상 URL을 Canva로 가져오기 | `url`, `name` |
+| | `create-upload-url` | 로컬 파일 업로드용 1회용 URL 발급 | 없음 |
+| | `remove-background` | 이미지 배경을 투명하게 만들기 | `sourceMedia` |
+| | `separate-image-layers` | 평면 이미지를 편집 가능한 디자인으로 분리 | `asset_id` |
+| 동영상 | `get-video-production-guide` | 영상 제작 가이드 목록 조회 및 가져오기 | 없음 |
+| | `create-video` | 전체 제작 사양으로 영상 생성 | `video_generation_confirmed`, `production_spec`, `video_title` |
+| | `import-claude-motion-from-url` | Claude Motion 영상을 Canva로 가져오기 | `url` |
+| 편집 | `edit-design` | 트랜잭션 안에서 텍스트, 이미지, 도형, 페이지 편집 | `transaction_id` |
+| | `resize-design` | 크기를 바꾼 복사본 만들기 | `design_id`, `design_type` |
+| | `merge-designs` | 디자인 합치기, 페이지 추가·이동·삭제 | `type`, `operations` |
+| | `copy-design` | 디자인 또는 선택한 페이지 복제 | `design_id` |
+| 내보내기 | `get-export-formats` | 지원하는 내보내기 형식과 페이지 확인 | `design_id` |
+| | `export-design` | PDF, PNG, JPG, GIF, PPTX, MP4, CSV로 내보내기 | `design_id`, `format` |
+| 브랜드 | `list-brand-kits` | 브랜드 키트 목록 | 없음 |
+| | `search-brand-templates` | 브랜드 템플릿 검색 | 없음 |
+| | `get-brand-template-dataset` | 브랜드 템플릿의 자동 채우기 필드 목록 | `template_id` |
+| | `create-brand-template-draft` | 브랜드 템플릿의 편집용 초안 생성 | `brand_template_id` |
+| | `publish-brand-template` | 디자인을 브랜드 템플릿으로 게시 | `design_id` |
+| 폴더 | `create-folder` | 폴더 생성 | `name`, `parent_folder_id` |
+| | `move-item-to-folder` | 디자인, 폴더, 이미지 이동 | `item_id`, `to_folder_id` |
+| 댓글 | `list-comments` | 디자인의 댓글 목록 | `design_id` |
+| | `list-replies` | 댓글 스레드의 답글 목록 | `design_id`, `comment_id` |
+| | `comment-on-design` | 댓글 작성 | `design_id`, `message_plaintext` |
+| | `reply-to-comment` | 댓글에 답글 작성 | `design_id`, `comment_id`, `message_plaintext` |
+| 작업 상태 | `get-create-design-async-job` | `create-design` 작업 폴링 | `job_id`, `continuation_token` |
+| | `get-generate-image-job` | `generate-image` 작업 폴링 | `jobId` |
+| | `get-video-generation-status` | `create-video` 작업 폴링 | `job_id`, `continuation_token` |
+| | `get-separate-image-layers-job` | 레이어 분리 작업 폴링 | `job_id`, `continuation_token` |
+| | `get-motion-import-job-status` | Claude Motion 가져오기 폴링 | `job_id` |
+| 도움말 | `help` | Canva 도움말 센터 기반으로 제품 질문에 답변 | `prompt` |
+
+대부분의 도구는 `user_intent` 문자열(사용자가 하려는 일을 짧게 적은 것)도 받습니다. 필수 목록에는 없지만 스키마가 LLM 클라이언트에는 필수라고 설명하므로 항상 넣으세요.
+
+## 도구 선택에 영향을 주는 규칙
+
+- **`create-design`이 기본 생성 도구입니다.** `generate-design`, `generate-design-structured`, `create-design-from-candidate`, `request-outline-review`의 설명은 `create-design`을 쓸 수 있으면 호출하지 말라고 하는 레거시 도구입니다.
+- **브랜드 예외.** `create-design`은 브랜드 키트나 브랜드 템플릿을 적용하지 못합니다. 브랜드를 적용하는 요청에는 레거시 `generate-design` 흐름(`brand_kit_id` 사용) 또는 `create-design-from-brand-template`을 쓰세요.
+- **이미지와 디자인의 구분.** 사용자가 이미지, 사진, 일러스트, 아이콘, 스티커를 명시적으로 요청하면 인포그래픽처럼 보이는 내용이라도 `generate-image`를 씁니다. 결과물 자체가 편집 가능한 페이지나 레이아웃일 때만 `create-design`을 씁니다.
+- **URL에서 가져오기.** URL로 디자인을 만들려는 경우 생성기가 아니라 `import-design-from-url`을 씁니다.
+- **로컬 파일.** 로컬, 비공개, 생성된 파일에는 `upload-asset-from-url`이나 `import-design-from-url`을 쓰지 마세요. URL을 얻으려고 파일을 제3자 호스팅에 올리는 것도 안 됩니다. 대신 `create-upload-url`을 씁니다.
+
+## 비동기 작업
+
+아래 도구들은 작업 ID를 돌려주고 나중에 완료됩니다.
+
+| 시작 도구 | 상태 도구 | 참고 |
+|---|---|---|
+| `create-design` | `get-create-design-async-job` | 호출 사이에 `polling_policy.wait_seconds`만큼 대기. 위젯이 표시되면 폴링 생략 |
+| `generate-image` | `get-generate-image-job` | `SUCCESS` 또는 `FAILURE`까지 폴링. "Open generated image" 링크를 함께 제공 |
+| `create-video` | `get-video-generation-status` | 자동 폴링은 20분 후 중단 |
+| `separate-image-layers` | `get-separate-image-layers-job` | `create-design`과 같은 폴링 규칙 |
+| `import-claude-motion-from-url` | `get-motion-import-job-status` | `done` 또는 `failed`까지 폴링 |
+
+## 편집 흐름
+
+`edit-design`은 편집 트랜잭션 안에서 동작합니다.
+
+1. `read-design`을 `open_transaction: true`와 `filter.fields`의 `thumbnails`로 호출해 `transaction_id`와 요소별 `locator_id`를 얻습니다.
+2. `edit-design`을 `finalize: "keep_open"`, `page_index`, `operations`로 호출합니다.
+3. 사용자에게 미리보기를 보여 주고 명시적 승인을 받습니다.
+4. `edit-design`을 `finalize: "commit"`(작업 없이)으로 호출해 저장하거나, `"cancel"`로 취소합니다. commit은 되돌릴 수 없습니다.
+
+사용 가능한 작업: `update_title`, `replace_text`, `find_and_replace_text`, `format_text`, `add_text`, `update_fill`, `insert_fill`, `crop_media`, `flip_media`, `position_element`, `resize_element`, `rotate_element`, `layer_element`, `recolor_element`, `update_opacity`, `insert_shape`, `replace_shape`, `update_stroke_properties`, `update_line_properties`, `group_elements`, `ungroup_elements`, `delete_element`, `add_page`, `reorder_page`, `replace_speaker_notes`, `update_autofill_field`. 반응형 페이지는 `update_title`, `replace_text`, `update_fill`, `delete_element`, `find_and_replace_text`만 받습니다.
+
+## 영역별 상세
+
+### 찾기·읽기
+
+- **`search-designs`**: 필터는 `query`(`sort_by: relevance` 필요), `ownership`(`any`, `owned`, `shared`), `design_types`(`presentation`만 지원), `sort_by`, `limit`, `continuation`. 반환값은 `id`, `title`, 썸네일, `edit_url`, `view_url`, 타임스탬프, `page_count`. 확인한 결과: 가장 최근 포스터 3개가 반환됐습니다.
+- **`read-design`**: 디자인 ID 또는 전체 공유 URL을 받습니다. `filter.fields`로 `design_metadata`, `page_metadata`, `design_content`, `thumbnails`, `presenter_notes`를 고르고, `page_indices`와 `element_ids`로 범위를 좁힙니다.
+- **`list-folder-items`**: `folder_id: "root"`는 최상위를 나열합니다. `item_types`와 `sort_by`로 필터링·정렬합니다.
+- **`search-folders`**: `ownership`과 `query`(이름과 태그에 매칭). 기본 `limit`은 5입니다.
+
+### 디자인 생성
+
+- **`create-design`**: `brief`는 사용자의 표현 그대로 적습니다. 선택 입력으로 `format`(방향을 포함해 예: "Flyer (Landscape A4)", 또는 생략하고 브리프에 맡김)과 프레젠테이션용 `outline.sections`(제목, 설명, 요점)가 있습니다. 동영상과 화이트보드에는 쓰지 않습니다.
+- **`generate-design`**: `design_type`은 26종 중 하나입니다. `business_card`, `card`, `desktop_wallpaper`, `doc`, `document`, `email`, `facebook_cover`, `facebook_post`, `flyer`, `infographic`, `instagram_post`, `invitation`, `logo`, `phone_wallpaper`, `photo_collage`, `pinterest_pin`, `postcard`, `poster`, `presentation`, `proposal`, `report`, `resume`, `twitter_post`, `your_story`, `youtube_banner`, `youtube_thumbnail`. 후보를 돌려주며, 선택한 후보는 `create-design-from-candidate`로 변환합니다. 먼저 사용자에게 브랜드 키트 사용 여부를 물어야 합니다. `verbatim: true`는 제공된 마크다운을 다시 쓰지 않고 `doc`에 그대로 넣습니다.
+- **`generate-design-structured`**와 **`request-outline-review`**: 레거시 프레젠테이션 경로입니다. 생성 전에 검토 위젯에서 아웃라인을 승인받아야 합니다. 생성기에 넘기는 제목과 설명에서는 구두점을 제거해야 합니다.
+- **`import-design-from-url`**: `intended_design_type`은 약 40개 값(예: `presentation`, `doc`, `sheet`, `whiteboard`, `video`)을 받습니다. URL은 공개 HTTPS여야 하며 Canva 디자인 URL은 안 됩니다.
+
+### 미디어
+
+- **`generate-image`**: `aspectRatio`는 `SQUARE_1_1`, `LANDSCAPE_16_9`, `PORTRAIT_9_16`, `PORTRAIT_4_5` 같은 열거값이어야 합니다. 이미지 대 이미지 생성은 `imageReferences`에 이미지마다 MEDIA 항목 하나씩 넘깁니다. 사용자의 요청은 `prompt`에 쓴 그대로 넘깁니다.
+- **`create-upload-url`**: 1단계에서 1회용 URL을 받고, 2단계에서 `Content-Type: application/octet-stream`으로 원본 바이트를 HTTP POST 한 번으로 보냅니다. 응답에 미디어 ID가 들어 있습니다.
+- **`remove-background`**와 **`separate-image-layers`**: 이미지가 이미 사용자의 Canva 계정에 있어야 합니다. 평면 그래픽은 잘 분리되지만 사진은 결과가 좋지 않습니다.
+
+### 동영상
+
+- `get-video-production-guide`를 인자 없이 호출하면 가이드 목록이, `production_guide_id`를 넣으면 해당 가이드가 나옵니다. ID를 추측하지 마세요.
+- `create-video`는 전체 `production_spec`(브리프, 스토리보드, 참조 이미지, 오디오, 출력 설정)이 필요합니다. 엔진은 `seedance` 하나뿐이며 9:16 또는 16:9, 5~30초, 480p 또는 720p입니다.
+- 대화에서 첫 생성 전에 사용자에게 "Just a quick heads up - creating a video may use a significant portion or all of your monthly AI limit. Would you like to continue?"라고 알리고 명시적인 동의를 기다립니다. 이후 생성마다 새로운 요청 또는 승인이 필요합니다.
+
+### 편집·재구성
+
+- **`resize-design`**: `design_type`은 프리셋(`presentation` 또는 `whiteboard`) 또는 픽셀 단위의 사용자 지정 너비·높이입니다. 새 디자인을 만들고 원본은 그대로 둡니다.
+- **`merge-designs`**: `type`은 `create_new_design`(`insert_pages` 작업만 가능) 또는 `modify_existing_design`(`move_pages`, `delete_pages`도 가능)입니다. 호출마다 정확한 작업 내용에 대한 명시적 승인이 필요하며, 페이지 삭제는 되돌릴 수 없습니다.
+- **`copy-design`**: 선택 입력 `page_numbers`로 일부 페이지만 복사할 수 있으며 원본은 그대로입니다.
+
+### 내보내기
+
+먼저 `get-export-formats`를 호출한 뒤 `format.type`으로 `export-design`을 호출합니다. 형식별 옵션: PDF는 `size`(`a4`, `a3`, `letter`, `legal`), PNG는 `width`, `height`, `transparent_background`, `lossless`, `as_single_image`, JPG는 `quality`(1~100), MP4는 `quality`(예: `horizontal_1080p`, 필수)입니다. 공통으로 `export_quality`(`regular` 또는 `pro`)와 일부 페이지만 내보내는 `pages`가 있습니다. 결과는 다운로드 URL입니다.
+
+### 브랜드
+
+- `search-brand-templates`는 `dataset: "non_empty"`로 자동 채우기가 가능한 템플릿을 찾을 수 있습니다.
+- `create-brand-template-draft`는 초안이 이미 있으면 기존 초안을 돌려줍니다. 설명에는 `start-editing-transaction`, `perform-editing-operations`, `commit-editing-transaction`이 언급되지만 이 서버의 도구 목록에는 없습니다. 여기서는 `read-design`과 `edit-design`이 그 역할을 합니다.
+- `publish-brand-template`은 `Missing scopes: [brandtemplate:content:write]`로 실패할 수 있습니다. 그 경우 커넥터를 연결 해제했다가 다시 연결하세요.
+
+## 제공되지 않는 도구
+
+다른 도구 설명에는 나오지만 이 서버에는 없는 도구: `autofill-design`, `prepare-design-generation`, `start-editing-transaction`, `perform-editing-operations`, `commit-editing-transaction`. 자동 채우기 필드는 조회할 수 있지만(`get-design-dataset`, `get-brand-template-dataset`) 값을 채우는 도구는 여기에 없습니다.
+
+## 출처
+
+- 2026-11-05에 Claude Code로 로드한 도구 스키마
+- https://www.canva.dev/docs/mcp
