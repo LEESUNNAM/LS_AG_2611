@@ -1,0 +1,52 @@
+{
+  "title": "AI 에이전트: 현황과 전망",
+  "blocks": [
+    {"type": "paragraph", "text": "작성일: 2026-11-05 · 조사 범위: Gartner, McKinsey, Anthropic 등 공개 자료 (2025년 6월~2026년 11월 확인분)"},
+    {"type": "heading", "text": "요약", "level": 1},
+    {"type": "bullets", "items": [
+      "McKinsey 2025년 설문(1,993명, 105개국)에서 응답자의 62%가 조직에서 AI 에이전트를 최소한 실험 중이며 23%는 어딘가에서 확대 적용 중이라고 답했습니다. 다만 개별 업무 기능별로는 확대 적용 비율이 10% 이하입니다 [1].",
+      "Gartner는 2027년 말까지 에이전틱 AI 프로젝트의 40% 이상이 비용 증가, 불분명한 사업 가치, 부족한 위험 통제로 취소될 것으로 예측합니다 [2].",
+      "Gartner는 2026년까지 기업용 애플리케이션의 최대 40%가 특정 업무용 AI 에이전트를 내장할 것으로 전망합니다(2025년 5% 미만) [3].",
+      "2025년 12월 Anthropic, Block, OpenAI가 Linux Foundation 산하 Agentic AI Foundation을 설립했고 MCP가 기부되었습니다. 표준화가 본격화되고 있습니다 [4].",
+      "2030년 시장 규모 전망은 조사기관별로 약 480억~530억 달러 범위에서 수렴합니다 [5][6]."
+    ]},
+    {"type": "heading", "text": "AI 에이전트란 무엇이며 왜 지금 중요한가", "level": 1},
+    {"type": "paragraph", "text": "AI 에이전트는 사람의 질문에 답하는 데 그치지 않고, 목표를 받아 스스로 도구를 호출하고 여러 단계를 거쳐 업무를 수행하는 AI 시스템을 말합니다. 다만 업계에 단일한 표준 정의는 없고, 조사기관마다 '에이전트'로 집계하는 범위가 달라 수치를 직접 비교하기 어렵습니다."},
+    {"type": "paragraph", "text": "Gartner는 기업 소프트웨어가 앱마다 내장된 어시스턴트(1단계)에서 특정 업무용 에이전트(2단계), 앱 내 에이전트 협업(3단계), 앱 간 에이전트 생태계(4단계)로 진화한다는 5단계 틀을 제시했습니다 [3]."},
+    {"type": "heading", "text": "도입 현황: 실험은 많고 확산은 제한적", "level": 1},
+    {"type": "paragraph", "text": "McKinsey의 2025년 6월 25일~7월 29일 설문에서 62%가 에이전트를 최소한 실험 중이고 23%가 기업 내 일부에서 확대 적용 중이라고 답했습니다. 그러나 특정 업무 기능 하나를 놓고 보면 확대 적용 중이라는 응답은 10%를 넘지 않았습니다 [1]. 즉 시도는 폭넓지만 깊이 있는 운영 단계에 이른 조직은 아직 소수입니다."},
+    {"type": "paragraph", "text": "벤더 설문은 더 높은 수치를 내놓습니다. 에이전트 플랫폼 기업 CrewAI의 대기업 임원 500명 설문은 65%가 이미 에이전트를 사용 중이라고 보고합니다 [7]. 이 수치는 자사 제품 판매와 이해관계가 있는 조사이므로 McKinsey 수치와 나란히 읽을 때 주의가 필요합니다."},
+    {"type": "heading", "text": "주요 흐름: 표준화와 생태계", "level": 1},
+    {"type": "paragraph", "text": "2025년 12월 9일 Anthropic, Block, OpenAI가 공동 설립자로 Agentic AI Foundation(AAIF)을 출범시켰고, Google, Microsoft, AWS, Cloudflare, Bloomberg가 지원 회원으로 참여했습니다. 첫 프로젝트는 Anthropic이 기부한 Model Context Protocol(MCP), Block의 goose, OpenAI의 AGENTS.md입니다 [4]."},
+    {"type": "paragraph", "text": "Anthropic은 MCP의 활성 공개 서버가 1만 개 이상이고 Python과 TypeScript SDK 월간 다운로드가 9,700만 건 이상이라고 밝혔습니다 [4]. 이는 제안 주체가 발표한 수치입니다."},
+    {"type": "heading", "text": "시장 규모와 주요 지표", "level": 1},
+    {"type": "table", "header": true, "rows": [
+      ["출처", "지표", "수치"],
+      ["MarketsandMarkets", "2030년 시장 규모", "526.2억 달러 (연평균 46.3%)"],
+      ["BCC Research", "2030년 시장 규모", "483억 달러 (연평균 43.3%)"],
+      ["Gartner", "2026년 앱 내 에이전트 탑재", "최대 40% (2025년 5% 미만)"],
+      ["Gartner", "2027년 말 프로젝트 취소", "40% 이상"],
+      ["McKinsey", "확대 적용 조직", "23% (실험 포함 62%)"]
+    ]},
+    {"type": "paragraph", "text": "시장 규모 예측은 기준 연도와 정의가 기관마다 달라 상당한 편차가 있으며, 일부 출처는 보도자료 형태입니다 [5][6]."},
+    {"type": "heading", "text": "위험과 한계", "level": 1},
+    {"type": "paragraph", "text": "Gartner는 현재 에이전틱 AI 프로젝트 다수가 유행에 휩쓸린 초기 실험이거나 잘못 적용된 개념검증 단계라고 평가합니다. 또한 기존 챗봇, RPA, AI 어시스턴트에 에이전트 이름만 붙이는 '에이전트 워싱'을 지적하며, 실제 에이전트 기능을 갖춘 벤더는 수천 개 중 약 130개에 불과하다고 추정합니다 [2]."},
+    {"type": "paragraph", "text": "반대로 Gartner는 2028년까지 일상 업무 의사결정의 15%가 AI 에이전트에 의해 자율적으로 이루어질 것으로 내다봅니다(2024년 0%) [2]. 비관과 낙관이 함께 존재하는 예측입니다."},
+    {"type": "heading", "text": "시사점", "level": 1},
+    {"type": "bullets", "items": [
+      "도입 수치는 정의에 따라 크게 달라지므로, 보고서를 읽을 때는 '실험'과 '운영 확대'를 구분해야 합니다.",
+      "투자 대상은 비용 대비 효과가 명확한 업무로 좁히는 것이 Gartner 권고와 부합합니다 [2].",
+      "MCP 같은 공개 표준이 자리 잡고 있어 특정 벤더 종속 위험은 줄어드는 방향이지만, 표준의 실제 채택 정도는 계속 지켜볼 필요가 있습니다 [4]."
+    ]},
+    {"type": "heading", "text": "출처", "level": 1},
+    {"type": "numbered", "items": [
+      "The state of AI in 2025: Agents, innovation, and transformation, McKinsey (2025). https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-state-of-ai-2025",
+      "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027, Gartner (2025-06-25). https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+      "Gartner Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026, Up from Less Than 5% in 2025, Gartner (2025-08-26). https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025",
+      "Donating the Model Context Protocol and establishing the Agentic AI Foundation, Anthropic (2025-12-09). https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+      "AI Agents Market Poised for Explosive Growth, Forecast to Reach $52.62 Billion by 2030, MarketsandMarkets. https://www.marketsandmarketsblog.com/industry/ai-agents-market",
+      "AI Agents: Technologies, Applications and Global Markets, BCC Research. https://www.bccresearch.com/market-research/artificial-intelligence-technology/ai-agent-market.html",
+      "Enterprise Insights (AI agent survey), CrewAI. https://crewai.com/ai-agent-survey"
+    ]}
+  ]
+}
