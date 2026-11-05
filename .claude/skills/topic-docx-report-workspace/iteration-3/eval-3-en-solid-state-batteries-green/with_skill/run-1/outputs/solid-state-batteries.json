@@ -1,0 +1,56 @@
+{
+  "title": "Solid-State Batteries: State of Play in Late 2026",
+  "color": "green",
+  "blocks": [
+    {"type": "paragraph", "text": "Prepared: 2026-11-05 · Scope: public sources published from January 2025 to August 2026, focused on EV batteries (commercial readiness, key players, costs, risks)"},
+    {"type": "heading", "text": "Summary", "level": 1},
+    {"type": "bullets", "items": [
+      "Solid-state batteries are still pre-commercial: 2025 to 2026 is described as the shift from lab R&D to engineering validation, with automakers expected to start vehicle-level all-solid-state testing in 2026 [1].",
+      "Investors are active: more than 57 financing deals involving 46 companies and over US$1.3 billion were disclosed from 2025 through Q1 2026 (single source) [1].",
+      "First series products are targeted for 2027 to 2028: Samsung SDI aims at the second half of 2027 [2][3], Toyota at a first solid-state EV by 2028 [4], and Chinese makers at small-scale production in 2027 to 2028 [5].",
+      "Cost is the main barrier: all-solid-state cells are reported at roughly 2 to 3 times [3] to 4 to 6 times [5] the cost of liquid-electrolyte cells, depending on the source.",
+      "Forecasts are modest: IDTechEx projects about US$8 billion by 2033 [6] and US$9 billion by 2035 [7], and SMM expects roughly 4% share of lithium-ion demand by 2030 (single analyst view) [3]."
+    ]},
+    {"type": "heading", "text": "Where the industry stands", "level": 1},
+    {"type": "paragraph", "text": "TrendForce's 1Q26 report says Toyota, Honda, Nissan and Samsung SDI are slightly ahead in small-scale pilot production and validation of all-solid-state cells, with their 2026 focus on yield and quality. In China, CATL, GAC, Geely and BYD began tendering for pilot production equipment in the second half of 2025 [1]. Semi-solid-state cells, which still contain some liquid, already reach GWh-scale output in China [1]."},
+    {"type": "paragraph", "text": "Chinese commentary frames 2026 as the first year of verification, with prototype vehicles from Geely, FAW and BYD planned for 2026 and market launches in 2027. Small-scale mass production in high-end models is expected in 2027 to 2028, and large-scale application only after 2030 [5]. SMM goes further and says first commercial products once expected for 2026 to 2029 are now projected for 2030 to 2035 [3]."},
+    {"type": "heading", "text": "Key players and timelines", "level": 1},
+    {"type": "paragraph", "text": "Toyota has slipped its launch date repeatedly (first 2020, then 2023, then 2026). At the Tokyo Motor Show in October 2025 an executive said it was sticking to a first solid-state EV by 2028, and Idemitsu aims to begin mass-producing all-solid-state cells in 2027 [4]. Toyota's prototype pack is claimed to offer about 1,200 km of range and a charge in under 10 minutes [3][4]; these are company claims, not independent test results."},
+    {"type": "paragraph", "text": "Samsung SDI plans to start mass production in the second half of 2027 at its Ulsan plant using sulfide electrolytes, with a target above 900 Wh/L. It has a 6,500 square metre pilot line in Suwon and has sent samples to EV and robotics customers [2]. Its announced investment is 25 trillion won for 2026 to 2040 [2]."},
+    {"type": "paragraph", "text": "In the United States, QuantumScape's Q2 2026 shareholder letter reports that its Eagle Line pilot line shows core-tool uptime above 90%, that cells have shipped to an additional automaker and a defense customer, and that it aims to double cell output again in the second half of 2026. It also announced a multi-year agreement with Honda in June 2026 and held US$859 million in liquidity [8]. The company still reports net losses (US$98.2 million in the quarter) [8]."},
+    {"type": "table", "header": true, "rows": [
+      ["Company", "Approach", "Stated target", "Source"],
+      ["Toyota / Idemitsu", "Sulfide electrolyte", "First EV by 2028; Idemitsu mass production from 2027", "[3][4]"],
+      ["Samsung SDI", "Sulfide, anode-less", "Mass production 2H 2027, above 900 Wh/L", "[2][3]"],
+      ["QuantumScape", "Ceramic separator, lithium metal", "Pilot line shipping samples; output to double in 2H 2026", "[8]"],
+      ["Nissan", "Pilot plant in Yokohama", "Large-scale production 2028 (single source)", "[3]"],
+      ["SK On", "Pilot plant in Daejeon", "Mass production 2029 (single source)", "[3]"],
+      ["Geely, FAW, BYD", "Prototype all-solid-state vehicles", "Prototypes 2026, launches 2027", "[5]"]
+    ]},
+    {"type": "heading", "text": "Costs, risks and open problems", "level": 1},
+    {"type": "paragraph", "text": "Sources disagree on the cost gap. SMM says sulfide cells cost 2 to 3 times liquid-electrolyte cells [3], while a Gasgoo report from February 2026 says all-solid-state cells cost 4 to 6 times as much, with packs above 1,000 yuan per kWh, and could fall to 0.8 to 1 yuan per Wh between 2028 and 2030 [5]. The difference likely reflects different cell formats and dates, so treat the cost gap as a range."},
+    {"type": "paragraph", "text": "Technical bottlenecks reported by SMM include interface impedance (capacity retention below 90% after 1,000 cycles) and weak low-temperature performance (over 30% capacity loss below minus 20 degrees C) for sulfide cells, which also need inert-atmosphere production because of poor chemical stability [3]. CATL is reported to have used stabilizers to relax the required factory dryness for sulfide electrolytes from a dew point of minus 80 to minus 60 degrees C [5]. Full qualification testing is said to take one to two years, and a production line two to three years from planning to commissioning [5]."},
+    {"type": "paragraph", "text": "Claimed figures such as 500 Wh/kg and 2,000 cycles come from company or analyst summaries and have not been independently verified [3]. A Chinese academician quoted in the Gasgoo article cautions against seeking quick success [5]."},
+    {"type": "heading", "text": "Market outlook", "level": 1},
+    {"type": "paragraph", "text": "IDTechEx's 2023 report put the opportunity at US$8 billion by 2033, with EVs as the main demand source and consumer electronics possibly arriving earlier [6]. Its 2025 outlook says the market could reach US$9 billion by 2035 [7]. Both figures come from the same research firm, so they are one analyst's view across two reports rather than two independent confirmations."},
+    {"type": "paragraph", "text": "SMM forecasts all-solid-state shipments of 13.5 GWh and semi-solid-state shipments of 160 GWh by 2028, against global lithium-ion demand of about 2,800 GWh by 2030 [3]. It expects about 4% penetration for all-solid-state by 2030 and about 10% for total solid-state by 2035; the Gasgoo article repeats these numbers as SMM's, so they remain a single-source forecast [3][5]."},
+    {"type": "heading", "text": "Takeaways", "level": 1},
+    {"type": "bullets", "items": [
+      "Expect limited, premium-priced series launches in 2027 to 2028 rather than mass-market volume; broad adoption is a 2030s story on most sources [3][5].",
+      "Past launch dates have slipped, so treat announced years as targets and watch for yield and cost data from pilot lines, not only prototype claims [3][4].",
+      "Semi-solid-state cells are the nearer-term product, already at GWh scale in China [1].",
+      "Figures from companies and market analysts are mostly unverified; the most reliable recent primary document in this review is QuantumScape's own filing [8]."
+    ]},
+    {"type": "heading", "text": "Sources", "level": 1},
+    {"type": "numbered", "items": [
+      "Global Solid-State Battery Industry Development Report (1Q26), press release, TrendForce (2026-04-29). https://www.trendforce.com/presscenter/news/20260429-13026.html",
+      "Samsung SDI Plans Mass Production of Solid-State Batteries Starting in 2027, Battery-News (2026-08-03). https://battery-news.de/en/2026/08/03/samsung-sdi-plans-mass-production-of-solid-state-batteries-starting-in-2027/",
+      "In-depth analysis of the global solid state battery industry landscape: sulphide pathway leads the way, Shanghai Metals Market (SMM) (2026-01-12). https://news.metal.com/newscontent/103715203/in-depth-analysis-of-the-global-solid-state-battery-industry-landscape-sulphide-pathway-leads-the-way-four-power-race-am",
+      "Toyota's solid-state EV battery dreams might actually come true, Electrek (2025-10-30). https://electrek.co/2025/10/30/toyotas-solid-state-ev-battery-dreams-might-actually-come-true/",
+      "All-Solid-State: No More 'Empty Promises', Gasgoo Auto News (2026-02-28). https://autonews.gasgoo.com/articles/market-industry/2027687099262570497",
+      "8 Billion Dollar Market Opportunity Enabled by Solid-State Batteries, IDTechEx via PR Newswire (2023-03-09). https://prnewswire.com/news-releases/8-billion-dollar-market-opportunity-enabled-by-solid-state-batteries-reports-idtechex-301768068.html",
+      "IDTechEx Forecasts Solid-State Battery Market to Hit US$9 Billion by 2035, Times Tech (2025-02-26). https://timestech.in/?p=366085",
+      "QuantumScape Q2 2026 shareholder letter, Form 8-K Exhibit 99.1, QuantumScape Corp. via SEC (2026). https://www.sec.gov/Archives/edgar/data/0001811414/000119312526312423/qs-ex99_1.htm"
+    ]}
+  ]
+}
