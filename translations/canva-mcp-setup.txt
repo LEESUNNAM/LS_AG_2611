@@ -1,0 +1,59 @@
+# Canva MCP 설정
+
+서버: `https://mcp.canva.com/mcp` (HTTP 전송 방식, `Canva`라는 이름으로 등록)
+
+Canva 공식 원격 MCP 서버를 쓰면 Claude Code에서 Canva 디자인을 검색, 생성, 편집, 내보내기 할 수 있습니다. 사용자의 Canva 계정에 대해 OAuth로 인증합니다.
+
+## 설정 순서
+
+1. 모든 프로젝트에서 쓸 수 있도록 **user 범위**로 서버를 등록합니다.
+
+   ```
+   claude mcp add --scope user --transport http Canva https://mcp.canva.com/mcp
+   ```
+
+   `--scope user`를 빼면 local 범위로 저장되어, 명령을 실행한 프로젝트 폴더에서만 보입니다.
+
+2. 세션을 재시작합니다. `claude mcp add`로 추가한 서버는 실행 중인 세션에 로드되지 않습니다. `claude --continue`를 쓰면 같은 폴더에서 대화를 유지한 채 다시 시작합니다.
+
+3. `/mcp`를 실행해 **Canva**를 선택하고 Authenticate를 누릅니다. 브라우저에서 Canva에 로그인하고 접근을 승인합니다.
+
+4. `claude mcp list`(연결됨으로 표시되어야 함) 또는 `claude mcp get Canva`(`Scope: User config`로 표시되어야 함)로 상태를 확인합니다.
+
+## 검증 결과
+
+2026-11-05에 읽기 전용 호출 2건이 성공했습니다.
+
+- `list-brand-kits`: 브랜드 키트 0개 반환 (계정에 설정된 것이 없음).
+- `search-designs`: 가장 최근 디자인 3개 반환 (모두 포스터).
+
+## 사용 가능한 도구
+
+인증 후 서버는 `mcp__Canva__<도구>` 형태의 도구 약 45개를 제공합니다.
+
+| 영역 | 도구 |
+|---|---|
+| 찾기·읽기 | `search-designs`, `read-design`, `get-design-dataset`, `list-folder-items`, `search-folders`, `resolve-shortlink`, `get-assets` |
+| 생성 | `create-design`, `generate-design`, `generate-design-structured`, `create-design-from-candidate`, `generate-image`, `create-video` |
+| 편집 | `edit-design`, `resize-design`, `merge-designs`, `copy-design`, `remove-background`, `separate-image-layers` |
+| 가져오기·업로드 | `import-design-from-url`, `upload-asset-from-url`, `create-upload-url`, `import-claude-motion-from-url` |
+| 내보내기 | `export-design`, `get-export-formats` |
+| 브랜드 | `list-brand-kits`, `search-brand-templates`, `create-design-from-brand-template`, `get-brand-template-dataset`, `create-brand-template-draft`, `publish-brand-template` |
+| 폴더 | `create-folder`, `move-item-to-folder` |
+| 댓글·검토 | `comment-on-design`, `list-comments`, `reply-to-comment`, `list-replies`, `request-outline-review` |
+| 작업 상태 | `get-create-design-async-job`, `get-generate-image-job`, `get-video-generation-status`, `get-motion-import-job-status`, `get-separate-image-layers-job` |
+| 도움말 | `help`, `get-video-production-guide` |
+
+생성·편집 도구 상당수는 비동기 작업으로 실행되므로, 결과를 받으려면 상태 조회 호출이 한 번 더 필요합니다.
+
+## 문제 해결
+
+- **`/mcp`에 Canva가 없음:** 서버를 추가하기 전에 시작한 세션입니다. 세션을 재시작하세요.
+- **Canva가 한 폴더에서만 보임:** local 범위로 등록된 것입니다. `claude mcp remove Canva -s local`로 지운 뒤 `--scope user`로 다시 추가하세요.
+- **상태가 "Needs authentication":** `/mcp`를 실행해 브라우저 로그인을 완료하세요.
+- **Canva Dev MCP 서버(`@canva/cli mcp`)와 혼동하지 마세요.** 그것은 Canva 앱을 만들기 위한 별도 도구입니다.
+
+## 출처
+
+- https://www.canva.dev/docs/connect/canva-mcp-server-setup
+- https://www.canva.dev/docs/mcp
