@@ -1,0 +1,70 @@
+{
+  "expectations": [
+    {
+      "text": "A .docx file was produced and opens with python-docx",
+      "passed": true,
+      "evidence": "solid_state_batteries_report.docx"
+    },
+    {
+      "text": "Title is 40px (30pt)",
+      "passed": false,
+      "evidence": "title paragraph 'Solid-State Batteries: Current State of ' = 26.0pt"
+    },
+    {
+      "text": "Body text is 20px (15pt)",
+      "passed": false,
+      "evidence": "body size distribution (pt): {11.0: 19}"
+    },
+    {
+      "text": "Font is 맑은 고딕 for title and body",
+      "passed": false,
+      "evidence": "'Solid-State Batteries: Cu' ascii=Calibri eastAsia=None; 'Research report, November' ascii=Calibri eastAsia=None; 'Solid-state batteries (SS' ascii=Calibri eastAsia=None"
+    },
+    {
+      "text": "Title and headings use a green main color",
+      "passed": true,
+      "evidence": "heading colors: [('1B7F4B', 9)]"
+    },
+    {
+      "text": "Has at least 3 section headings",
+      "passed": true,
+      "evidence": "8 Heading-style paragraphs"
+    },
+    {
+      "text": "Has a summary section",
+      "passed": true,
+      "evidence": "heading list: Executive Summary | 1. Why Solid-State | 2. Industry Status in 2026 | 3. Key Players and Timelines | 4. Main Challenges | 5. Outlook | 6. Caveats | Sources"
+    },
+    {
+      "text": "Has at least one table",
+      "passed": true,
+      "evidence": "1 table(s)"
+    },
+    {
+      "text": "Lists at least 5 distinct source URLs",
+      "passed": true,
+      "evidence": "5 distinct URLs"
+    },
+    {
+      "text": "Uses inline [n] citations at least 3 times",
+      "passed": false,
+      "evidence": "0 citation markers"
+    },
+    {
+      "text": "Report is written in English",
+      "passed": true,
+      "evidence": "Hangul share of letters = 0.00"
+    },
+    {
+      "text": "No raw Markdown syntax in the text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 4,
+    "total": 12,
+    "pass_rate": 0.67
+  }
+}

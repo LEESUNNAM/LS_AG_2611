@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "skill_name": "topic-docx-report",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-11-05T02:34:47Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 12,
+        "failed": 0,
+        "total": 12,
+        "time_seconds": 207.0,
+        "tokens": 77483,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "\uc0dd\uc131\ud615ai-\ucd5c\uc2e0\ub3d9\ud5a5.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": true,
+          "evidence": "title paragraph '\uc0dd\uc131\ud615 AI \ucd5c\uc2e0 \ub3d9\ud5a5 \ubcf4\uace0\uc11c' = 30.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": true,
+          "evidence": "body size distribution (pt): {15.0: 25}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": true,
+          "evidence": "all probed paragraphs use \ub9d1\uc740 \uace0\ub515"
+        },
+        {
+          "text": "Title and headings use a blue main color",
+          "passed": true,
+          "evidence": "heading colors: [('2E75B6', 8)]"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": true,
+          "evidence": "7 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": true,
+          "evidence": "heading list: \uc694\uc57d | 1. \ub3c4\uc785\uc740 \ube60\ub974\uc9c0\ub9cc \uc131\uacfc\ub294 \uc544\uc9c1 \uac08\ub9b0\ub2e4 | 2. \uc5d0\uc774\uc804\ud2b8\uc640 \ucf54\ub529\uc774 \ubcc0\ud654\ub97c \uc774\ub048\ub2e4 | 3. \ud22c\uc790, \uc778\ud504\ub77c, \uad6d\uac00 \uac04 \uacbd\uc7c1 | 4. \uaddc\uc81c\ub294 \uc2dc\ud589\uacfc \uc720\uc608\uac00 \ud568\uaed8 \uc9c4\ud589\ub41c\ub2e4 | \uc2dc\uc0ac\uc810 | \ucd9c\ucc98"
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "1 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": true,
+          "evidence": "8 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": true,
+          "evidence": "25 citation markers"
+        },
+        {
+          "text": "Report is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.63"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 12,
+        "failed": 0,
+        "total": 12,
+        "time_seconds": 118.1,
+        "tokens": 73579,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "\uc81c\uc8fc-3\ubc154\uc77c-\uc5ec\ud589.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": true,
+          "evidence": "title paragraph '\uc81c\uc8fc\ub3c4 3\ubc15 4\uc77c \uc5ec\ud589 \uc815\ubcf4' = 30.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": true,
+          "evidence": "body size distribution (pt): {15.0: 23}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": true,
+          "evidence": "all probed paragraphs use \ub9d1\uc740 \uace0\ub515"
+        },
+        {
+          "text": "Title and headings use a red main color",
+          "passed": true,
+          "evidence": "heading colors: [('C00000', 11)]"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": true,
+          "evidence": "10 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": true,
+          "evidence": "heading list: \uc694\uc57d | \ucd94\ucc9c \uc77c\uc815 \uac1c\uc694 | \uc77c\ucc28\ubcc4 \ud575\uc2ec \uc815\ubcf4 | 1\uc77c\ucc28: \ubd81\ubd80\uc640 \uc81c\uc8fc\uc2dc | 2\uc77c\ucc28: \ub0a8\ubd80\uc640 \ud55c\ub77c\uc0b0 | 3\uc77c\ucc28: \ub3d9\ubd80 | 4\uc77c\ucc28: \uc11c\ubd80 | \uc2dc\uae30\uc640 \ube44\uc6a9 | \uc2dc\uc0ac\uc810 | \ucd9c\ucc98"
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "1 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": true,
+          "evidence": "5 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": true,
+          "evidence": "23 citation markers"
+        },
+        {
+          "text": "Report is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.74"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 12,
+        "failed": 0,
+        "total": 12,
+        "time_seconds": 72.1,
+        "tokens": 66980,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "solid-state-batteries.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": true,
+          "evidence": "title paragraph 'Solid-State Batteries: Current State of ' = 30.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": true,
+          "evidence": "body size distribution (pt): {15.0: 21}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": true,
+          "evidence": "all probed paragraphs use \ub9d1\uc740 \uace0\ub515"
+        },
+        {
+          "text": "Title and headings use a green main color",
+          "passed": true,
+          "evidence": "heading colors: [('548235', 8)]"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": true,
+          "evidence": "7 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": true,
+          "evidence": "heading list: Summary | Where the industry stands | Key players and progress | Risks and limits | Outlook | Takeaways | Sources"
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "1 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": true,
+          "evidence": "5 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": true,
+          "evidence": "16 citation markers"
+        },
+        {
+          "text": "Report is written in English",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.00"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.58,
+        "passed": 7,
+        "failed": 5,
+        "total": 12,
+        "time_seconds": 45.1,
+        "tokens": 56613,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "\uc0dd\uc131\ud615AI_\ucd5c\uc2e0\ub3d9\ud5a5_\ubcf4\uace0\uc11c.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": false,
+          "evidence": "title paragraph '\uc0dd\uc131\ud615 AI \ucd5c\uc2e0 \ub3d9\ud5a5 \ubcf4\uace0\uc11c' = 28.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": false,
+          "evidence": "body size distribution (pt): {28.0: 1, 11.0: 22, 16.0: 8}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": true,
+          "evidence": "all probed paragraphs use \ub9d1\uc740 \uace0\ub515"
+        },
+        {
+          "text": "Title and headings use a blue main color",
+          "passed": false,
+          "evidence": "heading colors: []"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": false,
+          "evidence": "0 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": false,
+          "evidence": "heading list: "
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "1 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": true,
+          "evidence": "8 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": true,
+          "evidence": "8 citation markers"
+        },
+        {
+          "text": "Report is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.67"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.58,
+        "passed": 7,
+        "failed": 5,
+        "total": 12,
+        "time_seconds": 37.4,
+        "tokens": 53330,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "jeju_3n4d_trip.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": false,
+          "evidence": "title paragraph '\uc81c\uc8fc\ub3c4 3\ubc15 4\uc77c \uc5ec\ud589 \uac00\uc774\ub4dc' = 28.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": false,
+          "evidence": "body size distribution (pt): {28.0: 1, 11.0: 12}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": true,
+          "evidence": "all probed paragraphs use \ub9d1\uc740 \uace0\ub515"
+        },
+        {
+          "text": "Title and headings use a red main color",
+          "passed": true,
+          "evidence": "heading colors: [('B71C1C', 6)]"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": true,
+          "evidence": "6 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": false,
+          "evidence": "heading list: 1. \uc5ec\ud589 \uac1c\uc694 | 2. \uc77c\uc790\ubcc4 \ucd94\ucc9c \uc77c\uc815 | 3. \uc8fc\uc694 \uba85\uc18c | 4. \ub9db\uc9d1\u00b7\uce74\ud398 | 5. \uc5ec\ud589 \ud301 | 6. \ucd9c\ucc98"
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "3 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": false,
+          "evidence": "4 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": false,
+          "evidence": "0 citation markers"
+        },
+        {
+          "text": "Report is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.77"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 8,
+        "failed": 4,
+        "total": 12,
+        "time_seconds": 36.6,
+        "tokens": 54734,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A .docx file was produced and opens with python-docx",
+          "passed": true,
+          "evidence": "solid_state_batteries_report.docx"
+        },
+        {
+          "text": "Title is 40px (30pt)",
+          "passed": false,
+          "evidence": "title paragraph 'Solid-State Batteries: Current State of ' = 26.0pt"
+        },
+        {
+          "text": "Body text is 20px (15pt)",
+          "passed": false,
+          "evidence": "body size distribution (pt): {11.0: 19}"
+        },
+        {
+          "text": "Font is \ub9d1\uc740 \uace0\ub515 for title and body",
+          "passed": false,
+          "evidence": "'Solid-State Batteries: Cu' ascii=Calibri eastAsia=None; 'Research report, November' ascii=Calibri eastAsia=None; 'Solid-state batteries (SS' ascii=Calibri eastAsia=None"
+        },
+        {
+          "text": "Title and headings use a green main color",
+          "passed": true,
+          "evidence": "heading colors: [('1B7F4B', 9)]"
+        },
+        {
+          "text": "Has at least 3 section headings",
+          "passed": true,
+          "evidence": "8 Heading-style paragraphs"
+        },
+        {
+          "text": "Has a summary section",
+          "passed": true,
+          "evidence": "heading list: Executive Summary | 1. Why Solid-State | 2. Industry Status in 2026 | 3. Key Players and Timelines | 4. Main Challenges | 5. Outlook | 6. Caveats | Sources"
+        },
+        {
+          "text": "Has at least one table",
+          "passed": true,
+          "evidence": "1 table(s)"
+        },
+        {
+          "text": "Lists at least 5 distinct source URLs",
+          "passed": true,
+          "evidence": "5 distinct URLs"
+        },
+        {
+          "text": "Uses inline [n] citations at least 3 times",
+          "passed": false,
+          "evidence": "0 citation markers"
+        },
+        {
+          "text": "Report is written in English",
+          "passed": true,
+          "evidence": "Hangul share of letters = 0.00"
+        },
+        {
+          "text": "No raw Markdown syntax in the text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 132.4,
+        "stddev": 68.5775,
+        "min": 72.1,
+        "max": 207.0
+      },
+      "tokens": {
+        "mean": 72680.6667,
+        "stddev": 5308.8138,
+        "min": 66980,
+        "max": 77483
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.61,
+        "stddev": 0.052,
+        "min": 0.58,
+        "max": 0.67
+      },
+      "time_seconds": {
+        "mean": 39.7,
+        "stddev": 4.6936,
+        "min": 36.6,
+        "max": 45.1
+      },
+      "tokens": {
+        "mean": 54892.3333,
+        "stddev": 1647.2171,
+        "min": 53330,
+        "max": 56613
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.39",
+      "time_seconds": "+92.7",
+      "tokens": "+17788"
+    }
+  },
+  "notes": []
+}

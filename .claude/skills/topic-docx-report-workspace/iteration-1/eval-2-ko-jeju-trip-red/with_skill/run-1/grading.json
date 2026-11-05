@@ -1,0 +1,70 @@
+{
+  "expectations": [
+    {
+      "text": "A .docx file was produced and opens with python-docx",
+      "passed": true,
+      "evidence": "제주-3박4일-여행.docx"
+    },
+    {
+      "text": "Title is 40px (30pt)",
+      "passed": true,
+      "evidence": "title paragraph '제주도 3박 4일 여행 정보' = 30.0pt"
+    },
+    {
+      "text": "Body text is 20px (15pt)",
+      "passed": true,
+      "evidence": "body size distribution (pt): {15.0: 23}"
+    },
+    {
+      "text": "Font is 맑은 고딕 for title and body",
+      "passed": true,
+      "evidence": "all probed paragraphs use 맑은 고딕"
+    },
+    {
+      "text": "Title and headings use a red main color",
+      "passed": true,
+      "evidence": "heading colors: [('C00000', 11)]"
+    },
+    {
+      "text": "Has at least 3 section headings",
+      "passed": true,
+      "evidence": "10 Heading-style paragraphs"
+    },
+    {
+      "text": "Has a summary section",
+      "passed": true,
+      "evidence": "heading list: 요약 | 추천 일정 개요 | 일차별 핵심 정보 | 1일차: 북부와 제주시 | 2일차: 남부와 한라산 | 3일차: 동부 | 4일차: 서부 | 시기와 비용 | 시사점 | 출처"
+    },
+    {
+      "text": "Has at least one table",
+      "passed": true,
+      "evidence": "1 table(s)"
+    },
+    {
+      "text": "Lists at least 5 distinct source URLs",
+      "passed": true,
+      "evidence": "5 distinct URLs"
+    },
+    {
+      "text": "Uses inline [n] citations at least 3 times",
+      "passed": true,
+      "evidence": "23 citation markers"
+    },
+    {
+      "text": "Report is written in Korean",
+      "passed": true,
+      "evidence": "Hangul share of letters = 0.74"
+    },
+    {
+      "text": "No raw Markdown syntax in the text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "total": 12,
+    "pass_rate": 1.0
+  }
+}

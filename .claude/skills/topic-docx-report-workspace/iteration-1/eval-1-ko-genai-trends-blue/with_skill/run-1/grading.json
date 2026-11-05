@@ -1,0 +1,70 @@
+{
+  "expectations": [
+    {
+      "text": "A .docx file was produced and opens with python-docx",
+      "passed": true,
+      "evidence": "생성형ai-최신동향.docx"
+    },
+    {
+      "text": "Title is 40px (30pt)",
+      "passed": true,
+      "evidence": "title paragraph '생성형 AI 최신 동향 보고서' = 30.0pt"
+    },
+    {
+      "text": "Body text is 20px (15pt)",
+      "passed": true,
+      "evidence": "body size distribution (pt): {15.0: 25}"
+    },
+    {
+      "text": "Font is 맑은 고딕 for title and body",
+      "passed": true,
+      "evidence": "all probed paragraphs use 맑은 고딕"
+    },
+    {
+      "text": "Title and headings use a blue main color",
+      "passed": true,
+      "evidence": "heading colors: [('2E75B6', 8)]"
+    },
+    {
+      "text": "Has at least 3 section headings",
+      "passed": true,
+      "evidence": "7 Heading-style paragraphs"
+    },
+    {
+      "text": "Has a summary section",
+      "passed": true,
+      "evidence": "heading list: 요약 | 1. 도입은 빠르지만 성과는 아직 갈린다 | 2. 에이전트와 코딩이 변화를 이끈다 | 3. 투자, 인프라, 국가 간 경쟁 | 4. 규제는 시행과 유예가 함께 진행된다 | 시사점 | 출처"
+    },
+    {
+      "text": "Has at least one table",
+      "passed": true,
+      "evidence": "1 table(s)"
+    },
+    {
+      "text": "Lists at least 5 distinct source URLs",
+      "passed": true,
+      "evidence": "8 distinct URLs"
+    },
+    {
+      "text": "Uses inline [n] citations at least 3 times",
+      "passed": true,
+      "evidence": "25 citation markers"
+    },
+    {
+      "text": "Report is written in Korean",
+      "passed": true,
+      "evidence": "Hangul share of letters = 0.63"
+    },
+    {
+      "text": "No raw Markdown syntax in the text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "total": 12,
+    "pass_rate": 1.0
+  }
+}

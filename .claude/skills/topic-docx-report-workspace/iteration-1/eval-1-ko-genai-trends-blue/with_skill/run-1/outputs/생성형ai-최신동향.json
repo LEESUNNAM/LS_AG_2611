@@ -1,0 +1,51 @@
+{
+  "title": "생성형 AI 최신 동향 보고서",
+  "color": "blue",
+  "blocks": [
+    {"type": "paragraph", "text": "작성일: 2026-11-05 · 조사 범위: 2025년 11월~2026년 9월 공개 자료 (스탠퍼드 AI Index, 맥킨지, 법률·언론 자료). 관점: 일반 독자를 위한 기술·시장·규제 개관."},
+    {"type": "heading", "text": "요약", "level": 1},
+    {"type": "bullets", "items": [
+      "스탠퍼드 AI Index 2026은 조직의 AI 도입률을 88%로 보고했고, 코딩 벤치마크 SWE-bench Verified 성능이 1년 만에 60%에서 100%에 가깝게 올랐다 [1].",
+      "맥킨지 2026 조사에서 AI로 이익(EBIT) 효과를 본다는 응답은 37%로 전년과 비슷했고, 대기업의 에이전트 확산 비율은 27%에서 40%로 늘었다 [2][3].",
+      "미국 민간 AI 투자는 2025년 2,859억 달러로 중국(124억 달러)의 23배 이상이며, 문서화된 AI 사고는 233건에서 362건으로 늘었다 [1].",
+      "EU는 AI Act의 고위험 AI 의무를 2027년 12월 2일 이후로 미루기로 잠정 합의했고 [4], 한국 AI 기본법은 2026년 1월 22일 시행되었으나 과태료는 최소 1년 유예된다 [5][6]."
+    ]},
+    {"type": "heading", "text": "1. 도입은 빠르지만 성과는 아직 갈린다", "level": 1},
+    {"type": "paragraph", "text": "스탠퍼드 HAI의 AI Index 2026은 2026년 3월까지의 데이터를 기준으로 조직 AI 도입률 88%, 생성형 AI의 3년 내 인구 도입률 53%를 제시했다 [1]. 미국 대학생의 80% 이상이 학업에 AI를 쓰는 것으로 나타났다 [1]."},
+    {"type": "paragraph", "text": "그러나 사용이 곧 성과는 아니다. 맥킨지는 AI가 EBIT에 기여했다고 답한 응답자가 37%로 1년 전과 거의 같고, 순이익의 5% 이상을 AI 덕분이라고 답하는 고성과 조직도 약 6%에서 정체했다고 밝혔다 [3]. 도입률 수치는 조사 대상에 따라 크게 다르다는 점도 유의해야 한다. 대기업 중심 조사는 높게 나오는 반면, 한 2차 자료가 인용한 미국 인구조사국 수치는 AI를 업무에 쓰는 미국 기업이 19.8%에 그친다고 한다 [7]."},
+    {"type": "heading", "text": "2. 에이전트와 코딩이 변화를 이끈다", "level": 1},
+    {"type": "paragraph", "text": "맥킨지에 따르면 매출 10억 달러 이상 대기업 중 한 개 이상의 기능에서 AI 에이전트를 확산 중인 비율은 27%에서 40%로 올랐지만, 중소 조직은 22%로 정체했다 [3]. 에이전트의 업무 수행 능력도 빠르게 개선되는 중이다. 컴퓨터 조작 벤치마크 OSWorld에서 에이전트 성공률은 약 12%에서 약 66%로 올랐으나 인간 기준선 72.35%에는 못 미친다 [1]."},
+    {"type": "paragraph", "text": "성능은 고르지 않다. 같은 보고서에서 최상위 모델이 아날로그 시계를 정확히 읽는 비율은 50.1%에 그쳤다 [1]. 즉 복잡한 코딩에서는 거의 만점 수준이어도 단순해 보이는 과제에서 여전히 흔들린다."},
+    {"type": "heading", "text": "3. 투자, 인프라, 국가 간 경쟁", "level": 1},
+    {"type": "paragraph", "text": "2025년 미국의 민간 AI 투자는 2,859억 달러로 중국 124억 달러, 유럽 209억 달러를 크게 앞섰다 [1]. 미국은 데이터센터 5,427곳을 보유해 2위 국가의 10배 이상이다 [1]. 모델 성능 격차는 좁아졌다. 2026년 3월 기준 미국 최상위 모델과 중국 최상위 모델의 Arena 점수는 1,503 대 1,464로 차이가 2.7%였다 [1]."},
+    {"type": "paragraph", "text": "한편 AI 연구자와 개발자의 미국 유입은 2017년 대비 89% 줄었다 [1]. 위험 측면에서는 문서화된 AI 사고가 2024년 233건에서 2025년 362건으로 늘었고, 전문가의 73%가 AI가 일에 긍정적일 것으로 보는 반면 일반 대중은 23%에 그쳐 인식 차이가 크다 [1]."},
+    {"type": "heading", "text": "4. 규제는 시행과 유예가 함께 진행된다", "level": 1},
+    {"type": "paragraph", "text": "EU에서는 2026년 5월 7일 디지털 옴니버스에 대한 잠정 합의가 이뤄졌다. 독립형 고위험 AI 의무는 2027년 12월 2일, 규제 제품에 내장된 고위험 AI는 2028년 8월 2일로 늦춰지고, 동의 없는 성적 콘텐츠를 만드는 앱은 2026년 12월 2일부터 금지된다 [4]. 최종 발효 시점은 자료마다 7월 말에서 8월 초로 달라 정확한 날짜는 확인이 필요하다 [8]."},
+    {"type": "paragraph", "text": "한국의 AI 기본법은 2026년 1월 22일 시행되었다 [5]. 정부는 과태료 부과를 최소 1년 이상 유예하는 계도기간을 두기로 했다 [5][6]. 고영향 AI는 에너지, 교통, 금융 등 10개 분야의 사람 개입 없는 자동화 시스템이 대상이고, 안전성 확보 의무는 누적 연산량 10의 26승 FLOPs 이상 초대형 모델에만 적용되는데 현재 해당 모델은 없다고 정부는 밝혔다 [5]."},
+    {"type": "table", "header": true, "rows": [
+      ["구분", "시점", "핵심 내용"],
+      ["EU 독립형 고위험 AI", "2027-12-02", "의무 적용 연기 [4]"],
+      ["EU 제품 내장 고위험 AI", "2028-08-02", "의무 적용 연기 [4]"],
+      ["EU 생성형 AI 표시 유예", "2026-12-02", "기존 출시 서비스 4개월 유예 [4]"],
+      ["한국 AI 기본법", "2026-01-22", "시행, 과태료 최소 1년 유예 [5][6]"]
+    ]},
+    {"type": "heading", "text": "시사점", "level": 1},
+    {"type": "bullets", "items": [
+      "도입 확대와 재무 성과 사이의 간극이 핵심 과제이므로, 도입 건수보다 EBIT 등 성과 지표로 AI 투자를 평가하는 것이 합리적이다.",
+      "에이전트는 대기업에서 먼저 확산 중이다. 중소 조직은 코딩 등 효과가 검증된 영역부터 시작하는 편이 안전하다.",
+      "규제 유예는 면제가 아니다. 한국과 EU 모두 의무 시점이 정해져 있으므로 계도기간에 표시·관리 체계를 준비해야 한다.",
+      "이 보고서의 수치는 대부분 조사 시점의 스냅샷이며, 조사 방식에 따라 도입률이 크게 달라질 수 있다."
+    ]},
+    {"type": "heading", "text": "출처", "level": 1},
+    {"type": "numbered", "items": [
+      "The 2026 AI Index Report, Stanford HAI (2026년 4월 발표, 페이지에 날짜 미표기). https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "The state of AI in 2026: On the road to ROI, McKinsey (2026, 조사 기간 2026-05-04~06-08은 검색 요약 기준). https://www.mckinsey.com/featured-insights/mckinsey-global-surveys/the-state-of-ai",
+      "Companies' financial value from AI holds firm in 2026, FM Magazine (2026-09-01). https://www.fm-magazine.com/news/2026/sep/companies-financial-value-from-ai-holds-firm-in-2026/",
+      "The EU's Digital Omnibus on AI: what the provisional agreement really changes, CMS (2026-05-15). https://cms.law/en/gbr/publication/the-eu-s-digital-omnibus-on-ai-what-the-provisional-agreement-really-changes",
+      "AI 기본법 시행 DAY-1 관련 기사, 한국경제 (2026-01-21). https://www.hankyung.com/article/202601202345i",
+      "AI 기본법 시행령 입법예고, 과태료 유예기간 1년, SBS Biz (2025-11-12). https://biz.sbs.co.kr/amp/article/20000271710",
+      "Generative AI statistics, HatchWorks (날짜 미확인, 2차 자료, 본문 미열람). https://hatchworks.com/blog/software-development/generative-ai-statistics/",
+      "EU Digital Omnibus on AI enters into force, Mondaq (2026년 8월 추정, 본문 미열람). https://www.mondaq.com/eu-digital-omnibus-on-ai-enters-into-force/1825722"
+    ]}
+  ]
+}

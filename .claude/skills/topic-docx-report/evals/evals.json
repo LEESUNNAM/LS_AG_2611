@@ -1,0 +1,26 @@
+{
+  "skill_name": "topic-docx-report",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ko-genai-trends-blue",
+      "prompt": "생성형 AI 최신 동향 보고서 만들어줘. 자료 조사해서 워드(docx) 파일로 저장해주고, 메인 컬러는 파랑으로 해줘.",
+      "expected_output": "Korean Word report on recent generative-AI trends with a summary, sectioned body, a table, and a numbered source list with real URLs; blue main color; title 40px, body 20px, 맑은 고딕.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "ko-jeju-trip-red",
+      "prompt": "제주도 3박 4일 여행 정보 문서 만들어줘. 인터넷에서 조사해서 docx로 출력하고, 색상은 빨강 계열로 부탁해.",
+      "expected_output": "Korean Word travel-information document for a 3-night 4-day Jeju trip (itinerary, costs, timing, tips) with a table and sources; red main color; required type sizes and font.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "en-solid-state-batteries-green",
+      "prompt": "Research the current state of solid-state batteries and write it up as a Word report. Use green as the main color.",
+      "expected_output": "English Word report on solid-state batteries (players, timelines, technical hurdles) with summary, table, and sources with real URLs; green main color; required type sizes and font.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "expectations": [
+    {
+      "text": "A .docx file was produced and opens with python-docx",
+      "passed": true,
+      "evidence": "solid-state-batteries.docx"
+    },
+    {
+      "text": "Title is 40px (30pt)",
+      "passed": true,
+      "evidence": "title paragraph 'Solid-State Batteries: Current State of ' = 30.0pt"
+    },
+    {
+      "text": "Body text is 20px (15pt)",
+      "passed": true,
+      "evidence": "body size distribution (pt): {15.0: 21}"
+    },
+    {
+      "text": "Font is 맑은 고딕 for title and body",
+      "passed": true,
+      "evidence": "all probed paragraphs use 맑은 고딕"
+    },
+    {
+      "text": "Title and headings use a green main color",
+      "passed": true,
+      "evidence": "heading colors: [('548235', 8)]"
+    },
+    {
+      "text": "Has at least 3 section headings",
+      "passed": true,
+      "evidence": "7 Heading-style paragraphs"
+    },
+    {
+      "text": "Has a summary section",
+      "passed": true,
+      "evidence": "heading list: Summary | Where the industry stands | Key players and progress | Risks and limits | Outlook | Takeaways | Sources"
+    },
+    {
+      "text": "Has at least one table",
+      "passed": true,
+      "evidence": "1 table(s)"
+    },
+    {
+      "text": "Lists at least 5 distinct source URLs",
+      "passed": true,
+      "evidence": "5 distinct URLs"
+    },
+    {
+      "text": "Uses inline [n] citations at least 3 times",
+      "passed": true,
+      "evidence": "16 citation markers"
+    },
+    {
+      "text": "Report is written in English",
+      "passed": true,
+      "evidence": "Hangul share of letters = 0.00"
+    },
+    {
+      "text": "No raw Markdown syntax in the text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "total": 12,
+    "pass_rate": 1.0
+  }
+}
