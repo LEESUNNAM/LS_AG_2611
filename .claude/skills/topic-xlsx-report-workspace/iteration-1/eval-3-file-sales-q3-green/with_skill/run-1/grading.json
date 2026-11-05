@@ -1,0 +1,95 @@
+{
+  "expectations": [
+    {
+      "text": "An .xlsx file was produced and opens with openpyxl",
+      "passed": true,
+      "evidence": "sales_q3_분석.xlsx"
+    },
+    {
+      "text": "Excel opens the file and recalculates it",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "A data sheet has an ID first column numbered 1..n",
+      "passed": true,
+      "evidence": "매출: ids=[1, 2, 3, 4, 5, 6]"
+    },
+    {
+      "text": "Header cells are bold",
+      "passed": true,
+      "evidence": "11/11 bold"
+    },
+    {
+      "text": "Body text is 10pt",
+      "passed": true,
+      "evidence": "size distribution: {10.0: 64}"
+    },
+    {
+      "text": "Body font is 맑은 고딕",
+      "passed": true,
+      "evidence": "font distribution: {'맑은 고딕': 63, 'Calibri': 1}"
+    },
+    {
+      "text": "Header fill uses a green main color",
+      "passed": true,
+      "evidence": "header fills: {'548235': 11}"
+    },
+    {
+      "text": "At least one chart exists",
+      "passed": true,
+      "evidence": "[('매출', 'BarChart')]"
+    },
+    {
+      "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "Text is written in Korean",
+      "passed": true,
+      "evidence": "Hangul share = 0.95"
+    },
+    {
+      "text": "No raw Markdown syntax in cells",
+      "passed": true,
+      "evidence": "clean"
+    },
+    {
+      "text": "The original input file is unchanged",
+      "passed": true,
+      "evidence": "sha256 matches"
+    },
+    {
+      "text": "The correct grand total 12,580 appears",
+      "passed": true,
+      "evidence": "found"
+    },
+    {
+      "text": "Notes that Busan's August value is stored as text",
+      "passed": true,
+      "evidence": "mentioned"
+    },
+    {
+      "text": "Shows or mentions the file's understated total 11,330 next to the correct one",
+      "passed": true,
+      "evidence": "11,330 present=True"
+    },
+    {
+      "text": "All six regions are kept in the workbook",
+      "passed": true,
+      "evidence": "found ['서울', '부산', '대구', '인천', '광주', '대전']"
+    },
+    {
+      "text": "Total/blank rows are not numbered with an ID",
+      "passed": true,
+      "evidence": "ok"
+    }
+  ],
+  "summary": {
+    "passed": 17,
+    "failed": 0,
+    "total": 17,
+    "pass_rate": 1.0
+  }
+}

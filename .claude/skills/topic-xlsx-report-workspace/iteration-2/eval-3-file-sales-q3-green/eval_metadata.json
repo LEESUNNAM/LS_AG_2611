@@ -1,0 +1,24 @@
+{
+  "eval_id": 3,
+  "eval_name": "file-sales-q3-green",
+  "prompt": "<input>sales_q3.xlsx 파일을 분석해서 요약 엑셀 파일로 만들어줘. 메인 컬러는 초록으로 해줘.",
+  "assertions": [
+    "An .xlsx file was produced and opens with openpyxl",
+    "Excel opens the file and recalculates it",
+    "A data sheet has an ID first column numbered 1..n",
+    "Header cells are bold",
+    "Body text is 10pt",
+    "Body font is 맑은 고딕",
+    "Header fill uses a green main color",
+    "At least one chart exists",
+    "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+    "Text is written in Korean",
+    "No raw Markdown syntax in cells",
+    "The original input file is unchanged",
+    "The correct grand total 12,580 appears",
+    "Notes that Busan's August value is stored as text",
+    "Shows or mentions the file's understated total 11,330 next to the correct one",
+    "All six regions are kept in the workbook",
+    "Total/blank rows are not numbered with an ID"
+  ]
+}

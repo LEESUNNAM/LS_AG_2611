@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "An .xlsx file was produced and opens with openpyxl",
+      "passed": true,
+      "evidence": "smartphone-shipments-2025.xlsx"
+    },
+    {
+      "text": "Excel opens the file and recalculates it",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "A data sheet has an ID first column numbered 1..n",
+      "passed": true,
+      "evidence": "IDC Vendor Data: ids=[1, 2, 3, 4, 5, 6]; Cross-check: ids=[1, 2, 3, 4, 5]"
+    },
+    {
+      "text": "Header cells are bold",
+      "passed": true,
+      "evidence": "15/15 bold"
+    },
+    {
+      "text": "Body text is 10pt",
+      "passed": true,
+      "evidence": "size distribution: {10.0: 85}"
+    },
+    {
+      "text": "Body font is 맑은 고딕",
+      "passed": true,
+      "evidence": "font distribution: {'맑은 고딕': 85}"
+    },
+    {
+      "text": "Header fill uses a red main color",
+      "passed": true,
+      "evidence": "header fills: {'C00000': 15}"
+    },
+    {
+      "text": "At least one chart exists",
+      "passed": true,
+      "evidence": "[('IDC Vendor Data', 'PieChart'), ('IDC Vendor Data', 'BarChart'), ('IDC Vendor Data', 'BarChart'), ('Cross-check', 'BarChart'), ('Cross-check', 'BarChart')]"
+    },
+    {
+      "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "Text is written in English",
+      "passed": true,
+      "evidence": "Hangul share = 0.00"
+    },
+    {
+      "text": "No raw Markdown syntax in cells",
+      "passed": true,
+      "evidence": "clean"
+    },
+    {
+      "text": "Has a summary sheet",
+      "passed": true,
+      "evidence": "['IDC Vendor Data', 'Cross-check', 'Summary', 'Sources']"
+    },
+    {
+      "text": "Has a sources sheet with at least 5 distinct URLs",
+      "passed": false,
+      "evidence": "4 URLs on ['Sources']"
+    },
+    {
+      "text": "Uses [n] source markers at least 3 times",
+      "passed": true,
+      "evidence": "35 markers"
+    },
+    {
+      "text": "Numbers in data sheets are stored as numbers, not text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 14,
+    "failed": 1,
+    "total": 15,
+    "pass_rate": 0.93
+  }
+}

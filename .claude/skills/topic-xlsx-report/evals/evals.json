@@ -1,0 +1,26 @@
+{
+  "skill_name": "topic-xlsx-report",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ko-ev-sales-blue",
+      "prompt": "한국 전기차 판매 동향을 조사해서 엑셀 파일로 정리해줘. 메인 컬러는 파랑으로 해줘.",
+      "expected_output": "Korean workbook on electric-vehicle sales in Korea: a data sheet with period/unit-labelled numbers and [n] markers, a 요약 sheet, a 출처 sheet with real URLs; ID column, bold headers, 10pt body, at least one chart; blue main color.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "en-smartphone-share-red",
+      "prompt": "Research global smartphone shipments and market share by vendor for the latest full year and put it in an Excel workbook. Use red as the main color.",
+      "expected_output": "English workbook with vendor shares (stored as fractions, percent formatted), shipments, a summary sheet and a sources sheet with real URLs; a pie or bar chart; red main color.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "file-sales-q3-green",
+      "prompt": "{FILE} 파일을 분석해서 요약 엑셀 파일로 만들어줘. 메인 컬러는 초록으로 해줘.",
+      "expected_output": "New workbook (original untouched) with the tidied data and an analysis sheet. The analysis must catch that Busan's August value is stored as text, so the file's own 분기합계 and 합계 formulas understate the total: the true grand total is 12,580 while the file's formulas give 11,330. Blank row and total row handled; a chart; green main color.",
+      "files": ["evals/files/sales_q3.xlsx"]
+    }
+  ]
+}

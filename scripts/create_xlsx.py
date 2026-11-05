@@ -53,13 +53,14 @@ DATA = [
 ]
 
 # Header vocabulary used to recognise columns (compared in lower case).
-ID_HEADERS = {"id", "no", "번호"}
+ID_HEADERS = {"id", "no", "번호", "순위", "rank", "idx", "index", "seq", "#"}
 TITLE_HEADERS = {"제목", "항목명", "구분", "title", "subject"}
 QUOTE_HEADERS = {"인용구", "인용문", "quote", "quotation"}
 TOTAL_LABELS = {"합계", "총계", "소계", "계", "total", "sum", "subtotal"}
 SHARE_WORDS = ("점유율", "비율", "구성비", "share")
-RATE_WORDS = ("성장률", "증가율", "증감률", "변화율", "달성률", "점유율", "비율",
-              "전년 대비", "전월 대비", "전년대비", "전월대비", "growth rate", "change rate")
+RATE_WORDS = ("성장률", "증가율", "증감률", "변화율", "달성률", "점유율", "비율", "비중", "구성비",
+              "전년 대비", "전월 대비", "전년대비", "전월대비", "%")
+RATE_EN = re.compile(r"\b(rate|share|growth|yoy|mom|qoq|ratio|percent|percentage|pct)\b", re.I)
 TIME_HEADERS = {"월", "년", "연도", "년도", "분기", "기간", "날짜", "일자",
                 "date", "month", "year", "quarter", "period"}
 TIME_VALUE = re.compile(
@@ -131,7 +132,24 @@ def is_total_header(h):
 
 def is_rate_header(h):
     n = _norm(h)
-    return any(w in n for w in RATE_WORDS) or bool(re.search(r"\brate\b", n))
+    return any(w in n for w in RATE_WORDS) or bool(RATE_EN.search(n))
+
+
+def is_id_header(h):
+    """ID-like headers: ID, No., #, 번호, 순위, Rank ... (punctuation is ignored)."""
+    n = _norm(h)
+    return n in ID_HEADERS or re.sub(r"[\s.:()]+", "", n) in ID_HEADERS
+
+
+def _is_running_index(values):
+    """True for 1, 2, 3 ... (or 0, 1, 2 ...): a row counter, not a measurement."""
+    if len(values) < 3 or values[0] not in (0, 1) or not all(float(v).is_integer() for v in values):
+        return False
+    return all(b - a == 1 for a, b in zip(values, values[1:]))
+
+
+def _has_hangul(text):
+    return bool(re.search(r"[가-힣]", text))
 
 
 def is_share_header(h):
@@ -369,7 +387,7 @@ def detect_numeric_columns(ws):
         if not isinstance(h, str) or _blank(h):
             continue
         h = h.strip()
-        if _norm(h) in ID_HEADERS | QUOTE_HEADERS or is_total_header(h):
+        if is_id_header(h) or _norm(h) in QUOTE_HEADERS or is_total_header(h):
             continue
         cells = [ws.cell(r, c).value for r in rows]
         filled = [v for v in cells if not _blank(v)]
@@ -377,8 +395,9 @@ def detect_numeric_columns(ws):
             continue
         nums = [v for v in filled if to_number(v) is not None]
         formulas = [v for v in filled if _is_formula(v)]
+        running = len(nums) == len(filled) and _is_running_index([to_number(v) for v in nums])
         cols.append({
-            "col": c, "header": h, "rate": is_rate_header(h), "time": _time_like(h, cells),
+            "col": c, "header": h, "rate": is_rate_header(h), "time": _time_like(h, cells), "index": running,
             "nums": len(nums), "formulas": len(formulas),
             "texts": len(filled) - len(nums) - len(formulas), "n": len(filled),
         })
@@ -391,7 +410,7 @@ def detect_numeric_columns(ws):
 
     values, rates = [], []
     for x in cols:
-        if x is category or x["time"]:
+        if x is category or x["time"] or x["index"]:
             continue
         # Formula cells have no stored result, so only rate columns (usually
         # formulas such as =C3/C2-1) may rely on them.
@@ -520,20 +539,32 @@ def create_chart_if_needed(ws):
     values, rates = list(info["values"]), list(info["rates"])
     plans = []  # (cols, kind, title, y_title)
 
+    ko = _has_hangul(cat_header + "".join(h for _c, h in values + rates))  # title language
+
+    def title_for(cols, more=False):
+        if ko:
+            return f"{cat_header}별 {'·'.join(h for _c, h in cols[:3])}{' 등' if more else ''} {verb}"
+        return f"{', '.join(h for _c, h in cols[:3])}{' etc.' if more else ''} by {cat_header}"
+
     for col in [x for x in rates if is_share_header(x[1])]:
         nums = [to_number(ws.cell(r, col[0]).value) for r in info["rows"]]
         total = sum(n for n in nums if n is not None)
         if len(info["rows"]) <= 7 and (0.98 <= total <= 1.02 or 98 <= total <= 102):
-            plans.append(([col], "pie", f"{col[1]} 구성비", ""))
+            plans.append(([col], "pie", f"{col[1]} 구성비" if ko else f"{col[1]} breakdown", ""))
             rates.remove(col)
             break
-    if rates:
-        names = "·".join(h for _c, h in rates[:3])
-        plans.append((rates, kind, f"{cat_header}별 {names} {verb}", "비율"))
+    # Rates stored as fractions (0.19) and as percent numbers (3.5) differ by a factor
+    # of 100, so each group gets its own chart.
+    fractions, percents = [], []
+    for col in rates:
+        mags = [abs(n) for n in (to_number(ws.cell(r, col[0]).value) for r in info["rows"]) if n is not None]
+        (percents if mags and max(mags) > 1.5 else fractions).append(col)
+    for group in (fractions, percents):
+        if group:
+            plans.append((group, kind, title_for(group), "비율" if ko else "Rate"))
     if values:
-        names = "·".join(h for _c, h in values[:3]) + (" 등" if len(values) > 3 else "")
-        plans.append((values, kind, f"{cat_header}별 {names} {verb}",
-                      values[0][1] if len(values) == 1 else "수치"))
+        plans.append((values, kind, title_for(values, len(values) > 3),
+                      values[0][1] if len(values) == 1 else ("수치" if ko else "Value")))
 
     existing = _chart_refs(ws.parent)
     for cols, k, title, y_title in plans:

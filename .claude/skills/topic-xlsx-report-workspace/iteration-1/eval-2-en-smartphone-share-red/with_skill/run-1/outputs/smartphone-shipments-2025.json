@@ -1,0 +1,61 @@
+{
+  "title": "Global Smartphone Shipments and Vendor Share, 2025",
+  "color": "red",
+  "sheets": [
+    {"name": "IDC Vendor Data", "title": "Worldwide smartphone shipments by vendor, calendar year 2025 (IDC preliminary)",
+     "headers": ["Vendor", "Shipments 2025 (M units)", "Market share 2025", "YoY growth 2025", "Source"],
+     "rows": [
+       ["Apple", 247.8, 0.197, 0.063, "[1][2]"],
+       ["Samsung", 241.2, 0.191, 0.079, "[1][2]"],
+       ["Xiaomi", 165.3, 0.131, -0.019, "[1][2]"],
+       ["vivo", 103.9, 0.082, 0.027, "[1][2]"],
+       ["OPPO", 102.0, 0.081, -0.027, "[1]"],
+       ["Others", 400.0, 0.317, -0.013, "[1][2]"]
+     ],
+     "formats": {"Shipments 2025 (M units)": "#,##0.0"},
+     "notes": ["Single research firm (IDC); [1] and [2] report the same IDC release, so they count as one source.",
+               "OPPO YoY growth conflicts: -2.7% in [1], -1.3% in [2]; the value from [1] is shown. Transsion is not broken out by IDC in these articles; it is included in Others."]},
+    {"name": "Share by Source", "title": "Full-year 2025 market share by vendor, by research firm",
+     "headers": ["Vendor", "IDC share", "Counterpoint share", "Smart Analytics Global share", "Source"],
+     "rows": [
+       ["Apple", 0.197, 0.20, 0.193, "[1][3][4][5]"],
+       ["Samsung", 0.191, 0.19, null, "[1][3][4][5]"],
+       ["Xiaomi", 0.131, 0.13, null, "[1][3][4][5]"]
+     ],
+     "notes": ["Counterpoint Samsung share: 19% in [3] and [5] (inferred as one point below Apple), but 18% in one passage of [4]; 19% is shown. Counterpoint shares are rounded to whole percent.",
+               "Blank cell means the firm's figure was not found in the pages read. Omdia [6][7] gave rankings (Apple, Samsung, Xiaomi) and a 1.25 billion total but no full-year vendor shares."]},
+    {"name": "Apple Units by Source", "title": "Apple full-year 2025 smartphone shipments, by research firm",
+     "headers": ["Research firm", "Apple shipments 2025 (M units)", "Total market 2025 (M units)", "Source"],
+     "rows": [
+       ["IDC", 247.8, 1260.3, "[1]"],
+       ["Smart Analytics Global", 242.8, 1260, "[8]"],
+       ["Omdia", 240.6, 1250, "[6][7]"]
+     ],
+     "formats": {"Apple shipments 2025 (M units)": "#,##0.0", "Total market 2025 (M units)": "#,##0"},
+     "notes": ["Firms use different methods, so Apple's volume differs by up to 7.2 million units across sources. SAG total is stated as about 1,260 million; Omdia total as about 1.25 billion."]},
+    {"name": "Summary", "id": false, "headers": ["Item", "Content"],
+     "rows": [
+       ["Scope", "Global smartphone shipments and vendor share for calendar year 2025 (latest full year as of November 2026). Figures were published January 2026; IDC data is preliminary."],
+       ["Finding 1", "Apple was the world's largest smartphone vendor in 2025 in every tracker read: 247.8M units and 19.7% share per IDC [1], about 20% per Counterpoint [3], 240.6M units per Omdia [6]."],
+       ["Finding 2", "Samsung was a close second: 241.2M units and 19.1% per IDC [1]; the Apple lead is only about 6.6M units [1]."],
+       ["Finding 3", "Xiaomi held third place at about 13% (165.3M units per IDC [1]), with shipments down 1.9% [1]."],
+       ["Finding 4", "The market totaled about 1.25 to 1.26 billion units, up roughly 2% year on year [1][3][6][8]."],
+       ["Top 3 combined share (IDC)", "=SUM('IDC Vendor Data'!C2:C4)"],
+       ["Sum of vendor shipments (M units, IDC)", "=SUM('IDC Vendor Data'!B2:B7)"],
+       ["Apple lead over Samsung (M units, IDC)", "='IDC Vendor Data'!B2-'IDC Vendor Data'!B3"],
+       ["Caveat 1", "Shares and units differ by research firm (methodology, preliminary data). Apple units range 240.6M to 247.8M across IDC, SAG and Omdia."],
+       ["Caveat 2", "Only IDC gave a full vendor table in the pages read; Counterpoint gave rounded shares for three vendors; Omdia and SAG gave limited full-year figures. Transsion has no full-year 2025 figure here."]
+     ]},
+    {"name": "Sources", "id": false, "headers": ["No.", "Title", "Publisher", "Date", "URL", "Read"],
+     "rows": [
+       [1, "IDC: Smartphone shipments up 2.3% in Q4 2025, Apple is the clear winner (IDC data)", "GSMArena", "2026-01-14", "https://m.gsmarena.com/idc_smartphone_shipments_up_23_in_q4_2025_apple_is_the_clear_winner_-news-71096.php", "Read in full"],
+       [2, "Apple wins 2025 in terms of smartphone sales but Samsung is close second (IDC data)", "Android Headlines", "2026-01-15", "https://www.androidheadlines.com/2026/01/apple-wins-2025-in-terms-of-smartphone-sales-but-samsung-is-close-second.html", "Read in full"],
+       [3, "Apple leads global smartphone market with 20% share in 2025, says Counterpoint (Reuters)", "The Star (Malaysia)", "2026-01-12", "https://www.thestar.com.my/tech/tech-news/2026/01/12/apple-leads-global-smartphone-market-with-20-share-in-2025-says-counterpoint", "Read in full"],
+       [4, "Apple beats Samsung to become 2025's top global smartphone company (Counterpoint data)", "SamMobile", "2026-01-12", "https://www.sammobile.com/news/apple-beats-samsung-to-become-2025s-top-global-smartphone-company/", "Read in full"],
+       [5, "Digitimes report on 2025 smartphone shipments (Counterpoint data)", "DIGITIMES", "2026-01-14", "https://apps.digitimes.com/news/a20260114PD203.html?chid=12", "Read in full"],
+       [6, "Global iPhone shipments grew 7% to 240.6 million units in 2025 (Omdia data)", "MacTech", "2026-01-29", "https://www.mactech.com/2026/01/29/global-iphone-shipments-grew-7-to-240-6-million-units-in-2025", "Read in full"],
+       [7, "Global smartphone shipments rise 4% in Q4 2025, led by Apple (Omdia data)", "Evertiq", "2026-01-15", "https://evertiq.com/news/2026-01-15-global-smartphone-shipments-rise-4-in-q4-2025-led-by-apple", "Read in full"],
+       [8, "iPhone ASP taps US$1000 mark for the first time in Q4 2025 (Smart Analytics Global data)", "MacTech", "2026-01-30", "https://www.mactech.com/2026/01/30/iphone-asp-tapped-us1000-mark-for-the-first-time-in-quarter-four-of-2025/amp/", "Read in full"]
+     ]}
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "metadata": {
+    "skill_name": "topic-xlsx-report",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-11-05T05:48:53Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 15,
+        "failed": 0,
+        "total": 15,
+        "time_seconds": 80.5,
+        "tokens": 70141,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "ko-ev-sales.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": true,
+          "evidence": "\uad6d\uc0b0\u00b7\uc218\uc785 \uad6c\uc131: ids=[1, 2]; \uc81c\uc870\uc0ac\ubcc4 \ud310\ub9e4: ids=[1, 2, 3]; \uc218\uc785 \ube0c\ub79c\ub4dc\ubcc4: ids=[1, 2, 3, 4, 5, 6, 7]"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "13/13 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": true,
+          "evidence": "size distribution: {10.0: 54, None: 2}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": true,
+          "evidence": "font distribution: {'\ub9d1\uc740 \uace0\ub515': 50, 'Calibri': 6}"
+        },
+        {
+          "text": "Header fill uses a blue main color",
+          "passed": true,
+          "evidence": "header fills: {'2E75B6': 13}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('\uad6d\uc0b0\u00b7\uc218\uc785 \uad6c\uc131', 'BarChart'), ('\uc81c\uc870\uc0ac\ubcc4 \ud310\ub9e4', 'BarChart'), ('\uc218\uc785 \ube0c\ub79c\ub4dc\ubcc4', 'BarChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "Text is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share = 0.51"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "Has a summary sheet",
+          "passed": true,
+          "evidence": "['\uad6d\uc0b0\u00b7\uc218\uc785 \uad6c\uc131', '\uc81c\uc870\uc0ac\ubcc4 \ud310\ub9e4', '\uc218\uc785 \ube0c\ub79c\ub4dc\ubcc4', '\uc694\uc57d', '\ucd9c\ucc98']"
+        },
+        {
+          "text": "Has a sources sheet with at least 5 distinct URLs",
+          "passed": true,
+          "evidence": "5 URLs on ['\ucd9c\ucc98']"
+        },
+        {
+          "text": "Uses [n] source markers at least 3 times",
+          "passed": true,
+          "evidence": "35 markers"
+        },
+        {
+          "text": "Numbers in data sheets are stored as numbers, not text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.93,
+        "passed": 14,
+        "failed": 1,
+        "total": 15,
+        "time_seconds": 104.2,
+        "tokens": 71319,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "smartphone-shipments-2025.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": true,
+          "evidence": "IDC Vendor Data: ids=[1, 2, 3, 4, 5, 6]; Share by Source: ids=[1, 2, 3]; Apple Units by Source: ids=[1, 2, 3]"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "17/17 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": true,
+          "evidence": "size distribution: {10.0: 72}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": true,
+          "evidence": "font distribution: {'\ub9d1\uc740 \uace0\ub515': 67, 'Calibri': 5}"
+        },
+        {
+          "text": "Header fill uses a red main color",
+          "passed": true,
+          "evidence": "header fills: {'C00000': 17}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('IDC Vendor Data', 'BarChart'), ('Share by Source', 'BarChart'), ('Apple Units by Source', 'BarChart'), ('Sources', 'LineChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": false,
+          "evidence": "[\"chart on 'IDC Vendor Data' mixes rate and value series\", \"chart on sources sheet 'Sources'\", \"series 'No.' on 'Sources' is an ID/rank column\"]"
+        },
+        {
+          "text": "Text is written in English",
+          "passed": true,
+          "evidence": "Hangul share = 0.00"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "Has a summary sheet",
+          "passed": true,
+          "evidence": "['IDC Vendor Data', 'Share by Source', 'Apple Units by Source', 'Summary', 'Sources']"
+        },
+        {
+          "text": "Has a sources sheet with at least 5 distinct URLs",
+          "passed": true,
+          "evidence": "8 URLs on ['Sources']"
+        },
+        {
+          "text": "Uses [n] source markers at least 3 times",
+          "passed": true,
+          "evidence": "48 markers"
+        },
+        {
+          "text": "Numbers in data sheets are stored as numbers, not text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 17,
+        "failed": 0,
+        "total": 17,
+        "time_seconds": 38.3,
+        "tokens": 60462,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "sales_q3_\ubd84\uc11d.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": true,
+          "evidence": "\ub9e4\ucd9c: ids=[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "11/11 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": true,
+          "evidence": "size distribution: {10.0: 64}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": true,
+          "evidence": "font distribution: {'\ub9d1\uc740 \uace0\ub515': 63, 'Calibri': 1}"
+        },
+        {
+          "text": "Header fill uses a green main color",
+          "passed": true,
+          "evidence": "header fills: {'548235': 11}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('\ub9e4\ucd9c', 'BarChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "Text is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share = 0.95"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "The original input file is unchanged",
+          "passed": true,
+          "evidence": "sha256 matches"
+        },
+        {
+          "text": "The correct grand total 12,580 appears",
+          "passed": true,
+          "evidence": "found"
+        },
+        {
+          "text": "Notes that Busan's August value is stored as text",
+          "passed": true,
+          "evidence": "mentioned"
+        },
+        {
+          "text": "Shows or mentions the file's understated total 11,330 next to the correct one",
+          "passed": true,
+          "evidence": "11,330 present=True"
+        },
+        {
+          "text": "All six regions are kept in the workbook",
+          "passed": true,
+          "evidence": "found ['\uc11c\uc6b8', '\ubd80\uc0b0', '\ub300\uad6c', '\uc778\ucc9c', '\uad11\uc8fc', '\ub300\uc804']"
+        },
+        {
+          "text": "Total/blank rows are not numbered with an ID",
+          "passed": true,
+          "evidence": "ok"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 12,
+        "failed": 3,
+        "total": 15,
+        "time_seconds": 54.2,
+        "tokens": 58445,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "korea_ev_sales_trend.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": false,
+          "evidence": "no ID header in column A"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "7/7 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": false,
+          "evidence": "size distribution: {None: 27}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": true,
+          "evidence": "font distribution: {'\ub9d1\uc740 \uace0\ub515': 27}"
+        },
+        {
+          "text": "Header fill uses a blue main color",
+          "passed": true,
+          "evidence": "header fills: {'1F4E9E': 7}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('\uc5f0\ub3c4\ubcc4', 'BarChart'), ('\ube0c\ub79c\ub4dc\ubcc4', 'PieChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "Text is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share = 0.39"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "Has a summary sheet",
+          "passed": true,
+          "evidence": "['\uc694\uc57d', '\uc5f0\ub3c4\ubcc4', '\ube0c\ub79c\ub4dc\ubcc4', '\ucd9c\ucc98']"
+        },
+        {
+          "text": "Has a sources sheet with at least 5 distinct URLs",
+          "passed": true,
+          "evidence": "5 URLs on ['\ucd9c\ucc98']"
+        },
+        {
+          "text": "Uses [n] source markers at least 3 times",
+          "passed": false,
+          "evidence": "0 markers"
+        },
+        {
+          "text": "Numbers in data sheets are stored as numbers, not text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.73,
+        "passed": 11,
+        "failed": 4,
+        "total": 15,
+        "time_seconds": 100.6,
+        "tokens": 63531,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "smartphone_shipments_2025.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": false,
+          "evidence": "no ID header in column A"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "11/11 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": false,
+          "evidence": "size distribution: {None: 13, 11.0: 40}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": false,
+          "evidence": "font distribution: {None: 13, 'Calibri': 40}"
+        },
+        {
+          "text": "Header fill uses a red main color",
+          "passed": true,
+          "evidence": "header fills: {'C00000': 11}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('Vendor Data', 'BarChart'), ('Q4 2025 Share', 'PieChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "Text is written in English",
+          "passed": true,
+          "evidence": "Hangul share = 0.00"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "Has a summary sheet",
+          "passed": true,
+          "evidence": "['Summary', 'Vendor Data', 'Q4 2025 Share', 'Sources']"
+        },
+        {
+          "text": "Has a sources sheet with at least 5 distinct URLs",
+          "passed": true,
+          "evidence": "5 URLs on ['Sources']"
+        },
+        {
+          "text": "Uses [n] source markers at least 3 times",
+          "passed": false,
+          "evidence": "0 markers"
+        },
+        {
+          "text": "Numbers in data sheets are stored as numbers, not text",
+          "passed": true,
+          "evidence": "clean"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.88,
+        "passed": 15,
+        "failed": 2,
+        "total": 17,
+        "time_seconds": 43.1,
+        "tokens": 55707,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "An .xlsx file was produced and opens with openpyxl",
+          "passed": true,
+          "evidence": "sales_q3_summary.xlsx"
+        },
+        {
+          "text": "Excel opens the file and recalculates it",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "A data sheet has an ID first column numbered 1..n",
+          "passed": false,
+          "evidence": "no ID header in column A"
+        },
+        {
+          "text": "Header cells are bold",
+          "passed": true,
+          "evidence": "6/6 bold"
+        },
+        {
+          "text": "Body text is 10pt",
+          "passed": true,
+          "evidence": "size distribution: {10.0: 38}"
+        },
+        {
+          "text": "Body font is \ub9d1\uc740 \uace0\ub515",
+          "passed": true,
+          "evidence": "font distribution: {'\ub9d1\uc740 \uace0\ub515': 38}"
+        },
+        {
+          "text": "Header fill uses a green main color",
+          "passed": true,
+          "evidence": "header fills: {'2E7D32': 6}"
+        },
+        {
+          "text": "At least one chart exists",
+          "passed": true,
+          "evidence": "[('\uc694\uc57d', 'BarChart'), ('\uc694\uc57d', 'LineChart')]"
+        },
+        {
+          "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+          "passed": true,
+          "evidence": "ok"
+        },
+        {
+          "text": "Text is written in Korean",
+          "passed": true,
+          "evidence": "Hangul share = 0.97"
+        },
+        {
+          "text": "No raw Markdown syntax in cells",
+          "passed": true,
+          "evidence": "clean"
+        },
+        {
+          "text": "The original input file is unchanged",
+          "passed": true,
+          "evidence": "sha256 matches"
+        },
+        {
+          "text": "The correct grand total 12,580 appears",
+          "passed": true,
+          "evidence": "found"
+        },
+        {
+          "text": "Notes that Busan's August value is stored as text",
+          "passed": true,
+          "evidence": "mentioned"
+        },
+        {
+          "text": "Shows or mentions the file's understated total 11,330 next to the correct one",
+          "passed": false,
+          "evidence": "11,330 present=False"
+        },
+        {
+          "text": "All six regions are kept in the workbook",
+          "passed": true,
+          "evidence": "found ['\uc11c\uc6b8', '\ubd80\uc0b0', '\ub300\uad6c', '\uc778\ucc9c', '\uad11\uc8fc', '\ub300\uc804']"
+        },
+        {
+          "text": "Total/blank rows are not numbered with an ID",
+          "passed": true,
+          "evidence": "ok"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9767,
+        "stddev": 0.0404,
+        "min": 0.93,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 74.3333,
+        "stddev": 33.38,
+        "min": 38.3,
+        "max": 104.2
+      },
+      "tokens": {
+        "mean": 67307.3333,
+        "stddev": 5957.4208,
+        "min": 60462,
+        "max": 71319
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.8033,
+        "stddev": 0.0751,
+        "min": 0.73,
+        "max": 0.88
+      },
+      "time_seconds": {
+        "mean": 65.9667,
+        "stddev": 30.5025,
+        "min": 43.1,
+        "max": 100.6
+      },
+      "tokens": {
+        "mean": 59227.6667,
+        "stddev": 3970.2858,
+        "min": 55707,
+        "max": 63531
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.17",
+      "time_seconds": "+8.4",
+      "tokens": "+8080"
+    }
+  },
+  "notes": []
+}

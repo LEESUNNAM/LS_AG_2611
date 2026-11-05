@@ -1,0 +1,22 @@
+{
+  "eval_id": 1,
+  "eval_name": "ko-ev-sales-blue",
+  "prompt": "한국 전기차 판매 동향을 조사해서 엑셀 파일로 정리해줘. 메인 컬러는 파랑으로 해줘.",
+  "assertions": [
+    "An .xlsx file was produced and opens with openpyxl",
+    "Excel opens the file and recalculates it",
+    "A data sheet has an ID first column numbered 1..n",
+    "Header cells are bold",
+    "Body text is 10pt",
+    "Body font is 맑은 고딕",
+    "Header fill uses a blue main color",
+    "At least one chart exists",
+    "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+    "Text is written in Korean",
+    "No raw Markdown syntax in cells",
+    "Has a summary sheet",
+    "Has a sources sheet with at least 5 distinct URLs",
+    "Uses [n] source markers at least 3 times",
+    "Numbers in data sheets are stored as numbers, not text"
+  ]
+}

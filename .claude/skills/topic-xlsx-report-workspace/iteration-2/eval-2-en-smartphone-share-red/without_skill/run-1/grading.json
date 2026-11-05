@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "An .xlsx file was produced and opens with openpyxl",
+      "passed": true,
+      "evidence": "smartphone_shipments_2025.xlsx"
+    },
+    {
+      "text": "Excel opens the file and recalculates it",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "A data sheet has an ID first column numbered 1..n",
+      "passed": false,
+      "evidence": "no ID header in column A"
+    },
+    {
+      "text": "Header cells are bold",
+      "passed": true,
+      "evidence": "11/11 bold"
+    },
+    {
+      "text": "Body text is 10pt",
+      "passed": false,
+      "evidence": "size distribution: {None: 13, 11.0: 40}"
+    },
+    {
+      "text": "Body font is 맑은 고딕",
+      "passed": false,
+      "evidence": "font distribution: {None: 13, 'Calibri': 40}"
+    },
+    {
+      "text": "Header fill uses a red main color",
+      "passed": true,
+      "evidence": "header fills: {'C00000': 11}"
+    },
+    {
+      "text": "At least one chart exists",
+      "passed": true,
+      "evidence": "[('Vendor Data', 'BarChart'), ('Q4 2025 Share', 'PieChart')]"
+    },
+    {
+      "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "Text is written in English",
+      "passed": true,
+      "evidence": "Hangul share = 0.00"
+    },
+    {
+      "text": "No raw Markdown syntax in cells",
+      "passed": true,
+      "evidence": "clean"
+    },
+    {
+      "text": "Has a summary sheet",
+      "passed": true,
+      "evidence": "['Summary', 'Vendor Data', 'Q4 2025 Share', 'Sources']"
+    },
+    {
+      "text": "Has a sources sheet with at least 5 distinct URLs",
+      "passed": true,
+      "evidence": "5 URLs on ['Sources']"
+    },
+    {
+      "text": "Uses [n] source markers at least 3 times",
+      "passed": false,
+      "evidence": "0 markers"
+    },
+    {
+      "text": "Numbers in data sheets are stored as numbers, not text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 4,
+    "total": 15,
+    "pass_rate": 0.73
+  }
+}

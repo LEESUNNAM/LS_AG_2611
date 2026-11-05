@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "An .xlsx file was produced and opens with openpyxl",
+      "passed": true,
+      "evidence": "korea_ev_sales_trend.xlsx"
+    },
+    {
+      "text": "Excel opens the file and recalculates it",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "A data sheet has an ID first column numbered 1..n",
+      "passed": false,
+      "evidence": "no ID header in column A"
+    },
+    {
+      "text": "Header cells are bold",
+      "passed": true,
+      "evidence": "7/7 bold"
+    },
+    {
+      "text": "Body text is 10pt",
+      "passed": false,
+      "evidence": "size distribution: {None: 27}"
+    },
+    {
+      "text": "Body font is 맑은 고딕",
+      "passed": true,
+      "evidence": "font distribution: {'맑은 고딕': 27}"
+    },
+    {
+      "text": "Header fill uses a blue main color",
+      "passed": true,
+      "evidence": "header fills: {'1F4E9E': 7}"
+    },
+    {
+      "text": "At least one chart exists",
+      "passed": true,
+      "evidence": "[('연도별', 'BarChart'), ('브랜드별', 'PieChart')]"
+    },
+    {
+      "text": "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+      "passed": true,
+      "evidence": "ok"
+    },
+    {
+      "text": "Text is written in Korean",
+      "passed": true,
+      "evidence": "Hangul share = 0.39"
+    },
+    {
+      "text": "No raw Markdown syntax in cells",
+      "passed": true,
+      "evidence": "clean"
+    },
+    {
+      "text": "Has a summary sheet",
+      "passed": true,
+      "evidence": "['요약', '연도별', '브랜드별', '출처']"
+    },
+    {
+      "text": "Has a sources sheet with at least 5 distinct URLs",
+      "passed": true,
+      "evidence": "5 URLs on ['출처']"
+    },
+    {
+      "text": "Uses [n] source markers at least 3 times",
+      "passed": false,
+      "evidence": "0 markers"
+    },
+    {
+      "text": "Numbers in data sheets are stored as numbers, not text",
+      "passed": true,
+      "evidence": "clean"
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 3,
+    "total": 15,
+    "pass_rate": 0.8
+  }
+}

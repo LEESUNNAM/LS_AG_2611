@@ -1,0 +1,22 @@
+{
+  "eval_id": 2,
+  "eval_name": "en-smartphone-share-red",
+  "prompt": "Research global smartphone shipments and market share by vendor for the latest full year and put it in an Excel workbook. Use red as the main color.",
+  "assertions": [
+    "An .xlsx file was produced and opens with openpyxl",
+    "Excel opens the file and recalculates it",
+    "A data sheet has an ID first column numbered 1..n",
+    "Header cells are bold",
+    "Body text is 10pt",
+    "Body font is 맑은 고딕",
+    "Header fill uses a red main color",
+    "At least one chart exists",
+    "Charts are sensible (none on a sources sheet, no ID/rank series, rates not mixed with values)",
+    "Text is written in English",
+    "No raw Markdown syntax in cells",
+    "Has a summary sheet",
+    "Has a sources sheet with at least 5 distinct URLs",
+    "Uses [n] source markers at least 3 times",
+    "Numbers in data sheets are stored as numbers, not text"
+  ]
+}
