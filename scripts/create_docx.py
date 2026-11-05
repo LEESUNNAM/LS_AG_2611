@@ -52,7 +52,7 @@ def main():
     doc.add_heading("맺음말", 1)
     doc.add_paragraph("python-docx로 Word 문서 작성을 자동화할 수 있습니다.")
 
-    out = Path(__file__).resolve().parent.parent / "output" / "sample.docx"
+    out = Path(__file__).resolve().parent.parent / "output" / "samples" / "sample.docx"
     out.parent.mkdir(exist_ok=True)
     doc.save(out)
     print(f"saved: {out}")

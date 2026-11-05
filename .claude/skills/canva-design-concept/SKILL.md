@@ -24,7 +24,7 @@ The Canva tools are deferred. Load their schemas with ToolSearch before the firs
 | File in the Canva account | `move-item-to-folder` |
 | Standalone image only | `generate-image` (use instead of `create-design` when the user asks for an image, illustration, or icon rather than a designed page) |
 
-Always pass `user_intent` on Canva calls. Do not use the legacy generators (`generate-design`, `generate-design-structured`, `request-outline-review`) unless the user wants their own brand kit or brand template applied; see `research/canva-mcp-tools.md` for the full tool reference.
+Always pass `user_intent` on Canva calls. Do not use the legacy generators (`generate-design`, `generate-design-structured`, `request-outline-review`) unless the user wants their own brand kit or brand template applied; see `research/notes/canva-mcp-tools.md` for the full tool reference.
 
 ## Workflow
 

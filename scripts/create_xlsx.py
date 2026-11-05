@@ -12,7 +12,7 @@ After the workbook is built, format_workbook() applies the house style:
   - charts picked from the data structure (line / bar / pie)
 
 Usage:
-  python scripts/create_xlsx.py [-o output/sample.xlsx] [--color blue]
+  python scripts/create_xlsx.py [-o output/samples/sample.xlsx] [--color blue]
 
 --color accepts a name (red, blue, green, 빨강, 파랑 ...) or HEX (#1F4E79).
 """
@@ -708,7 +708,7 @@ def build(color):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("-o", "--output", default="output/sample.xlsx")
+    ap.add_argument("-o", "--output", default="output/samples/sample.xlsx")
     ap.add_argument("--color", default=DEFAULT_COLOR)
     args = ap.parse_args()
 

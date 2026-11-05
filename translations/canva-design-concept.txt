@@ -24,7 +24,7 @@ Canva 도구는 지연 로드 방식입니다. 첫 호출 전에 ToolSearch로 �
 | Canva 계정에 정리 | `move-item-to-folder` |
 | 독립 이미지만 필요할 때 | `generate-image` (사용자가 디자인된 페이지가 아니라 이미지, 일러스트, 아이콘을 요청하면 `create-design` 대신 사용) |
 
-Canva 호출에는 항상 `user_intent`를 넣으세요. 사용자가 자신의 브랜드 키트나 브랜드 템플릿을 적용하길 원하는 경우가 아니면 레거시 생성기(`generate-design`, `generate-design-structured`, `request-outline-review`)는 쓰지 마세요. 전체 도구 설명은 `research/canva-mcp-tools.md`를 참고하세요.
+Canva 호출에는 항상 `user_intent`를 넣으세요. 사용자가 자신의 브랜드 키트나 브랜드 템플릿을 적용하길 원하는 경우가 아니면 레거시 생성기(`generate-design`, `generate-design-structured`, `request-outline-review`)는 쓰지 마세요. 전체 도구 설명은 `research/notes/canva-mcp-tools.md`를 참고하세요.
 
 ## 작업 순서
 

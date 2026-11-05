@@ -20,3 +20,16 @@ This repository (`LS_AG_2611`) is currently empty apart from a README containing
 Once code is added, update this file with:
 - Build, lint, and test commands (including how to run a single test)
 - The high-level architecture
+
+## Folder layout
+
+- `output/docx/`, `output/xlsx/`: finished Word and Excel deliverables.
+- `output/data/`: the JSON specs the reports are generated from.
+- `output/samples/`: sample files written by `scripts/create_docx.py` and `scripts/create_xlsx.py`.
+- `research/notes/`: research notes in Markdown (Canva and trivago MCP references).
+- `research/reports/`: finished research reports.
+- `scripts/`: Python generators; `scripts/archive/` holds retired versions.
+- `canva/`: exported Canva designs, grouped by topic.
+- `translations/`: translated `.txt` versions of the `.md` files.
+
+New skill output lands flat in `output/` (as the skills specify); sort it into the subfolders above afterwards.
