@@ -1,0 +1,20 @@
+{
+  "eval_id": 3,
+  "eval_name": "en-solid-state-batteries-green",
+  "prompt": "Research the current state of solid-state batteries and write it up as a Word report. Use green as the main color.",
+  "assertions": [
+    "A .docx file was produced and opens with python-docx",
+    "Title is 40px (30pt)",
+    "Body text is 14px (10.5pt)",
+    "Font is 맑은 고딕 for title and body",
+    "Title and headings use a green main color",
+    "Has at least 3 section headings",
+    "Has a summary section",
+    "Has at least one table",
+    "Lists at least 5 distinct source URLs",
+    "Uses inline [n] citations at least 3 times",
+    "Report is written in English",
+    "No raw Markdown syntax in the text",
+    "No more empty paragraphs than tables (no stray blank lines)"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "생성형 AI 최신 동향 보고서",
+  "color": "파랑",
+  "blocks": [
+    {"type": "paragraph", "text": "작성일: 2026-11-05 · 조사 범위: 2026년 공개 자료(스탠퍼드 AI Index, McKinsey 분석, EU AI Act·한국 AI기본법 등). 관점: 일반 독자를 위한 도입 현황, 성과, 규제 중심 개관"},
+    {"type": "heading", "text": "요약", "level": 1},
+    {"type": "bullets", "items": [
+      "생성형 AI는 3년 만에 인구 기준 53% 보급률에 도달해 PC와 인터넷보다 빠르게 확산됐고, 조직 도입률은 88%이다 [1][2].",
+      "도입에 비해 성과는 더디다. PwC CEO 설문에서 56%가 AI 투자 성과를 얻지 못했다고 답했다(단일 출처) [3].",
+      "기술은 빠르게 진보한다. 코딩 벤치마크 SWE-bench Verified 점수는 1년 만에 약 60%에서 100%에 가깝게 올랐고, 에이전트 과제 성공률(OSWorld)은 약 12%에서 약 66%로 상승했다 [1][2].",
+      "미국과 중국 최상위 모델 간 격차는 2026년 3월 기준 2.7%로 사실상 좁혀졌다. 2025년 미국 민간 AI 투자는 2,859억 달러였다 [1][2].",
+      "규제가 본격화된다. EU AI Act의 투명성 의무와 집행 권한은 2026년 8월 2일부터 적용되고, 한국은 개정 AI기본법이 2026년 7월 21일 시행됐다 [4][5]."
+    ]},
+    {"type": "heading", "text": "1. 확산 현황과 시장 배경", "level": 1},
+    {"type": "paragraph", "text": "스탠퍼드 HAI의 2026 AI Index에 따르면 생성형 AI는 출시 후 3년 만에 인구의 53%에 보급되어 PC나 인터넷보다 빠른 속도를 보였다. 조직 차원의 AI 도입률은 88%, 대학생 약 5명 중 4명이 생성형 AI를 사용한다. 미국 소비자가 얻는 가치는 연간 약 1,720억 달러로 추정된다 [1][2]."},
+    {"type": "paragraph", "text": "투자 규모도 크다. 2025년 미국 민간 AI 투자는 2,859억 달러로 중국(124억 달러), 유럽(209억 달러)을 크게 앞섰다. 다만 중국의 민간 수치는 실제 지출을 과소 반영할 가능성이 있다는 단서가 붙는다 [1]. 시장 조사 업체들은 멀티모달, 업종별 특화 모델, 소프트웨어 개발 자동화, 클라우드를 통한 접근성 확대를 주요 흐름으로 꼽는다 [6]. YipitData의 2026년 6월 시장 보고서는 기업 지출과 모델 점유율을 다루지만 핵심 수치는 가입 양식 뒤에 있어 확인하지 못했다 [7]."},
+    {"type": "heading", "text": "2. 기술 진보와 에이전트", "level": 1},
+    {"type": "paragraph", "text": "AI Index는 AI 역량이 정체되지 않고 가속하고 있다고 평가한다. SWE-bench Verified는 1년 새 약 60%에서 100%에 근접했고, 컴퓨터 조작 에이전트 벤치마크 OSWorld의 성공률은 약 12%에서 약 66%가 되었으나 인간 기준선 72.35%에는 아직 못 미친다. 반면 최상위 모델도 아날로그 시계를 읽는 정확도는 50.1%에 그쳐 능력이 고르지 않음을 보여 준다 [1][2]."},
+    {"type": "paragraph", "text": "McKinsey 전략 조직은 2026년 5월 분석에서 자사가 직원 4만 명과 함께 AI 에이전트 2만 5,000개를 운영하며 연말까지 4만 개로 늘릴 계획이라고 밝혔다 [3]. 미중 격차는 2026년 3월 기준 미국 최상위 모델이 중국 최상위 모델을 2.7% 앞서는 수준(Arena 점수 1,503 대 1,464)으로 좁혀졌다 [1]."},
+    {"type": "heading", "text": "3. 성과와 한계: 생산성 격차", "level": 1},
+    {"type": "paragraph", "text": "도입이 곧 성과는 아니다. 2026년 5월 보도된 McKinsey 분석에 인용된 조사들을 보면 PwC 2026 CEO 설문(4,454명)에서 56%가 AI 투자로 얻은 것이 없다고 답했고, Deloitte 2026 조사(3,235명)에서는 66%가 생산성 향상을, 20%가 매출 증가를 보고했다. NBER(2026년 2월)는 AI를 적극 활용하는 기업의 80%가 생산성 영향이 없다고 보고했다. 이 수치들은 모두 해당 기사를 통한 2차 인용이며 단일 출처이다 [3]."},
+    {"type": "paragraph", "text": "McKinsey의 2025년 11월 State of AI 보고서에서 AI가 EBIT의 5% 이상에 기여한다고 답한 고성과 기업은 약 6%였고, 차별 요인은 기술 선택이 아니라 업무 흐름 재설계 같은 조직 관행이었다. 또한 Workday 조사에 따르면 AI가 절감한 시간의 37~40%는 결과물 검토와 수정에 쓰인다 [3]. 다만 이 기사는 McKinsey의 권고가 자사 컨설팅 사업과 이해가 맞닿아 있다는 점도 지적한다 [3]."},
+    {"type": "heading", "text": "4. 리스크와 신뢰", "level": 1},
+    {"type": "paragraph", "text": "기록된 AI 사고 건수는 2024년 233건에서 2025년 362건으로 늘어 사상 최대를 기록했다. 전문가의 73%는 AI가 일자리에 긍정적 영향을 줄 것으로 보지만 일반 대중은 23%에 그친다. 자국 정부의 AI 규제를 신뢰하는 비율은 미국 31%, 싱가포르 91%로 크게 갈린다 [1][2]. 미국으로 이동하는 AI 연구자와 개발자 수는 2017년 대비 89% 감소했다 [1][2]."},
+    {"type": "heading", "text": "5. 규제 동향: EU와 한국", "level": 1},
+    {"type": "paragraph", "text": "EU AI Act의 범용 AI(GPAI) 규정은 2025년 8월 2일부터 적용되고 있으며, 2026년 8월 2일에는 제50조 투명성 의무가 발효되고 GPAI 집행이 시작된다. 2026년 12월 2일에는 비동의 성적 딥페이크와 아동 성착취물 생성 AI 금지가 발효된다. Digital Omnibus 개정으로 부속서 III 고위험 AI 규정은 2027년 12월 2일로 미뤄졌다 [4][5]."},
+    {"type": "paragraph", "text": "한국은 AI기본법 시행령 개정안이 2026년 7월 14일 국무회의를 통과했고 개정 법률은 7월 21일 시행됐다. AI 제품·서비스 확인 제도가 신설되어 8월부터 조달 우대가 적용되고, AI연구소 설립 근거도 마련됐다 [5]. 시행 시점에 관해 2026년 1월 22일 시행으로 보도한 자료도 있어, 최초 시행과 개정 시행을 구분해 이해할 필요가 있다(검색 결과 기준, 본문 미열람)."},
+    {"type": "heading", "text": "주요 지표 비교", "level": 2},
+    {"type": "table", "header": true, "rows": [
+      ["영역", "핵심 지표", "수치", "출처"],
+      ["보급", "생성형 AI 인구 보급률(3년)", "53%", "[1][2]"],
+      ["보급", "조직 AI 도입률", "88%", "[1][2]"],
+      ["투자", "미국 민간 AI 투자(2025)", "2,859억 달러", "[1][2]"],
+      ["성능", "OSWorld 에이전트 성공률", "약 12%에서 약 66%", "[1][2]"],
+      ["성과", "AI 투자 성과 없음(PwC CEO)", "56%(단일 출처)", "[3]"],
+      ["리스크", "AI 사고 건수(2024에서 2025)", "233건에서 362건", "[1][2]"],
+      ["규제", "EU 투명성 의무·GPAI 집행", "2026-08-02", "[4][5]"],
+      ["규제", "한국 개정 AI기본법 시행", "2026-07-21", "[5]"]
+    ]},
+    {"type": "heading", "text": "시사점", "level": 1},
+    {"type": "bullets", "items": [
+      "보급 속도보다 성과 전환이 과제이다. 도구 도입보다 업무 흐름 재설계와 검증 체계가 성과를 가른다는 것이 조사들의 공통된 시사점이다 [3].",
+      "에이전트는 빠르게 성숙하지만 인간 기준선에는 못 미치므로, 사람의 검토를 전제로 한 단계적 적용이 현실적이다 [1][3].",
+      "2026년 하반기는 규제 대응 시점이다. 생성형 AI 결과물 표시, 투명성 의무, 조달 인증 등을 사업 계획에 반영해야 한다 [5].",
+      "이 보고서의 일부 수치는 2차 인용이므로 의사결정 전 원문 확인이 필요하다."
+    ]},
+    {"type": "heading", "text": "출처", "level": 1},
+    {"type": "numbered", "items": [
+      "The 2026 AI Index Report, Stanford HAI (날짜 미기재, 2026년 3월까지의 데이터). https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "Stanford 2026 AI Index Report, Stark Insider (2026-04-14). https://starkinsider.com/2026/04/stanford-2026-ai-index-report.html",
+      "McKinsey's new AI report argues the productivity payoff is real but conditional, The Next Web (2026-05-01). https://thenextweb.com/news/mckinsey-ai-productivity-paradox-enterprise-roi-capex",
+      "Timeline for the Implementation of the EU AI Act, AI Act Service Desk, European Commission (2026). https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+      "국내외 AI 규제, 2026년 하반기 분수령: EU AI Act의 새로운 국면과 AI기본법 시행령 개정, 법률신문 (2026-07-20). https://www.lawtimes.co.kr/news/223727",
+      "Generative AI Market Trends 2026, Global Market Insights (2026-04-27). https://gminsights.com/blogs/generative-ai-market-trends-opportunities-challenges",
+      "June 2026 Generative AI Market Report, YipitData (2026-07-13). https://www.yipitdata.com/resources/june-2026-generative-ai-market-report (핵심 수치는 가입 양식 뒤에 있어 열람 불가)"
+    ]}
+  ]
+}

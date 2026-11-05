@@ -1,0 +1,20 @@
+{
+  "eval_id": 2,
+  "eval_name": "ko-jeju-trip-red",
+  "prompt": "제주도 3박 4일 여행 정보 문서 만들어줘. 인터넷에서 조사해서 docx로 출력하고, 색상은 빨강 계열로 부탁해.",
+  "assertions": [
+    "A .docx file was produced and opens with python-docx",
+    "Title is 40px (30pt)",
+    "Body text is 14px (10.5pt)",
+    "Font is 맑은 고딕 for title and body",
+    "Title and headings use a red main color",
+    "Has at least 3 section headings",
+    "Has a summary section",
+    "Has at least one table",
+    "Lists at least 5 distinct source URLs",
+    "Uses inline [n] citations at least 3 times",
+    "Report is written in Korean",
+    "No raw Markdown syntax in the text",
+    "No more empty paragraphs than tables (no stray blank lines)"
+  ]
+}

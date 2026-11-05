@@ -1,11 +1,11 @@
 """Command-line helpers for Word documents, built on python-docx.
 
-Defaults: title 40px, body 20px, font 맑은 고딕, main color 1F4E79.
-(Word uses points: 1px = 0.75pt, so 40px = 30pt and 20px = 15pt.)
+Defaults: title 40px, body 14px, font 맑은 고딕, main color 1F4E79.
+(Word uses points: 1px = 0.75pt, so 40px = 30pt and 14px = 10.5pt.)
 
 Commands:
   create   Build a new .docx from a JSON content file.
-  read     Print paragraphs (with style) and tables of a .docx.
+  read     Print paragraphs (with style) and tables of a .docx in document order.
   replace  Find and replace text, keeping run formatting where possible.
   append   Append paragraphs to the end of an existing .docx.
   restyle  Re-apply font, sizes and main color to an existing .docx.
@@ -14,7 +14,7 @@ Commands:
 Style options (create / restyle; the command line overrides the JSON file):
   --color     main color: a name (red, blue, 빨강, 파랑 ...) or HEX (#1F4E79)
   --title-px  title size in px (default 40)
-  --body-px   body size in px (default 20)
+  --body-px   body size in px (default 14)
   --font      font name (default 맑은 고딕)
   The main color is used for the title, headings, table header and borders.
 
@@ -30,7 +30,7 @@ Examples:
 JSON content format (blocks are written in order; style keys are optional):
   {
     "title": "Document title",
-    "color": "navy", "title_px": 40, "body_px": 20, "font": "맑은 고딕",
+    "color": "navy", "title_px": 40, "body_px": 14, "font": "맑은 고딕",
     "author": "name",
     "blocks": [
       {"type": "heading", "text": "Section", "level": 1},
@@ -55,10 +55,12 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
+from docx.table import Table
+from docx.text.paragraph import Paragraph
 
-DEFAULTS = {"color": "1F4E79", "title_px": 40, "body_px": 20, "font": "맑은 고딕"}
+DEFAULTS = {"color": "1F4E79", "title_px": 40, "body_px": 14, "font": "맑은 고딕"}
 PX_TO_PT = 0.75
-# Heading sizes as a multiple of the body size (20px body -> 28/24/22px).
+# Heading sizes as a multiple of the body size (14px body -> about 20/17/15px).
 HEADING_SCALE = {"Heading 1": 1.4, "Heading 2": 1.2, "Heading 3": 1.1}
 LINE_SPACING = 1.5
 ZEBRA_TINT = 0.12  # share of the main color mixed into white for alternate rows
@@ -254,7 +256,13 @@ def add_table(doc, rows, header, color):
         for c, text in enumerate(row):
             table.cell(r, c).text = str(text)
     style_table(table, color, header)
-    doc.add_paragraph()  # breathing room after the table
+
+
+def add_spacer(doc):
+    """A thin empty line so body text does not touch the table above it."""
+    p = doc.add_paragraph()
+    p.paragraph_format.line_spacing = Pt(6)
+    p.paragraph_format.space_after = Pt(0)
 
 
 def find_image(path, base):
@@ -289,7 +297,8 @@ def cmd_create(args):
     if content.get("title"):
         doc.add_heading(content["title"], 0)
 
-    for b in content.get("blocks", []):
+    blocks = content.get("blocks", [])
+    for i, b in enumerate(blocks):
         t = b.get("type")
         if t == "heading":
             doc.add_heading(b["text"], b.get("level", 1))
@@ -303,6 +312,11 @@ def cmd_create(args):
                 doc.add_paragraph(item, style="List Number")
         elif t == "table":
             add_table(doc, b["rows"], b.get("header", True), st["color"])
+            # A heading already has space above it, and nothing follows the last
+            # table, so a spacer is only needed before other blocks.
+            nxt = blocks[i + 1].get("type") if i + 1 < len(blocks) else None
+            if nxt not in (None, "heading", "page_break"):
+                add_spacer(doc)
         elif t == "image":
             img = find_image(b["path"], content_path.parent)
             doc.add_picture(str(img), width=Cm(b.get("width_cm", 14)))
@@ -314,14 +328,27 @@ def cmd_create(args):
     save(doc, args.output)
 
 
+def iter_blocks(doc):
+    """Paragraphs and tables in the order they appear in the document body."""
+    for child in doc.element.body.iterchildren():
+        if child.tag == qn("w:p"):
+            yield Paragraph(child, doc)
+        elif child.tag == qn("w:tbl"):
+            yield Table(child, doc)
+
+
 def cmd_read(args):
     doc = Document(args.file)
-    for p in doc.paragraphs:
-        print(f"[{p.style.name}] {p.text}")
-    for i, table in enumerate(doc.tables, 1):
-        print(f"--- table {i} ---")
-        for row in table.rows:
-            print(" | ".join(c.text for c in row.cells))
+    n = 0
+    for block in iter_blocks(doc):
+        if isinstance(block, Table):
+            n += 1
+            print(f"--- table {n} ---")
+            for row in block.rows:
+                print(" | ".join(c.text for c in row.cells))
+            print(f"--- end table {n} ---")
+        elif block.text.strip():  # empty paragraphs are layout spacers
+            print(f"[{block.style.name}] {block.text}")
 
 
 def iter_paragraphs(doc):

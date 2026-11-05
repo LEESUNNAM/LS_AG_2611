@@ -5,7 +5,7 @@
       "id": 1,
       "name": "ko-genai-trends-blue",
       "prompt": "생성형 AI 최신 동향 보고서 만들어줘. 자료 조사해서 워드(docx) 파일로 저장해주고, 메인 컬러는 파랑으로 해줘.",
-      "expected_output": "Korean Word report on recent generative-AI trends with a summary, sectioned body, a table, and a numbered source list with real URLs; blue main color; title 40px, body 20px, 맑은 고딕.",
+      "expected_output": "Korean Word report on recent generative-AI trends with a summary, sectioned body, a table, and a numbered source list with real URLs; blue main color; title 40px, body 14px, 맑은 고딕.",
       "files": []
     },
     {

@@ -125,7 +125,7 @@ def main():
     body = [p for p in pars if not p.style.name.startswith(("Heading", "Title", "Header", "Footer"))]
     sizes = Counter(eff_size_pt(p) for p in body)
     mode = sizes.most_common(1)[0][0] if sizes else None
-    add("Body text is 20px (15pt)", mode is not None and abs(mode - 15) < 0.01,
+    add("Body text is 14px (10.5pt)", mode is not None and abs(mode - 10.5) < 0.01,
         f"body size distribution (pt): {dict(sizes)}")
 
     # --- style: font ---
@@ -173,6 +173,9 @@ def main():
     # --- hygiene ---
     md = [p.text[:40] for p in pars if "**" in p.text or "](" in p.text or re.match(r"#{1,4} ", p.text)]
     add("No raw Markdown syntax in the text", not md, "clean" if not md else f"found: {md[:3]}")
+    empty = sum(1 for p in doc.paragraphs if not p.text.strip())
+    add("No more empty paragraphs than tables (no stray blank lines)", empty <= len(doc.tables),
+        f"{empty} empty paragraph(s), {len(doc.tables)} table(s)")
 
     finish(run_dir, exp)
 

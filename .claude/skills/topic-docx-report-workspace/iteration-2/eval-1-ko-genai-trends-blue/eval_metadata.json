@@ -1,0 +1,20 @@
+{
+  "eval_id": 1,
+  "eval_name": "ko-genai-trends-blue",
+  "prompt": "생성형 AI 최신 동향 보고서 만들어줘. 자료 조사해서 워드(docx) 파일로 저장해주고, 메인 컬러는 파랑으로 해줘.",
+  "assertions": [
+    "A .docx file was produced and opens with python-docx",
+    "Title is 40px (30pt)",
+    "Body text is 14px (10.5pt)",
+    "Font is 맑은 고딕 for title and body",
+    "Title and headings use a blue main color",
+    "Has at least 3 section headings",
+    "Has a summary section",
+    "Has at least one table",
+    "Lists at least 5 distinct source URLs",
+    "Uses inline [n] citations at least 3 times",
+    "Report is written in Korean",
+    "No raw Markdown syntax in the text",
+    "No more empty paragraphs than tables (no stray blank lines)"
+  ]
+}
