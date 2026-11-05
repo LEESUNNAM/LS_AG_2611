@@ -1,0 +1,17 @@
+{
+  "title": "업무 보고서 샘플",
+  "blocks": [
+    {"type": "heading", "text": "개요", "level": 1},
+    {"type": "paragraph", "text": "이 문서는 docx_tools.py의 create 명령으로 생성한 예시입니다."},
+    {"type": "heading", "text": "진행 사항", "level": 1},
+    {"type": "bullets", "items": ["요구사항 정리", "초안 작성", "검토 요청"]},
+    {"type": "heading", "text": "다음 단계", "level": 1},
+    {"type": "numbered", "items": ["피드백 반영", "최종본 확정"]},
+    {"type": "heading", "text": "일정표", "level": 1},
+    {"type": "table", "header": true, "rows": [
+      ["항목", "담당", "마감"],
+      ["초안", "이선남", "11/10"],
+      ["최종본", "이선남", "11/15"]
+    ]}
+  ]
+}
