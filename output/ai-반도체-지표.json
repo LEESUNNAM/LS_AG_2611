@@ -1,0 +1,381 @@
+{
+  "title": "AI 반도체 지표",
+  "sheets": [
+    {
+      "name": "시장규모",
+      "title": "AI 데이터센터 반도체 시장 규모 (십억 달러)",
+      "headers": [
+        "연도",
+        "구분",
+        "Omdia(십억 달러)",
+        "IDTechEx(십억 달러)",
+        "출처"
+      ],
+      "rows": [
+        [
+          2024,
+          "실적(추정)",
+          123,
+          null,
+          "[1]"
+        ],
+        [
+          2025,
+          "추정",
+          207,
+          null,
+          "[1]"
+        ],
+        [
+          2030,
+          "전망",
+          286,
+          453,
+          "[1][2]"
+        ]
+      ],
+      "formats": {
+        "연도": "0"
+      },
+      "notes": [
+        "※ Omdia는 GPU, AI ASIC, ASSP, FPGA, AI 가속 기능이 있는 CPU를 포함한 AI 데이터센터 칩 범위 [1]. IDTechEx는 데이터센터·클라우드용 AI 칩 범위이며 2025~2030년 연평균 성장률 14%를 제시 [2].",
+        "※ 2030년 전망이 $286B(Omdia)와 $453B(IDTechEx)로 약 1.6배 차이 남. 범위 정의 차이로 추정되나 두 기관의 정의 차이는 확인하지 못함.",
+        "※ IDTechEx 기사는 2030년 수치를 'US$400 billion 초과'와 'US$453 billion' 두 가지로 적음 [2]. IDTechEx의 2024·2025년 시장 규모는 확인하지 못해 비워 둠.",
+        "※ Omdia 수치는 2차 매체 보도 한 건에서만 확인함(단일 출처) [1]."
+      ]
+    },
+    {
+      "name": "점유율",
+      "title": "AI 반도체 점유율: 가속기와 HBM",
+      "headers": [
+        "구분",
+        "엔비디아 점유율",
+        "AMD 점유율",
+        "SK하이닉스 점유율",
+        "삼성전자 점유율",
+        "마이크론 점유율",
+        "기준",
+        "출처"
+      ],
+      "rows": [
+        [
+          "가속기 · TrendForce · 2025",
+          0.7,
+          null,
+          null,
+          null,
+          null,
+          "AI 칩 점유율(출하량·매출 미표기)",
+          "[3]"
+        ],
+        [
+          "가속기 · SemiAnalysis · 2025 1분기",
+          0.88,
+          0.04,
+          null,
+          null,
+          null,
+          "AI 가속기 점유율(지표 미표기)",
+          "[4]"
+        ],
+        [
+          "가속기 · Silicon Analysts · 2025 추정",
+          0.81,
+          null,
+          null,
+          null,
+          null,
+          "매출 기준 자체 추정(내부 불일치 있음)",
+          "[5]"
+        ],
+        [
+          "HBM · Counterpoint · 2025 2분기",
+          null,
+          null,
+          0.62,
+          0.17,
+          0.21,
+          "HBM 점유율(지표 미표기)",
+          "[6]"
+        ],
+        [
+          "HBM · Counterpoint · 2025 3분기",
+          null,
+          null,
+          0.57,
+          0.22,
+          0.21,
+          "HBM 판매 점유율(매출·출하 구분 미표기)",
+          "[7][8]"
+        ]
+      ],
+      "notes": [
+        "※ 기관마다 지표(출하량, 매출, 비트)와 범위가 달라 행끼리 직접 비교할 수 없음.",
+        "※ SemiAnalysis 수치는 Motley Fool 기사가 인용한 것이며 기사에 연도가 적혀 있지 않아 게재일(2025-06-27)을 근거로 2025년 1분기로 추정함 [4].",
+        "※ Silicon Analysts는 TrendForce·TSMC 생산능력 자료를 바탕으로 한 자체 추정이며 기사 안에 내부 불일치가 있음. AMD의 2025년 점유율은 기사 안에서 5~8%와 6~8%로 갈려 비워 둠 [5].",
+        "※ HBM 2025년 2분기 삼성 점유율은 BusinessKorea 보도의 17%를 사용함 [6]. 2025년 12월 기사는 같은 분기를 15%로 적어 상충함 [7].",
+        "※ 3분기 수치 [7][8]는 같은 Counterpoint 자료를 옮긴 기사라 한 출처로 셈. Counterpoint는 삼성의 HBM 점유율이 2026년에 30%를 넘을 것으로 전망함(2025-09 보도) [6]."
+      ]
+    },
+    {
+      "name": "엔비디아 매출",
+      "title": "엔비디아 데이터센터 매출 (회계 분기 기준, 십억 달러)",
+      "headers": [
+        "분기",
+        "분기말",
+        "데이터센터 매출(십억 달러)",
+        "총매출(십억 달러)",
+        "전 분기 대비 성장률",
+        "전년 동기 대비 성장률",
+        "출처"
+      ],
+      "rows": [
+        [
+          "FY25 Q4",
+          "2025-01-26",
+          35.6,
+          39.3,
+          0.16,
+          0.93,
+          "[13]"
+        ],
+        [
+          "FY26 Q1",
+          "2025-04-27",
+          39.1,
+          44.1,
+          0.1,
+          0.73,
+          "[12]"
+        ],
+        [
+          "FY26 Q2",
+          "2025-07-27",
+          41.1,
+          46.7,
+          0.05,
+          0.56,
+          "[11]"
+        ],
+        [
+          "FY26 Q3",
+          "2025-10-26",
+          51.2,
+          57.0,
+          0.25,
+          0.66,
+          "[10]"
+        ],
+        [
+          "FY26 Q4",
+          "2026-01-25",
+          62.3,
+          68.1,
+          0.22,
+          0.75,
+          "[9]"
+        ]
+      ],
+      "formats": {
+        "데이터센터 매출(십억 달러)": "0.0",
+        "총매출(십억 달러)": "0.0"
+      },
+      "notes": [
+        "※ 연간 합계: FY26(2025-01-27~2026-01-25) 데이터센터 매출 $193.7B(전년 대비 +68%) [9][14], FY25 $115.2B(+142%) [13]. 위 FY26 네 분기 합계 39.1+41.1+51.2+62.3 = 193.7은 보도된 연간 수치와 일치함.",
+        "※ 엔비디아의 회계연도는 1월 말에 끝남(FY26 = 2025년 2월~2026년 1월). 성장률은 보도자료의 반올림 표기를 그대로 옮김.",
+        "※ 분기 수치는 엔비디아 공시·보도자료 원문에서 확인함(1차 자료) [9][10][11][12][13]."
+      ]
+    },
+    {
+      "name": "요약",
+      "id": false,
+      "headers": [
+        "항목",
+        "내용"
+      ],
+      "rows": [
+        [
+          "범위·기준일",
+          "AI 반도체(데이터센터 AI 칩 중심) 지표. 2026-11-05 기준 공개 자료이며, 조사 기관마다 범위가 달라 수치를 기관별로 나란히 제시함."
+        ],
+        [
+          "시장 규모",
+          "Omdia는 AI 데이터센터 칩 시장이 2024년 $123B에서 2025년 $207B로 커지고 2030년 $286B에 이를 것으로 봄 [1]. IDTechEx의 2030년 전망은 $453B로 Omdia보다 훨씬 큼 [2]."
+        ],
+        [
+          "2025년 시장 성장률(Omdia 수치 기준 계산)",
+          "=시장규모!C3/시장규모!C2-1"
+        ],
+        [
+          "2030년 전망 격차(IDTechEx가 Omdia보다 큰 비율)",
+          "=시장규모!D4/시장규모!C4-1"
+        ],
+        [
+          "가속기 점유율",
+          "TrendForce는 2025년 엔비디아의 AI 칩 점유율을 약 70% [3], SemiAnalysis는 2025년 1분기 약 88% [4]로 추정함. 지표와 범위가 달라 차이가 큼."
+        ],
+        [
+          "HBM 점유율",
+          "Counterpoint 기준 2025년 2분기 SK하이닉스 62%·마이크론 21%·삼성 17% [6], 3분기 SK하이닉스 57%·삼성 22%·마이크론 21% [7]. SK하이닉스가 1위를 지켰고 삼성이 2위로 올라섬."
+        ],
+        [
+          "엔비디아 데이터센터 매출",
+          "FY26 데이터센터 매출은 $193.7B로 전년 $115.2B보다 68% 늘었고 [9][13], 분기별로 $39.1B, $41.1B, $51.2B, $62.3B로 커짐 [9][10][11][12]."
+        ],
+        [
+          "FY26 데이터센터 매출 증가율(분기 합계 기준 계산)",
+          "=SUM('엔비디아 매출'!C3:C6)/115.2-1"
+        ],
+        [
+          "Gartner 전망",
+          "Gartner는 전체 반도체 매출이 2025년 $809B에서 2026년 약 $1.6T로 늘고, AI 데이터센터 생태계가 반도체 매출에서 차지하는 비중이 2026년 36.5%, 2030년 53% 초과가 될 것으로 전망함 [15]. 범위가 달라 위 표와 직접 비교할 수 없음."
+        ],
+        [
+          "유의점",
+          "AI 반도체의 정의가 기관마다 달라 시장 규모 전망이 크게 다름. Omdia, IDTechEx, Gartner, TrendForce, SemiAnalysis 수치는 모두 2차 보도 한 건에서만 확인한 단일 출처임. Gartner 기사 안의 수치(2026년 $1.6T와 +92%)도 서로 맞지 않아 약 $1.55T로 보는 것이 일관됨. 점유율은 지표(출하량·매출·비트)가 달라 행끼리 비교할 수 없음."
+        ],
+        [
+          "구하지 못한 항목",
+          "AMD와 구글 TPU 등 맞춤형 칩의 점유율, IDTechEx의 2024·2025년 시장 규모, HBM의 2025년 연간·4분기 점유율은 신뢰할 만한 본문 출처를 읽지 못해 제외함."
+        ]
+      ],
+      "formats": {
+        "내용": "0.0%"
+      }
+    },
+    {
+      "name": "출처",
+      "id": false,
+      "headers": [
+        "번호",
+        "제목",
+        "발행처",
+        "날짜",
+        "URL",
+        "읽음 여부"
+      ],
+      "rows": [
+        [
+          1,
+          "Omdia: AI chip market to hit $286B by 2030, ASICs gain ground",
+          "TechIntelPro (Omdia 전망 보도)",
+          "2025-08-29",
+          "https://techintelpro.com/news/ai/enterprise-ai/omdia-ai-chip-market-to-hit-286b-by-2030-asics-gain-ground",
+          "읽음"
+        ],
+        [
+          2,
+          "AI Chips for the Data Center and Cloud Market Will Exceed US$400 Billion by 2030",
+          "I-Connect007 (IDTechEx 전망 보도)",
+          "2025-05-09",
+          "https://iconnect007.com/article/145281/ai-chips-for-the-data-center-and-cloud-market-will-exceed-us400-billion-by-2030/145278",
+          "읽음"
+        ],
+        [
+          3,
+          "Strong Demand from CSPs and Sovereign Cloud to Drive Over 20% Growth in AI Server Shipments by 2026",
+          "I-Connect007 (TrendForce 보도)",
+          "2025-10-30",
+          "https://iconnect007.com/article/147504/strong-demand-from-csps-and-sovereign-cloud-to-drive-over-20-growth-in-ai-server-shipments-by-2026/147501",
+          "읽음"
+        ],
+        [
+          4,
+          "Did Nvidia Just Say Checkmate to AMD?",
+          "The Motley Fool (SemiAnalysis 자료 인용)",
+          "2025-06-27",
+          "https://www.fool.com/investing/2025/06/27/did-nvidia-just-say-checkmate-to-amd",
+          "읽음"
+        ],
+        [
+          5,
+          "Nvidia AI Accelerator Market Share 2024-2026",
+          "Silicon Analysts (자체 추정, 신뢰도 낮음)",
+          "2026-02-21",
+          "https://siliconanalysts.com/analysis/nvidia-ai-accelerator-market-share-2024-2026",
+          "읽음"
+        ],
+        [
+          6,
+          "Samsung's share in HBM market projected to surpass 30% in 2026",
+          "BusinessKorea via Design & Reuse (Counterpoint 인용)",
+          "2025-09-24",
+          "https://www.design-reuse.com/news/202529413-samsung-s-share-in-hbm-market-projected-to-surpass-30-in-2026/",
+          "읽음"
+        ],
+        [
+          7,
+          "SK Hynix' Lead Shrinks In DRAM, HBM",
+          "Mark LaPedus, Substack (Counterpoint 인용)",
+          "2025-12-24",
+          "https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm",
+          "읽음"
+        ],
+        [
+          8,
+          "Samsung Regains HBM Market Share Lead",
+          "Let's Data Science (Counterpoint 인용)",
+          "2025-12-23",
+          "https://letsdatascience.com/news/samsung-regains-hbm-market-share-lead-7cebb611",
+          "읽음"
+        ],
+        [
+          9,
+          "NVIDIA Form 8-K: Fourth Quarter and Fiscal 2026 results",
+          "NVIDIA (SEC)",
+          "분기말 2026-01-25",
+          "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+          "읽음"
+        ],
+        [
+          10,
+          "NVIDIA Announces Financial Results for Third Quarter Fiscal 2026",
+          "NVIDIA Newsroom",
+          "분기말 2025-10-26",
+          "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+          "읽음"
+        ],
+        [
+          11,
+          "NVIDIA Form 8-K: Second Quarter Fiscal 2026 results",
+          "NVIDIA (SEC)",
+          "분기말 2025-07-27",
+          "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207/q2fy26pr.htm",
+          "읽음"
+        ],
+        [
+          12,
+          "NVIDIA Announces Financial Results for First Quarter Fiscal 2026",
+          "NVIDIA Newsroom",
+          "분기말 2025-04-27",
+          "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+          "읽음"
+        ],
+        [
+          13,
+          "NVIDIA Form 8-K: Fourth Quarter and Fiscal 2025 results",
+          "NVIDIA (SEC)",
+          "분기말 2025-01-26",
+          "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000021/q4fy25pr.htm",
+          "읽음"
+        ],
+        [
+          14,
+          "Nvidia: Fiscal 4Q26 and FY26 Financial Results",
+          "StorageNewsletter",
+          "2026-03-04",
+          "https://www.storagenewsletter.com/2026/03/04/nvidia-fiscal-4q26-and-fy26-financial-results/",
+          "읽음"
+        ],
+        [
+          15,
+          "Gartner forecasts semiconductor revenue to hit US$1.6 trillion in 2026",
+          "Intelligent CIO (Gartner 전망 보도)",
+          "2026-09-01",
+          "https://www.intelligentcio.com/north-america/2026/09/01/gartner-forecasts-semiconductor-revenue-to-hit-us1-6-trillion-in-2026/",
+          "읽음"
+        ]
+      ]
+    }
+  ]
+}
