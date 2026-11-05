@@ -60,7 +60,9 @@ Set `format` with the orientation, for example `Poster (Portrait)`. For a presen
 
 `create-design` is asynchronous. Wait the number of seconds in `polling_policy.wait_seconds` (first 15 s, then about 10 s) before each `get-create-design-async-job` call; polling earlier returns the same answer. Use a short PowerShell `Start-Sleep` for the wait, because the Bash tool blocks foreground sleeps.
 
-Before sharing, call `read-design` with `design_metadata` and `design_content` and compare the text to what you asked for. Then give the user:
+The generator tends to add text you did not ask for (extra taglines, repeated subtitles, a sample checklist on the cover). Put "use only this wording and add no other text" in the brief to limit it, and still expect some extras.
+
+Before sharing, call `read-design` with `design_metadata` and `design_content` and compare the text to what you asked for. List any extra or reordered text for the user instead of presenting the draft as exact. A line break can make a title read without its space in `design_content` (for example "생산성습관"), so do not report that as a typo until you have seen the exported image. Then give the user:
 
 - the edit link and the view link
 - the title and page count
@@ -103,12 +105,23 @@ If the repository's CLAUDE.md asks for it, commit and push the saved files.
 - **Do not create duplicates.** Look for the `canva` folder before creating one, and do not create a second draft unless the user asks for a new one.
 - **Video is out of scope.** `create-video` uses the user's monthly AI limit and needs its own explicit confirmation; offer it separately instead of folding it into this flow.
 
-## Verified behavior (test run, topic "AI 도구")
+## Verified behavior
 
+Two test runs, both through the full flow.
+
+**Poster, topic "AI 도구"**
 - Three concepts were presented first; the user approved one and chose a poster.
 - `create-design` with a Korean brief that included hex colors and exact wording produced a one-page poster whose text matched the brief; the generator added line icons on its own.
 - The job took about 25 seconds (a 15 s wait, then a 10 s wait).
-- `get-export-formats` listed `pdf`, `jpg`, `png`, `pptx`, `gif`, `mp4` for the poster.
 - `export-design` as PNG returned one signed URL; the file was 2304 x 3456.
-- The account already had a `canva` folder, so only the `AI 도구` subfolder was created.
-- Not yet verified: multi-page designs, presentations, and PNG export for docs.
+
+**Presentation, topic "생산성 습관", 3 slides**
+- `create-design` with `format: "Presentation"` and three `outline.sections` produced a 3-page deck in the approved concept. All three slides kept the same colors and notebook style.
+- The job took about 70 seconds and needed four status polls (15 s, then 10 s each).
+- The text matched the outline, but the generator added extra text: tagline lines on slide 1, a repeated subtitle on slides 2 and 3, a heading on the checklist, and a different checklist order. These were reported to the user before saving.
+- `export-design` as PNG returned three signed URLs, one per page. Each file was a valid 1920 x 1080 PNG and was saved as `<name>-1.png` to `<name>-3.png`.
+
+**Both runs**
+- `get-export-formats` listed `pdf`, `jpg`, `png`, `pptx`, `gif`, `mp4`.
+- The account already had a `canva` folder, so only the topic subfolder was created each time.
+- Not yet verified: PNG export for docs, and revising a draft with `edit-design`.
