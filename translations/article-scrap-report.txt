@@ -86,6 +86,31 @@ python <skill-dir>/scripts/article_tools.py read output/pptx/<slug>.pptx
 
 발표자료 슬라이드 구성: 표지, 요약, 주제별 1장씩, 비교표, 기사별 1장씩(왼쪽 스크린샷, 오른쪽 요약), 시사점, 출처. 슬라이드는 멀리서 읽으므로 발표자료 글자는 보고서 본문 14px보다 일부러 크게 한다.
 
+### 선택 사항: 템플릿 적용
+
+사용자가 `.pptx` 템플릿을 지정하면 `pptx` 명령에 `--template <파일>`을 추가한다.
+
+```bash
+python <skill-dir>/scripts/article_tools.py pptx output/data/<slug>.json -o output/pptx/<slug>.pptx --template output/pptx/templates/minimalist-white-slides.pptx
+```
+
+SlidesCarnival 같은 사이트의 템플릿은 실제 레이아웃을 쓰지 않고 빈 슬라이드 위에 디자인을 직접 그려 두므로, 스크립트가 레이아웃을 재사용할 수 없다. 스크립트는 템플릿 파일을 열어 마지막 `--keep-last`장(기본 1장, 크레딧 슬라이드)을 남기고 나머지는 지운 뒤, 같은 캔버스 위에 템플릿의 모양대로 새 슬라이드를 만든다. 모양은 `minimalist-white-slides.pptx`에서 읽은 값(크림 배경 `FFFCF9`, 붉은색 `C03221` 제목과 하단 선, 상단 작은 머리글 3개, 56pt 제목)이며 스크립트의 `TEMPLATE_STYLE`에 들어 있다. 다른 템플릿을 따르려면 이 딕셔너리를 고친다. 템플릿 글꼴은 보통 영문 전용(여기서는 DM Serif Display)이므로, 스크립트가 모든 텍스트에 동아시아 글꼴로 맑은 고딕을 지정해 한글이 정상으로 표시된다. 보고서가 발표자료와 맞도록 명세의 `"color"`를 템플릿의 강조색으로 지정한다.
+
+지켜야 할 템플릿 라이선스 규칙(2026-11-06에 SlidesCarnival 약관 페이지에서 확인, `research/notes/ppt-template-sources.md` 참고): 크레딧 슬라이드를 유지하고, 웹사이트 링크와 함께 출처를 표기하며, 템플릿 파일을 그대로 재배포하거나 재판매하지 않는다. 그러므로 템플릿 파일은 Git에 commit하지 않는다. 자신의 콘텐츠를 더한 발표자료는 공유할 수 있다.
+
+### 슬라이드 모양 확인
+
+텍스트 추출로는 글자 넘침이나 그림이 선을 가리는 문제를 볼 수 없다. PowerPoint가 설치된 Windows에서는 슬라이드를 PNG로 내보내 눈으로 확인한다.
+
+```powershell
+$app = New-Object -ComObject PowerPoint.Application
+$pres = $app.Presentations.Open("<절대 경로>.pptx", $true, $false, $false)   # 읽기 전용, 창 없음
+$pres.SaveAs("<절대 경로 폴더>", 18)   # 18 = PNG, 슬라이드마다 파일 1개
+$pres.Close(); $app.Quit()
+```
+
+PowerPoint가 없으면 마무리 메시지에 레이아웃을 눈으로 확인하지 못했다고 적는다.
+
 ## 6단계: 결과 보고
 
 다음을 간단히 답한다.

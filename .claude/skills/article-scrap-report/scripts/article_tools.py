@@ -7,7 +7,9 @@ deck always say the same thing.
 Commands
   validate <spec.json>                      check the spec and the screenshot files
   docx     <spec.json> -o <out.docx>        build the report with python-docx
-  pptx     <spec.json> -o <out.pptx>        build the deck with python-pptx
+  pptx     <spec.json> -o <out.pptx> [--template t.pptx]
+                                            build the deck with python-pptx; with --template the
+                                            deck takes the template's look and keeps its credit slides
   read     <file.docx|file.pptx>            print the text of a finished file
   colors                                    list supported color names
 
@@ -293,6 +295,8 @@ def cmd_pptx(args):
     from pptx.util import Inches, Pt
 
     spec = load_spec(args.spec)
+    if args.template:
+        return cmd_pptx_template(args, spec)
     font, color, L = spec["_font"], spec["_color"], spec["_labels"]
     light = tint(color, 0.10)
     W, H = 13.333, 7.5
@@ -417,6 +421,207 @@ def cmd_pptx(args):
 
 
 # --------------------------------------------------------------------------- #
+# pptx with a template file (--template)
+# --------------------------------------------------------------------------- #
+# Values read from minimalist-white-slides.pptx (SlidesCarnival): cream background,
+# one red accent for titles and rules, a 3pt rule near the bottom, three small header
+# texts at the top, a 56pt title and 18pt body on a 20 x 11.25 inch canvas.
+TEMPLATE_STYLE = {
+    "bg": "FFFCF9", "accent": "C03221", "text": "2B2B2B", "muted": "7A6A66",
+    "head_font": "DM Serif Display", "body_font": "맑은 고딕",
+}
+
+
+def fit_font_size(paragraphs, width_in, height_in, base, minimum, line_gap=1.35, para_gap_pt=10):
+    """Largest font size (pt) in [minimum, base] whose estimated wrapped height fits the box.
+    Korean characters count as one em wide, Latin ones as 0.55 em."""
+    size = base
+    while size > minimum:
+        total = 0.0
+        for para in paragraphs:
+            lines, cur, maxw = 1, 0.0, width_in * 72
+            for ch in para:
+                w = size * (1.0 if ord(ch) >= 0x2E80 else 0.55)
+                if cur + w > maxw:
+                    lines, cur = lines + 1, w
+                else:
+                    cur += w
+            total += lines * size * line_gap + para_gap_pt
+        if total <= height_in * 72:
+            break
+        size -= 1
+    return size
+
+
+def cmd_pptx_template(args, spec):
+    from lxml import etree
+    from pptx import Presentation
+    from pptx.dml.color import RGBColor
+    from pptx.enum.shapes import MSO_CONNECTOR
+    from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
+    from pptx.oxml.ns import qn
+    from pptx.util import Inches, Pt
+
+    st, L = TEMPLATE_STYLE, spec["_labels"]
+    tpl = Path(args.template)
+    if not tpl.exists():
+        sys.exit(f"template not found: {tpl}")
+    prs = Presentation(tpl)
+    W, H = prs.slide_width / 914400, prs.slide_height / 914400
+
+    # Keep the template's closing slides (resource page and credits): the license asks
+    # users to keep the attribution. Everything before them is replaced by new slides.
+    id_list = prs.slides._sldIdLst
+    ids = list(id_list)
+    if len(ids) <= args.keep_last:
+        sys.exit(f"template has only {len(ids)} slides; cannot keep the last {args.keep_last}")
+    keep = ids[-args.keep_last:]
+    kept_text = " ".join(sh.text_frame.text
+                         for i in range(len(ids) - args.keep_last, len(ids))
+                         for sh in prs.slides[i].shapes if sh.has_text_frame)
+    if not re.search(r"credit|resource", kept_text, re.I):
+        print("warning: the kept slides do not mention 'credit' or 'resource'; check --keep-last",
+              file=sys.stderr)
+    for sid in ids[:-args.keep_last]:
+        prs.part.drop_rel(sid.rId)
+        id_list.remove(sid)
+
+    blank = next((l for l in prs.slide_layouts if l.name.upper() == "BLANK"), prs.slide_layouts[0])
+    rgb = RGBColor.from_string
+    page = {"n": 0}
+
+    def run_style(run, size, color, bold=False, head=False):
+        run.font.name = st["head_font"] if head else st["body_font"]
+        run.font.size = Pt(size)
+        run.font.bold = bold
+        run.font.color.rgb = rgb(color)
+        rPr = run._r.get_or_add_rPr()
+        for tag in ("a:ea", "a:cs"):  # Korean text needs an East Asian font
+            el = etree.SubElement(rPr, qn(tag))
+            el.set("typeface", st["body_font"])
+
+    def text(slide, x, y, w, h, paras, size, color, bold=False, head=False, align=PP_ALIGN.LEFT,
+             anchor=MSO_ANCHOR.TOP, bullet=False, space=10, spacing=1.0):
+        box = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
+        tf = box.text_frame
+        tf.word_wrap = True
+        tf.vertical_anchor = anchor
+        paras = [paras] if isinstance(paras, str) else paras
+        for i, para in enumerate(paras):
+            p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+            p.alignment = align
+            p.space_after = Pt(space)
+            p.line_spacing = spacing
+            r = p.add_run()
+            r.text = ("• " + para) if bullet else para
+            run_style(r, size, color, bold, head)
+        return box
+
+    def rule(slide):
+        line = slide.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Inches(1.125), Inches(10.125),
+                                          Inches(W - 1.125), Inches(10.125))
+        line.line.color.rgb = rgb(st["accent"])
+        line.line.width = Pt(3)
+
+    def new_slide(chrome=True):
+        s = prs.slides.add_slide(blank)
+        page["n"] += 1
+        s.background.fill.solid()
+        s.background.fill.fore_color.rgb = rgb(st["bg"])
+        if chrome:
+            text(s, 1.1, 0.4, 6.0, 0.4, spec.get("subtitle", ""), 12, st["accent"], head=True)
+            text(s, 7.0, 0.4, 6.0, 0.4, spec["title"], 12, st["accent"], head=True, align=PP_ALIGN.CENTER)
+            text(s, 12.9, 0.4, 6.0, 0.4, spec.get("date", ""), 12, st["accent"], head=True, align=PP_ALIGN.RIGHT)
+            rule(s)
+            text(s, W - 3.1, 10.3, 2.0, 0.4, str(page["n"]), 12, st["accent"], head=True, align=PP_ALIGN.RIGHT)
+        return s
+
+    def heading(slide, label):
+        text(slide, 1.1, 1.3, W - 2.2, 1.5, label, 56, st["accent"], head=True, spacing=0.9)
+
+    def bullet_slide(label, items, base=26):
+        s = new_slide()
+        heading(s, label)
+        size = fit_font_size(items, W - 2.2, 6.0, base, 16)
+        text(s, 1.1, 3.3, W - 2.2, 6.5, items, size, st["text"], bullet=True, space=14)
+        return s
+
+    n = len(spec["articles"])
+
+    # Cover
+    s = new_slide(chrome=False)
+    title_size = fit_font_size([spec["title"]], W - 2.2, 3.4, 88, 40, line_gap=1.05, para_gap_pt=0)
+    text(s, 1.1, 3.4, W - 2.2, 3.6, spec["title"], title_size, st["accent"], head=True, spacing=0.85)
+    sub = f"{spec.get('subtitle', '')}  ·  {L['date']}: {spec.get('date', '')}  ·  {L['scope']}: {n}{L['count']}"
+    text(s, 1.1, 7.4, W - 2.2, 0.8, sub.strip(" ·"), 22, st["muted"])
+    rule(s)
+
+    if spec.get("summary"):
+        bullet_slide(L["summary"], spec["summary"])
+
+    for th in spec.get("themes", []):
+        s = new_slide()
+        size = fit_font_size([th["heading"]], W - 2.2, 2.0, 48, 28, line_gap=1.1, para_gap_pt=0)
+        text(s, 1.1, 1.3, W - 2.2, 2.2, th["heading"], size, st["accent"], head=True, spacing=0.9)
+        body = fit_font_size([th["text"]], W - 2.2, 5.6, 26, 16)
+        text(s, 1.1, 4.0, W - 2.2, 5.8, th["text"], body, st["text"], spacing=1.1)
+
+    tb = spec.get("table")
+    if tb and tb.get("rows"):
+        s = new_slide()
+        heading(s, L["table"])
+        rows, cols = len(tb["rows"]) + 1, len(tb["header"])
+        gf = s.shapes.add_table(rows, cols, Inches(1.1), Inches(3.3), Inches(W - 2.2),
+                                Inches(min(1.0 * rows, 6.4)))
+        tint_fill = tint(st["accent"], 0.07)
+        for r, row in enumerate([tb["header"]] + tb["rows"]):
+            for c, val in enumerate(row):
+                cell = gf.table.cell(r, c)
+                cell.fill.solid()
+                cell.fill.fore_color.rgb = rgb(st["accent"] if r == 0 else (tint_fill if r % 2 == 0 else st["bg"]))
+                cell.vertical_anchor = MSO_ANCHOR.MIDDLE
+                cell.text_frame.word_wrap = True
+                run = cell.text_frame.paragraphs[0].add_run()
+                run.text = str(val)
+                run_style(run, 18, "FFFFFF" if r == 0 else st["text"], bold=(r == 0))
+
+    # One slide per article: text left, screenshot right (like the template's picture slide)
+    for i, a in enumerate(spec["articles"], 1):
+        s = new_slide()
+        shot = cropped_image(spec, a.get("screenshot"), 8.9 / 8.6)  # ends above the bottom rule
+        tw = 8.3 if shot else W - 2.2
+        t_size = fit_font_size([f"{i}. {a['title']}"], tw, 3.0, 40, 24, line_gap=1.15, para_gap_pt=0)
+        text(s, 1.1, 1.3, tw, 3.2, f"{i}. {a['title']}", t_size, st["accent"], head=True, spacing=0.95)
+        text(s, 1.1, 4.6, tw, 0.4, f"{a.get('publisher', '')}  ·  {a.get('date', '')}", 14, st["muted"])
+        bsize = fit_font_size(a.get("summary", []), tw, 3.9, 20, 13, para_gap_pt=8)
+        text(s, 1.1, 5.1, tw, 4.0, a.get("summary", []), bsize, st["text"], bullet=True, space=8)
+        if a.get("keywords"):
+            text(s, 1.1, 9.15, tw, 0.4, f"{L['keywords']}: " + ", ".join(a["keywords"]), 14, st["accent"], bold=True)
+        text(s, 1.1, 9.6, tw, 0.35, a.get("url", ""), 9, st["muted"])
+        if shot:
+            s.shapes.add_picture(str(shot), Inches(10.0), Inches(1.1), width=Inches(8.9))
+
+    if spec.get("takeaways"):
+        bullet_slide(L["takeaways"], spec["takeaways"])
+
+    srcs = [f"[{i}] {t}" for i, t in enumerate(sources(spec), 1)]
+    s = new_slide()
+    heading(s, L["sources"])
+    text(s, 1.1, 3.3, W - 2.2, 6.5, srcs, fit_font_size(srcs, W - 2.2, 6.2, 18, 11, para_gap_pt=8),
+         st["text"], space=8)
+
+    # Move the kept template slides (credits) behind the new ones
+    for el in keep:
+        id_list.remove(el)
+        id_list.append(el)
+
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    prs.save(out)
+    print(f"saved: {out} ({len(prs.slides)} slides, last {args.keep_last} are the template's credit slides)")
+
+
+# --------------------------------------------------------------------------- #
 # read / colors
 # --------------------------------------------------------------------------- #
 def cmd_read(args):
@@ -473,6 +678,9 @@ def main():
     p = sub.add_parser("pptx")
     p.add_argument("spec")
     p.add_argument("-o", "--output", required=True)
+    p.add_argument("--template", help="a .pptx template; its last slides (credits) are kept")
+    p.add_argument("--keep-last", type=int, default=1,
+                   help="template slides to keep at the end (default 1: the credits slide)")
     p.set_defaults(fn=cmd_pptx)
     p = sub.add_parser("read")
     p.add_argument("file")

@@ -105,6 +105,31 @@ python <skill-dir>/scripts/article_tools.py read output/pptx/<slug>.pptx
 
 The deck has these slides: title, summary, one per theme, comparison table, one per article (screenshot left, summary right), takeaways, sources. Deck text is larger than the report's 14px body on purpose, since slides are read at a distance.
 
+### Optional: apply a template
+
+When the user points to a `.pptx` template, add `--template <file>` to the `pptx` command:
+
+```bash
+python <skill-dir>/scripts/article_tools.py pptx output/data/<slug>.json -o output/pptx/<slug>.pptx --template output/pptx/templates/minimalist-white-slides.pptx
+```
+
+Templates from sites such as SlidesCarnival draw their design on blank slides instead of using real layouts, so the script cannot reuse layouts. It opens the template file, keeps its last `--keep-last` slides (default 1, the credits slide), removes the rest, and builds new slides in the template's look on the same canvas. The look is read from `minimalist-white-slides.pptx` (cream background `FFFCF9`, red `C03221` titles and bottom rule, three small header texts, 56pt titles) and set in `TEMPLATE_STYLE` in the script; edit that dictionary to follow a different template. The templates' fonts are usually Latin-only (DM Serif Display here), so the script sets 맑은 고딕 as the East Asian font on every run and Korean text renders correctly. Set `"color"` in the spec to the template's accent so the report matches the deck.
+
+Template license rules to respect (checked on the SlidesCarnival terms page on 2026-11-06, see `research/notes/ppt-template-sources.md`): keep the credits slide, give credit with a link to the website, and do not redistribute or resell the template file as-is. For that reason do not commit template files to Git; a deck that adds your own content may be shared.
+
+### Check how the slides look
+
+Text extraction cannot show overflow or a picture covering a line. On Windows with PowerPoint installed, export the slides to PNG and look at them:
+
+```powershell
+$app = New-Object -ComObject PowerPoint.Application
+$pres = $app.Presentations.Open("<abs path>.pptx", $true, $false, $false)   # read-only, no window
+$pres.SaveAs("<abs folder>", 18)   # 18 = PNG, one file per slide
+$pres.Close(); $app.Quit()
+```
+
+Without PowerPoint, say in the closing message that the layout was not checked visually.
+
 ## Step 6: Report back
 
 Reply briefly with:
