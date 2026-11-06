@@ -21,7 +21,7 @@ Read these off the user's message and fall back to the defaults. Asking costs th
 
 | Item | Default |
 |---|---|
-| Article source | URLs given by the user, a site section (for example Naver News IT/과학), or a keyword search. If none is given, ask. |
+| Article source | Naver News only (`news.naver.com` / `n.news.naver.com`): article URLs on Naver News, a Naver News section (for example IT/과학), or a Naver News keyword search. If none is given, ask. If the user gives a URL from another site, do not scrape it; tell the user, and ask whether to look for the same article on Naver News instead. |
 | Which articles | Exactly what the user specifies ("5th page, 6th article"). Otherwise the top 3 to 5 from the section. |
 | Language | The language of the request; `lang` in the spec is `ko` or `en`. |
 | Main color | Name (`navy`, `파랑` ... run `article_tools.py colors`) or HEX. Default navy-blue 1F4E79. |
