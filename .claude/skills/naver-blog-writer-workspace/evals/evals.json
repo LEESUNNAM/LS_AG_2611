@@ -1,0 +1,23 @@
+{
+  "skill_name": "naver-blog-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "블로그 글 작성",
+      "expected_output": "Opens Naver Blog with Playwright, asks the user to log in and verify, then asks for the topic and does nothing else until the user answers.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "블로그 글 작성해줘. 주제는 2026년 직장인 재테크 트렌드야. 로그인은 내가 해둘게.",
+      "expected_output": "Confirms login state, recommends 2 to 3 templates that fit the topic, and waits for template approval before researching or writing. Saves a draft only; does not publish.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "네이버 블로그에 제주도 겨울 여행 코스 글 써서 올려줘. 템플릿은 아무거나 네가 골라.",
+      "expected_output": "Still asks for explicit template approval, writes a sourced post, saves a draft, and asks for approval. Publishes publicly only after the user says yes, then opens the saved post page.",
+      "files": []
+    }
+  ]
+}
