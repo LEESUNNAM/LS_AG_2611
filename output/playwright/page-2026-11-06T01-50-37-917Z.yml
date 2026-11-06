@@ -1,0 +1,443 @@
+- generic [active] [ref=f3e1]:
+  - generic:
+    - generic:
+      - link "주요 콘텐츠로 이동" [ref=f3e2] [cursor=pointer]
+      - link "접근성 도움말" [ref=f3e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=ko
+  - generic [ref=f3e8]:
+    - search [ref=f3e9]:
+      - generic [ref=f3e12]:
+        - link [ref=f3e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=ko&ictx=0&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQpYkNegQIBhAG
+          - img "Google 홈으로 이동" [ref=f3e14]
+        - generic [ref=f3e19]:
+          - combobox "검색" [ref=f3e21]: 네이버 네이버
+          - generic [ref=f3e22]:
+            - button "지우기" [ref=f3e26] [cursor=pointer]
+            - generic [ref=f3e31]:
+              - button "입력 도구" [ref=f3e34] [cursor=pointer]
+              - button "음성 검색" [ref=f3e40] [cursor=pointer]
+              - button "이미지로 검색" [ref=f3e45] [cursor=pointer]
+    - generic [ref=f3e48]:
+      - button "설정" [ref=f3e50] [cursor=pointer]
+      - button "공유" [ref=f3e55] [cursor=pointer]
+      - generic [ref=f3e61]:
+        - button "Google 앱" [ref=f3e63] [cursor=pointer]
+        - link "로그인" [ref=f3e68] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https://www.google.com/search%3Fq%3D%25EB%2584%25A4%25EC%259D%25B4%25EB%25B2%2584%26sca_esv%3Dd05caf2a46dfadf9%26sxsrf%3DAKL5yDhfhFdd9PlbagSxjk8ODuRRBwygEg%253A1793929835088%26source%3Dhp%26ei%3DazLtarPbA56UhvcP4OqO8Qo%26iflsig%3DAHSINFcAAAAAau1AexbJpkZkvI3nM46liCrHMw6yyaE6%26ved%3D2ahUKEwjzvMi0nfKXAxUeiuEIHWC1I64Q4dUDegQIABAb%26uact%3D5%26oq%3D%25EB%2584%25A4%25EC%259D%25B4%25EB%25B2%2584%26gs_lp%3DEgdnd3Mtd2l6IgnrhKTsnbTrsoRIC1AAWABwAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcAsgcAuAcAwgcAyAcAgAgB%26sclient%3Dgws-wiz%26sei%3DbjLtaovRJo-dhvcPj63JoQY&ec=futura_srp_og_si_72236_p
+  - generic [ref=f3e70]:
+    - navigation [ref=f3e76]:
+      - generic [ref=f3e82]:
+        - list [ref=f3e83]:
+          - listitem [ref=f3e84]:
+            - link "AI 모드" [ref=f3e87] [cursor=pointer]:
+              - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&udm=50&source=hp&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&vsint=&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ2J8OegQIEhAD
+          - listitem [ref=f3e91]:
+            - link "전체" [disabled] [ref=f3e92]
+          - listitem [ref=f3e95]:
+            - link "이미지" [ref=f3e96] [cursor=pointer]:
+              - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&udm=2&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&q=%EB%84%A4%EC%9D%B4%EB%B2%84&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQtKgLegQIFBAB
+          - listitem [ref=f3e99]:
+            - link "쇼핑" [ref=f3e100] [cursor=pointer]:
+              - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&udm=28&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&q=%EB%84%A4%EC%9D%B4%EB%B2%84&ved=1t:220175&ictx=111
+          - listitem [ref=f3e103]:
+            - link "동영상" [ref=f3e104] [cursor=pointer]:
+              - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&udm=vids&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&q=%EB%84%A4%EC%9D%B4%EB%B2%84&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQtKgLegQIFRAB
+          - listitem [ref=f3e107]:
+            - link "뉴스" [ref=f3e108] [cursor=pointer]:
+              - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84&tbm=nws&source=lnms&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ0pQJegQIFxAB
+          - listitem [ref=f3e111]:
+            - link "짧은 동영상" [ref=f3e112] [cursor=pointer]:
+              - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&udm=short_vids&fbs=ACAhTvx3ZLlbdllkCGV4rg7y_2q3oGZCiUBEpFhlxhQvT0D7mBN16Jgw49WxKeJ3rQT39KK6anteqOOVF026u446Gv33lmbonH8c8FPS81ubJUu37tnjVDaz8luX2MdJlddIZu37ilaQ_FWl9iLea8zv1cIoztAwa5vyCb28dha-h1XM9kBUQMWDdGIERRZVBJklBBW1Jzbr4tBfruclJr7ev8yIwELjZyrbsd6CAcaICKuvJLV5-i8&q=%EB%84%A4%EC%9D%B4%EB%B2%84&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQs6gLegQIFhAB
+          - listitem [ref=f3e115]:
+            - button [ref=f3e116] [cursor=pointer]:
+              - generic "필터 더보기" [ref=f3e117]: 더보기
+        - button "도구" [ref=f3e124] [cursor=pointer]
+    - heading "검색결과" [level=1] [ref=f3e131]
+    - main [ref=f3e137]:
+      - generic [ref=f3e141]:
+        - generic [ref=f3e144]:
+          - heading "사이트링크가 있는 웹 검색결과" [level=2] [ref=f3e145]
+          - generic [ref=f3e146]:
+            - generic [ref=f3e150]:
+              - generic [ref=f3e152]:
+                - link "네이버 NAVER https://www.naver.com" [ref=f3e154] [cursor=pointer]:
+                  - /url: /goto?url=CAESUwHEIkXXcL7hbwnRaqzjBTfz3ytJbJHffnth7Wbmy3orDvbfO1jnpWEu8sEoP80Vpnv_KkSzAwqL9kT3k5Vie0bO807BGLoPV7MIZZJ56TwVc8dZ
+                  - heading "네이버" [level=3] [ref=f3e155]
+                  - generic [ref=f3e161]:
+                    - generic [ref=f3e162]: NAVER
+                    - generic [ref=f3e164]: https://www.naver.com
+                - button "검색결과에 관한 정보" [ref=f3e170] [cursor=pointer]
+              - generic [ref=f3e177]:
+                - emphasis [ref=f3e178]: 네이버
+                - text: 모바일 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요.
+            - group "방문 기록 기반 맞춤형 추천" [ref=f3e179]:
+              - rowgroup [ref=f3e180]:
+                - row [ref=f3e181]:
+                  - cell [ref=f3e182]:
+                    - generic [ref=f3e188]:
+                      - heading [level=3] [ref=f3e189]:
+                        - link "네이버지도" [ref=f3e190] [cursor=pointer]:
+                          - /url: /goto?url=CAESVQHEIkXXiCzb61d5DbcODXWkEGRpdZz8TlGkGBvQGp8Xm07Uyqp2j07P-gYXjUCf8Cd8IPieT8WQNQjurIomUeY_rCZ5JVlZRjXBtOQqEvim7WCCmYA
+                      - generic [ref=f3e193]: ... 여정의 시작, 네이버 ... NAVER · 지도 홈 · 길찾기 · 버스 · 지하철 ...
+                - row [ref=f3e194]:
+                  - cell [ref=f3e195]:
+                    - generic [ref=f3e201]:
+                      - heading [level=3] [ref=f3e202]:
+                        - link "스포츠" [ref=f3e203] [cursor=pointer]:
+                          - /url: /goto?url=CAESXQHEIkXX6NOo3uooUg4zwxJTd_ZYcVJTonBa751mQG32Sc7cgbVM0H4emZD5J1JcBznossQqxk-ZJ1zzE6TxusoKrGnxJyDVYLcRMCiQsWr_Z2tOItWo1O0pJykEWg
+                      - generic [ref=f3e206]: 종합 NOW · 1위. [오피셜] 마침내 '공식 발표' 손흥민 '영혼의 단짝' 해리 ...
+                - row [ref=f3e207]:
+                  - cell [ref=f3e208]:
+                    - generic [ref=f3e214]:
+                      - heading [level=3] [ref=f3e215]:
+                        - link "네이버 웹툰" [ref=f3e216] [cursor=pointer]:
+                          - /url: /goto?url=CAESVQHEIkXXXt32XcWA_5BecpBC5UyWk7gWESuvnBcEliJ_kkyRNNFVjlXJN1sGUNXgpBLVVJWBm4iQVtwZQobUSafouf3MpE_LpgIq_BOzq6jL7ct1lGI
+                      - generic [ref=f3e219]: 가장 핫한 개그 웹툰만 모아봤어요! · 방구석 재민이. 1 UP방구석 재 ...
+                - row [ref=f3e220]:
+                  - cell [ref=f3e221]:
+                    - generic [ref=f3e227]:
+                      - heading [level=3] [ref=f3e228]:
+                        - link "네이버 로그인 바로가기" [ref=f3e229] [cursor=pointer]:
+                          - /url: /goto?url=CAESawHEIkXXN2UZhBOYWBvC7pGMnRVYJFqsbnKFWt_dAVgvNyaNxUUeknWxEWheXPF2CgQLKwlryygI061NBeaIaK6tXc2cJEBhuPYMftTj0YPrtWoAG0ZnhBmqy1jjMdfH0OQS-RBzhnIpBPgt
+                      - generic [ref=f3e232]: 네이버 · 패스키 로그인 · 로그인. QR 코드 로그인; 일회용 번호 로그인 ...
+                - row [ref=f3e233]:
+                  - cell [ref=f3e234]:
+                    - generic [ref=f3e240]:
+                      - heading [level=3] [ref=f3e241]:
+                        - link "네이버 로그인창" [ref=f3e242] [cursor=pointer]:
+                          - /url: /goto?url=CAESYQHEIkXXI8gvgeBeGlFmQMV0FbODCqCnpX-RapPalpWOtHol8pGgchJ7D0k2xCZN7CxPMLrC7RIGpeyK8E61SSoZtY8aA8ojJ_CugGY06yy9c1-OhpDesaTZGL6Cggdd6Pk
+                      - generic [ref=f3e245]: 네이버 · QR 코드 로그인 · 일회용 번호 로그인. QR 코드 로그인. 아이 ...
+                - row [ref=f3e247]:
+                  - cell [ref=f3e248]:
+                    - link "naver.com 검색결과 더보기 »" [ref=f3e250] [cursor=pointer]:
+                      - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84+site:naver.com&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQrAN6BAgbEAE
+        - generic [ref=f3e259]:
+          - generic [ref=f3e276]:
+            - heading [level=2] [ref=f3e281]:
+              - strong [ref=f3e282]: AI 개요
+            - generic [ref=f3e286]:
+              - generic [ref=f3e287]:
+                - generic [ref=f3e288]:
+                  - strong [ref=f3e289]: 네이버(Naver)
+                  - text: 는
+                - mark [ref=f3e290]:
+                  - generic [ref=f3e291]: 1999년 6월 2일에 출시된
+                  - strong [ref=f3e292]: 대한민국의 대표적인 온라인 포털 사이트
+                  - text: 이자 플랫폼
+                - text: 입니다.
+                - generic [ref=f3e296]:
+                  - link "Wikipedia" [ref=f3e297] [cursor=pointer]:
+                    - /url: /goto?url=CAESdgHEIkXXmizowyYTsFg2O1Ug8KzL8LmGDHipdCyx1Qp_jCeD-huOD2ePduGaqoGkA1Rq_CqDr6M28Tv3t8or91sbitDKGSM4cJQxA0Zfrrzti0_QnkNfRn6UqznhzD4CABDkHXgBjYqda5Jqgl7luSEFP9mD0PM
+                  - button "Wikipedia(+1) - 관련 검색 결과" [ref=f3e298] [cursor=pointer]:
+                    - generic [ref=f3e300]:
+                      - generic [ref=f3e301]: Wikipedia
+                      - generic [ref=f3e302]: "+1"
+              - heading "주요 특징 및 서비스" [level=3] [ref=f3e307]
+              - list [ref=f3e308]:
+                - listitem [ref=f3e310]:
+                  - generic [ref=f3e311]:
+                    - strong [ref=f3e312]: 검색 및 AI
+                    - text: ": '초록창'으로 잘 알려진 검색 포털을 중심으로, 최근에는 대화형 AI 검색 서비스인"
+                    - strong [ref=f3e313]: AI탭
+                    - text: 과 AI 브리핑 기능을 고도화하고 있습니다.
+                  - generic [ref=f3e317]:
+                    - link "NAVER" [ref=f3e318] [cursor=pointer]:
+                      - /url: /goto?url=CAESUwHEIkXXAhGy0d7xFxsyBQONXQQTqESePJoZJ2SKz0vRSnOxoTS3khWFUn7S-nqGcE50e0yZx7AuRUTbNposrNDjoX4R-_1DNopaWxhEs1J4X5MR
+                    - button "NAVER(+2) - 관련 검색 결과" [ref=f3e319] [cursor=pointer]:
+                      - generic [ref=f3e321]:
+                        - generic [ref=f3e322]: NAVER
+                        - generic [ref=f3e323]: "+2"
+                - listitem [ref=f3e329]:
+                  - generic [ref=f3e330]:
+                    - strong [ref=f3e331]: 커머스 및 금융
+                    - text: ":"
+                    - strong [ref=f3e332]: 네이버페이(Npay)
+                    - text: ","
+                    - strong [ref=f3e333]: 네이버플러스 스토어
+                    - text: 등을 통해 결제, 쇼핑, 멤버십 혜택을 제공합니다.
+                  - generic [ref=f3e337]:
+                    - link "나무위키" [ref=f3e338] [cursor=pointer]:
+                      - /url: /goto?url=CAESbAHEIkXXQSnJ2Lao8vyClMvle78GWIFw9ovuJqI5jM-4Y0OWJTOsp0_DRQKwGilLsN0gfHCYNACFjs73ZM4vh1mRs8-nz4cvhMQ-suiQKUDAqcTFnPCj8JPayR081TwJB-rjUMBnop-ElulPsw
+                    - button "나무위키(+1) - 관련 검색 결과" [ref=f3e339] [cursor=pointer]:
+                      - generic [ref=f3e341]:
+                        - generic [ref=f3e342]: 나무위키
+                        - generic [ref=f3e343]: "+1"
+                - listitem [ref=f3e349]:
+                  - generic [ref=f3e350]:
+                    - strong [ref=f3e351]: 콘텐츠 및 커뮤니티
+                    - text: ":"
+                    - strong [ref=f3e352]: 네이버 블로그
+                    - text: ","
+                    - strong [ref=f3e353]: 네이버 카페
+                    - text: ","
+                    - strong [ref=f3e354]: 네이버 웹툰
+                    - text: ","
+                    - strong [ref=f3e355]: 치지직
+                    - text: ","
+                    - strong [ref=f3e356]: 밴드
+                    - text: 등 다양한 콘텐츠와 커뮤니티 서비스를 운영합니다.
+                  - generic [ref=f3e360]:
+                    - link [ref=f3e361] [cursor=pointer]:
+                      - /url: /goto?url=CAESbAHEIkXXQSnJ2Lao8vyClMvle78GWIFw9ovuJqI5jM-4Y0OWJTOsp0_DRQKwGilLsN0gfHCYNACFjs73ZM4vh1mRs8-nz4cvhMQ-suiQKUDAqcTFnPCj8JPayR081TwJB-rjUMBnop-ElulPsw
+                    - button [ref=f3e362] [cursor=pointer]:
+                      - generic [ref=f3e363]: 나무위키
+                - listitem [ref=f3e371]:
+                  - generic [ref=f3e372]:
+                    - strong [ref=f3e373]: 도구 및 비즈니스
+                    - text: ":"
+                    - strong [ref=f3e374]: 네이버 지도
+                    - text: ","
+                    - strong [ref=f3e375]: 네이버 메일
+                    - text: ","
+                    - strong [ref=f3e376]: MYBOX
+                    - text: ","
+                    - strong [ref=f3e377]: 네이버 캘린더
+                    - text: 같은 일상 도구와
+                    - strong [ref=f3e378]: 네이버애즈
+                    - text: (광고 플랫폼) 및 클라우드 서비스를 지원합니다.
+                  - generic [ref=f3e382]:
+                    - link [ref=f3e383] [cursor=pointer]:
+                      - /url: /goto?url=CAESVwHEIkXXFqIo1DQIf-Z6qbJkgjkpAQ5qaSfuy9Grknysdq8BSiPu07L-2OSvEyEhS1TTaIGnGpGemqkbayynd0aWRSN8ERZRd38swI2NW-0KSMUMHZRJ1Q
+                    - button [ref=f3e384] [cursor=pointer]:
+                      - generic [ref=f3e386]:
+                        - generic [ref=f3e387]: NAVERCorp.
+                        - generic [ref=f3e388]: "+1"
+              - generic [ref=f3e394]:
+                - text: 공식 홈페이지와 모바일 서비스는
+                - link [ref=f3e397] [cursor=pointer]:
+                  - /url: /goto?url=CAESUwHEIkXXAhGy0d7xFxsyBQONXQQTqESePJoZJ2SKz0vRSnOxoTS3khWFUn7S-nqGcE50e0yZx7AuRUTbNposrNDjoX4R-_1DNopaWxhEs1J4X5MR
+                  - text: 네이버
+                - text: 에서 이용할 수 있으며, 기업 정보는
+                - generic [ref=f3e398]: 네이버(주) 공식 홈페이지
+                - text: 에서 확인할 수 있습니다.
+                - generic [ref=f3e402]:
+                  - link [ref=f3e403] [cursor=pointer]:
+                    - /url: /goto?url=CAESUwHEIkXXAhGy0d7xFxsyBQONXQQTqESePJoZJ2SKz0vRSnOxoTS3khWFUn7S-nqGcE50e0yZx7AuRUTbNposrNDjoX4R-_1DNopaWxhEs1J4X5MR
+                  - button [ref=f3e404] [cursor=pointer]:
+                    - generic [ref=f3e406]:
+                      - generic [ref=f3e407]: NAVER
+                      - generic [ref=f3e408]: "+1"
+              - generic [ref=f3e414]: "네이버의 특정 서비스(예: 네이버 지도, 부동산, 웹툰, 페이 등)나 기능에 대해 궁금하신 점이 있으시면 편하게 말씀해 주세요."
+              - generic [ref=f3e420]:
+                - list [ref=f3e421]:
+                  - listitem [ref=f3e422]:
+                    - generic [ref=f3e423]:
+                      - link [ref=f3e424] [cursor=pointer]:
+                        - /url: /goto?url=CAESUwHEIkXXAhGy0d7xFxsyBQONXQQTqESePJoZJ2SKz0vRSnOxoTS3khWFUn7S-nqGcE50e0yZx7AuRUTbNposrNDjoX4R-_1DNopaWxhEs1J4X5MR
+                      - generic [ref=f3e425]:
+                        - generic [ref=f3e426]:
+                          - generic [ref=f3e429]: NAVER
+                          - button [ref=f3e433] [cursor=pointer]
+                        - generic [ref=f3e439]:
+                          - generic [aria-hidden] [ref=f3e440]: 네이버
+                          - generic [ref=f3e441]: 네이버 모바일 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요. ... ai tab AI 검색. AI탭에...
+                  - listitem [ref=f3e444]:
+                    - generic [ref=f3e445]:
+                      - link [ref=f3e446] [cursor=pointer]:
+                        - /url: /goto?url=CAESVwHEIkXXFqIo1DQIf-Z6qbJkgjkpAQ5qaSfuy9Grknysdq8BSiPu07L-2OSvEyEhS1TTaIGnGpGemqkbayynd0aWRSN8ERZRd38swI2NW-0KSMUMHZRJ1Q
+                      - generic [ref=f3e447]:
+                        - generic [ref=f3e448]:
+                          - generic [ref=f3e451]: NAVERCorp.
+                          - button [ref=f3e455] [cursor=pointer]
+                        - generic [ref=f3e461]:
+                          - generic [aria-hidden] [ref=f3e462]: 네이버
+                          - generic [ref=f3e463]: logo * 회사소개 주요 계열사 브랜드 리소스 제휴 제안 * 서비스 On-Service AI. 검색 * 기...
+                  - listitem [ref=f3e466]:
+                    - generic [ref=f3e467]:
+                      - link [ref=f3e468] [cursor=pointer]:
+                        - /url: /goto?url=CAESbAHEIkXXQSnJ2Lao8vyClMvle78GWIFw9ovuJqI5jM-4Y0OWJTOsp0_DRQKwGilLsN0gfHCYNACFjs73ZM4vh1mRs8-nz4cvhMQ-suiQKUDAqcTFnPCj8JPayR081TwJB-rjUMBnop-ElulPsw
+                      - generic [ref=f3e469]:
+                        - generic [ref=f3e470]:
+                          - generic [ref=f3e473]: 나무위키
+                          - button [ref=f3e477] [cursor=pointer]
+                        - generic [ref=f3e483]:
+                          - generic [aria-hidden] [ref=f3e484]: 네이버 - 나무위키
+                          - generic [ref=f3e485]: 네이버 * 네이버 * 대한민국의 포털 사이트 * 검색 엔진 * 네이버(기업) * 1999년 출시 * .com...
+                  - listitem [ref=f3e488]:
+                    - generic [ref=f3e489]:
+                      - link [ref=f3e490] [cursor=pointer]:
+                        - /url: /goto?url=CAESdgHEIkXXmizowyYTsFg2O1Ug8KzL8LmGDHipdCyx1Qp_jCeD-huOD2ePduGaqoGkA1Rq_CqDr6M28Tv3t8or91sbitDKGSM4cJQxA0Zfrrzti0_QnkNfRn6UqznhzD4CABDkHXgBjYqda5Jqgl7luSEFP9mD0PM
+                      - generic [ref=f3e491]:
+                        - generic [ref=f3e492]:
+                          - generic [ref=f3e495]: Wikipedia
+                          - button [ref=f3e499] [cursor=pointer]
+                        - generic [ref=f3e505]:
+                          - generic [aria-hidden] [ref=f3e506]: 네이버 - 위키백과, 우리 모두의 백과사전
+                          - generic [ref=f3e507]: 네이버. 대한민국의 포털 사이트. 언어; 저장; 편집; PDF 다운로드. 이 문서는 포털 사이트에 관한 것입...
+                  - listitem [ref=f3e510]:
+                    - generic [ref=f3e511]:
+                      - link [ref=f3e512] [cursor=pointer]:
+                        - /url: /goto?url=CAESbQHEIkXXlmLsdF0EIRE7dJ_oYskdTv1DeScK9mVSnVKGRvgvVkak0z7xXGIfmHMqzvOfEDYkXTfDEnYJjPXA1kcAHyGPVBXnHcRGrRRyT0ivF4N48gFxT0dBSavh0hP1QrIQyC1HUFp2IL5jV44
+                      - generic [ref=f3e513]:
+                        - generic [ref=f3e514]:
+                          - generic [ref=f3e517]:
+                            - text: YouTube
+                            - generic [ref=f3e518]: ·서울경제TV
+                          - button [ref=f3e522] [cursor=pointer]
+                        - generic [ref=f3e527]:
+                          - button [ref=f3e532] [cursor=pointer]:
+                            - generic [ref=f3e533]: 1m
+                          - generic [aria-hidden] [ref=f3e545]: ChatGPT and Google left behind… Naver search share explodes to 80%
+                  - listitem [ref=f3e546]:
+                    - generic [ref=f3e547]:
+                      - link [ref=f3e548] [cursor=pointer]:
+                        - /url: /goto?url=CAESZwHEIkXXUKHZK-tHKJWGnzl0Zedpjnfxf_V1aJEvcPPqHu_dwwap3ujAjV8YKaXV2CNKcAfaWsLgZ5kh-BeSaSZ4jSun0tfYlKr-bgvIb47CGzNjiPHPbwRA-QK8w6N1Q3OsZzf4eY4
+                      - generic [ref=f3e549]:
+                        - generic [ref=f3e550]:
+                          - generic [ref=f3e553]:
+                            - text: YouTube
+                            - generic [ref=f3e554]: ·이데일리TV
+                          - button [ref=f3e558] [cursor=pointer]
+                        - generic [ref=f3e563]:
+                          - button [ref=f3e568] [cursor=pointer]:
+                            - generic [ref=f3e569]: 0:55
+                          - generic [aria-hidden] [ref=f3e576]: Naver Unveils AI Strategy for a Major AI Transformation with Agent N ...
+                - button [aria-hidden] [ref=f3e577] [cursor=pointer]
+            - generic [ref=f3e584]:
+              - generic [ref=f3e587]:
+                - text: AI 대답에는 오류가 있을 수 있습니다.
+                - link [ref=f3e588] [cursor=pointer]:
+                  - /url: https://support.google.com/websearch?p=ai_overviews
+                  - text: 자세히 알아보기
+              - generic [ref=f3e589]:
+                - generic [ref=f3e590]:
+                  - status [ref=f3e591]
+                  - button [ref=f3e593] [cursor=pointer]
+                - button [ref=f3e603] [cursor=pointer]
+                - generic [ref=f3e609]:
+                  - button [ref=f3e611] [cursor=pointer]
+                  - button [ref=f3e616] [cursor=pointer]
+                - button [ref=f3e623] [cursor=pointer]
+          - button "AI 개요 더보기" [ref=f3e631]:
+            - generic [ref=f3e632] [cursor=pointer]: 더보기
+        - generic [ref=f3e641]:
+          - heading "웹 검색결과" [level=2] [ref=f3e642]
+          - generic [ref=f3e643]:
+            - generic [ref=f3e646]:
+              - link "네이버 - NAVER Google Play https://play.google.com › store › apps › details" [ref=f3e648] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.nhn.android.search&hl=ko
+                - heading "네이버 - NAVER" [level=3] [ref=f3e649]
+                - generic [ref=f3e655]:
+                  - generic [ref=f3e656]: Google Play
+                  - generic [ref=f3e658]: https://play.google.com › store › apps › details
+              - button "검색결과에 관한 정보" [ref=f3e664] [cursor=pointer]
+            - generic [ref=f3e671]:
+              - emphasis [ref=f3e672]: 모바일에 최적화된 다양하고 풍부한 정보
+              - text: "! 매일 새로워지는 네이버앱을 만나보세요. 네이버앱은 콘텐츠 유형에 따라 5개의 공간을 제공합니다."
+        - generic [ref=f3e676]:
+          - generic [ref=f3e679]:
+            - link "네이버 NAVERCorp. https://www.navercorp.com" [ref=f3e681] [cursor=pointer]:
+              - /url: /goto?url=CAESVwHEIkXXCdRVSpxCy6hcyWQ7Bqr1D25vfDW0hWl7gVBkRH3JodD0iTXxV6RsI8WdjbF3fxE4oIbhmLwmEmUIxY36tJBCZq6-qZ2JmEcXfLhp58V9kREABg
+              - heading "네이버" [level=3] [ref=f3e682]
+              - generic [ref=f3e688]:
+                - generic [ref=f3e689]: NAVERCorp.
+                - generic [ref=f3e691]: https://www.navercorp.com
+            - button "검색결과에 관한 정보" [ref=f3e697] [cursor=pointer]
+          - generic [ref=f3e704]:
+            - emphasis [ref=f3e705]: 네이버
+            - text: 주요 서비스 · 포털 · 도구 · 검색 · 광고 · 커머스 · 클라우드 · 핀테크 · 1784 · 콘텐츠 · 데이터센터 각 · 커뮤니티 · 전체 서비스 · 지도.
+            - emphasis [ref=f3e706]: NAVER
+            - text: 서비스.
+        - generic [ref=f3e710]:
+          - generic [ref=f3e713]:
+            - link "‎네이버 - NAVER 앱 - App Store Apple https://apps.apple.com › app › 네이버-naver" [ref=f3e715] [cursor=pointer]:
+              - /url: /goto?url=CAESiAEBxCJF16q7zdhrb1Idnwa35C_xHf_Z8bcBGwAAZHl3Z4NFL8WKZO5lhH3RUaOg3IHPV7ab_VN12bG1g_JJ9YLQ7PAwGEJfQu3GgI7ANOWOpDcMFejTqtHDUX0xz7Ea_v1pSi3F-NsRNBEAgz0-eBKjo55l_fmWbdTieNaTgWcLKurIXZVc-ht9
+              - heading "‎네이버 - NAVER 앱 - App Store" [level=3] [ref=f3e716]
+              - generic [ref=f3e722]:
+                - generic [ref=f3e723]: Apple
+                - generic [ref=f3e725]: https://apps.apple.com › app › 네이버-naver
+            - button "검색결과에 관한 정보" [ref=f3e731] [cursor=pointer]
+          - generic [ref=f3e738]:
+            - emphasis [ref=f3e739]: 모바일에 최적화된 다양하고 풍부한 정보
+            - text: "! 매일 새로워지는 네이버앱을 만나보세요. 네이버앱은 콘텐츠 유형에 따라 5개의 공간을 제공합니다."
+        - generic [ref=f3e743]:
+          - generic [ref=f3e746]:
+            - link "네이버 - 위키백과, 우리 모두의 백과사전 Wikipedia https://ko.wikipedia.org › wiki › 네이버" [ref=f3e748] [cursor=pointer]:
+              - /url: /goto?url=CAESdgHEIkXXwsuRXoFwyrDapCsyrIwX1p_fGfkNKDw7nu3PgRMmfNSvHYtRsMApTnBLwSgujA7F1NORFDTtXfLR2GhtBlFQYqohKS4z4K-M_WanW_sTYcDFOvxtU5Xt987yjs4GnTD4Z3ChkrSsgaooAQglMh-VS00
+              - heading "네이버 - 위키백과, 우리 모두의 백과사전" [level=3] [ref=f3e749]
+              - generic [ref=f3e755]:
+                - generic [ref=f3e756]: Wikipedia
+                - generic [ref=f3e758]: https://ko.wikipedia.org › wiki › 네이버
+            - button "검색결과에 관한 정보" [ref=f3e764] [cursor=pointer]
+          - generic [ref=f3e771]:
+            - text: "네이버(영어: NAVER )는"
+            - emphasis [ref=f3e772]: 1999년 6월 2일에 출시된 대한민국의 포털사이트
+            - text: 이다. 현재는 네이버(주)에서 운영하고 있다.
+        - generic [ref=f3e776]:
+          - generic [ref=f3e779]:
+            - link "네이버웍스, 일이 쉬워진다 네이버웍스 https://naver.worksmobile.com" [ref=f3e781] [cursor=pointer]:
+              - /url: /goto?url=CAESWwHEIkXX4ln-5EHuhyw0Zuoj8UdJd8Evblad7L72nH-7-k_FfxgzJP2n33pUjIkOqbAUm2sbaFJF1OP1ubxXp9_DRmIKCI1GJQpb6PLPk-TC2rCOKBCjs6XHGsM
+              - heading "네이버웍스, 일이 쉬워진다" [level=3] [ref=f3e782]
+              - generic [ref=f3e788]:
+                - generic [ref=f3e789]: 네이버웍스
+                - generic [ref=f3e791]: https://naver.worksmobile.com
+            - button "검색결과에 관한 정보" [ref=f3e797] [cursor=pointer]
+          - generic [ref=f3e804]:
+            - emphasis [ref=f3e805]: 네이버웍스는 네이버의 편리함과 기술, 일하는 방식을 담은 통합 업무 플랫폼
+            - text: 입니다. 소통과 협업, 경영지원을 하나의 플랫폼에서 활용하며 생산성을 높여보세요.
+      - generic [ref=f3e807]:
+        - generic [ref=f3e812]:
+          - heading "관련 검색어" [level=2] [ref=f3e814]
+          - generic [ref=f3e816]:
+            - generic [ref=f3e817]:
+              - link "네이버 부동산" [ref=f3e821] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%EB%B6%80%EB%8F%99%EC%82%B0&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgsEAE
+              - link "네이버 홈페이지" [ref=f3e835] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgzEAE
+              - link "네이버 설치" [ref=f3e849] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%EC%84%A4%EC%B9%98&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgyEAE
+              - link "네이버 다운로드" [ref=f3e863] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgxEAE
+            - generic [ref=f3e874]:
+              - link "네이버 홈페이지 PC" [ref=f3e878] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80+PC&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgwEAE
+              - link "네이버 무료 다운로드" [ref=f3e892] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%EB%AC%B4%EB%A3%8C+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgvEAE
+              - link "네이버 메일함" [ref=f3e906] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84+%EB%A9%94%EC%9D%BC%ED%95%A8&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAguEAE
+              - link "네이버앱" [ref=f3e920] [cursor=pointer]:
+                - /url: /search?sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&q=%EB%84%A4%EC%9D%B4%EB%B2%84%EC%95%B1&sa=X&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ1QJ6BAgtEAE
+        - navigation [ref=f3e931]:
+          - heading "페이지 탐색" [level=1] [ref=f3e932]
+          - text: "1"
+          - link "Page 2" [ref=f3e935] [cursor=pointer]:
+            - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=10&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8tMDegQIJBAE
+            - text: "2"
+          - link "Page 3" [ref=f3e937] [cursor=pointer]:
+            - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=20&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8tMDegQIJBAG
+            - text: "3"
+          - link "Page 4" [ref=f3e939] [cursor=pointer]:
+            - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=30&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8tMDegQIJBAI
+            - text: "4"
+          - link "Page 5" [ref=f3e941] [cursor=pointer]:
+            - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=40&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8tMDegQIJBAK
+            - text: "5"
+          - link "Page 6" [ref=f3e943] [cursor=pointer]:
+            - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=50&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8tMDegQIJBAM
+            - text: "6"
+          - heading [level=2] [ref=f3e945]:
+            - link "다음" [ref=f3e946] [cursor=pointer]:
+              - /url: /search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sca_esv=d05caf2a46dfadf9&sxsrf=AKL5yDgPg4aq0UhEFfq1M7Y7IKYa6WvhPA:1793929838842&ei=bjLtarOGM52jhvcP1o2yuAY&start=10&sa=N&sstk=AYl2yk83bHyusRrbjsNBFKDDhw2knzvhhAUsNbNRW6E9jTYV81TVCnR8hD5CYJeeweMMfJxfXpg8pbwk1etGwy-UNGbZcnKv8PBWNQ&ved=2ahUKEwiz9a62nfKXAxWdkeEIHdaGDGcQ8NMDegQIJBAO
+      - navigation
+    - contentinfo [ref=f3e949]:
+      - heading "바닥글 링크" [level=1] [ref=f3e950]
+      - generic [ref=f3e954]:
+        - generic [ref=f3e956]:
+          - text: 대한민국
+          - generic [ref=f3e958]:
+            - button "세종특별자치시 - IP 주소 기반" [ref=f3e960] [cursor=pointer]:
+              - generic [ref=f3e961]: 세종특별자치시
+              - generic [ref=f3e963]:
+                - text: "-"
+                - generic [ref=f3e964]: IP 주소 기반
+            - text: "-"
+            - button "위치 업데이트" [ref=f3e966] [cursor=pointer]
+        - generic [ref=f3e969]:
+          - link "도움말" [ref=f3e970] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=ko&fg=1
+          - button "의견 보내기" [ref=f3e972] [cursor=pointer]
+          - link "개인정보처리방침" [ref=f3e974] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=ko&fg=1
+          - link "약관" [ref=f3e975] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=ko&fg=1

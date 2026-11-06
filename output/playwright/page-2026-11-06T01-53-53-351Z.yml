@@ -1,0 +1,861 @@
+- generic [ref=f16e2]:
+  - link "본문 바로가기" [ref=f16e3] [cursor=pointer]:
+    - /url: "#ct"
+  - banner [ref=f16e4]:
+    - generic [ref=f16e5]:
+      - generic [ref=f16e9]:
+        - link "이전 페이지" [ref=f16e10] [cursor=pointer]:
+          - /url: "#"
+        - heading [level=1] [ref=f16e12]:
+          - link "경향신문" [ref=f16e13] [cursor=pointer]:
+            - /url: https://media.naver.com/press/032
+        - button "구독" [ref=f16e15] [cursor=pointer]
+      - generic [ref=f16e18]:
+        - tablist [ref=f16e19]:
+          - tab "주요뉴스" [ref=f16e20] [cursor=pointer]
+          - tab "정치" [ref=f16e22] [cursor=pointer]
+          - tab "이슈" [ref=f16e24] [cursor=pointer]
+          - tab "경제" [ref=f16e26] [cursor=pointer]
+          - tab "사회" [ref=f16e28] [cursor=pointer]
+          - tab "생활" [ref=f16e30] [cursor=pointer]
+          - tab "세계" [ref=f16e32] [cursor=pointer]
+          - tab "IT" [selected] [ref=f16e34] [cursor=pointer]
+          - tab "사설/칼럼" [ref=f16e36] [cursor=pointer]
+          - tab "신문보기" [ref=f16e38] [cursor=pointer]
+          - tab "랭킹" [ref=f16e40] [cursor=pointer]
+        - link "MY" [ref=f16e43] [cursor=pointer]:
+          - /url: https://media.naver.com/my/home
+  - generic [ref=f16e46]:
+    - main [ref=f16e47]:
+      - generic [ref=f16e48]:
+        - generic [ref=f16e49]:
+          - link "경향신문 경향신문" [ref=f16e51] [cursor=pointer]:
+            - /url: http://www.khan.co.kr/
+            - img "경향신문" [ref=f16e53]
+            - generic [ref=f16e54]: 경향신문
+          - heading "미 AI 데이터센터 규제 강화 전망에…한국 반도체 초호황에도 불똥 튀나" [level=2] [ref=f16e56]
+          - generic [ref=f16e57]:
+            - generic [ref=f16e58]:
+              - img "김유진 기자" [ref=f16e60]
+              - generic [ref=f16e61]:
+                - link [ref=f16e63] [cursor=pointer]:
+                  - /url: https://media.naver.com/journalist/032/56114
+                  - emphasis [ref=f16e64]: 김유진 기자
+                - generic [ref=f16e65]:
+                  - generic [ref=f16e67]:
+                    - generic [ref=f16e68]:
+                      - emphasis [ref=f16e69]: 입력
+                      - generic [ref=f16e70]: 2026.11.05. 오후 4:03
+                    - generic [ref=f16e71]:
+                      - emphasis [ref=f16e72]: 수정
+                      - generic [ref=f16e73]: 2026.11.05. 오후 4:05
+                  - link "기사원문" [ref=f16e74] [cursor=pointer]:
+                    - /url: https://www.khan.co.kr/article/202611051603001
+            - generic [ref=f16e75]:
+              - link "댓글 반응" [ref=f16e79] [cursor=pointer]:
+                - /url: /article/comment/032/0003480892
+                - text: 댓글
+                - generic [ref=f16e80]: 반응
+              - link "요약" [ref=f16e83] [cursor=pointer]:
+                - /url: javascript:;
+              - generic [ref=f16e84]:
+                - button "텍스트 음성 변환 서비스 사용하기" [ref=f16e86] [cursor=pointer]
+                - link "글자 크기 변경하기" [ref=f16e89] [cursor=pointer]:
+                  - /url: "#"
+                - link "SNS 보내기" [ref=f16e92] [cursor=pointer]:
+                  - /url: "#"
+                - link "인쇄하기" [ref=f16e96] [cursor=pointer]:
+                  - /url: "#"
+        - generic [ref=f16e98]:
+          - article [ref=f16e100]:
+            - strong [ref=f16e101]: ‘데이터센터 모라토리엄’ 내건 미 민주당, 중간선거 압승 AI 투자·메모리 수요 감소 우려에 5일 삼전닉스 주가 급락 업계, AI 인프라 확장 ‘속도조절’해도 지속 전망
+            - text: 미국 중간선거가 민주당이 공화당 강세 지역까지 휩쓰는 ‘블루 쓰나미’로 귀결되면서 인공지능(AI) 데이터센터 규제 강화 흐름이 실제로 나타날 경우 한국 반도체 업계에 변수로 작용할 지 주목되고 있다. 업계에선 반도체 호황의 흐름이 꺾일 가능성보다는 속도조절 쪽에 무게를 두면서도, 미국 내 AI 인프라 구축 둔화가 서버용 메모리 수요에도 영향을 미칠 가능성을 예의주시하고 있다.5일 유가증권시장에서 삼성전자는 전장보다 7.57% 내린 20만1500원에, SK하이닉스는 9.46% 급락한 126만4000원에 정규장 거래를 마무리했다. AI 데이터센터 규제로 인한 반도체 수요 감소 우려가 악재로 작용했다.지난 3일(현지시간) 치러진 미 중간선거에서 민주당이 연방 상·하원은 물론 주지사 선거에서까지 약진한 데는 물가 상승, 이란 전쟁 등 도널드 트럼프 공화당 행정부 정책에 대한 불만과 더불어 AI 데이터센터 건설 반대 여론이 주요하게 작용한 것으로 풀이된다. 특히 텍사스, 조지아, 오하이오 등 지역에서 당선된 민주당 소속 주지사들은 데이터센터 모라토리엄(일시 중단)이나 규제 강화를 공약했다. 이에 주정부 차원에서 지역 내 신규 데이터센터 건설 승인 요건이나 각종 인허가 절차, 전력·용수 공급 과정을 보다 까다롭게 만들 수 있다는 관측도 나온다.
+            - generic [ref=f16e102]:
+              - img "미국 캔자스주 리븐워스 카운티의 한 잔디밭에 3일(현지시간) ‘데이터센터 반대’라고 적힌 푯말이 세워져 있다. 로이터연합뉴스" [ref=f16e105]
+              - emphasis [ref=f16e106]: 미국 캔자스주 리븐워스 카운티의 한 잔디밭에 3일(현지시간) ‘데이터센터 반대’라고 적힌 푯말이 세워져 있다. 로이터연합뉴스
+            - text: 미국 빅테크들이 주도하는 AI 인프라 확장이 주춤해질 경우 메모리 수요에 영향을 미칠 가능성도 제기된다. 데이터센터 건설이 지연 또는 보류되거나 프로젝트가 축소될 경우 최대 고객인 빅테크들의 AI 메모리 주문량 감소로도 이어질 수 있기 때문이다. 데이터센터에는 고대역폭메모리(HBM)를 비롯해 서버용 D램, 낸드플래시 기반 기업용 솔리드스테이트드라이브(SSD) 등이 필수 탑재된다.이는 고부가가치 메모리 반도체 생산으로 무게 중심을 옮기고 있는 메모리 3사의 중장기 수익성에까지 영향을 미칠 수 있다는 관측도 나온다. 다만 삼성전자와 SK하이닉스는 최근 3분기 실적 발표 당시 빅테크 등 10여개 이상 주요 고객사와의 장기공급계약(LTA) 체결로 안정적인 수익 기반을 마련했고, 향후 수년내 물량이 이미 ‘솔드아웃’된 상태라고 밝힌 바 있다.반도체 업계는 AI 데이터센터와 관련된 미국 내 정책 환경이 변화하더라도 AI 인프라 구축이나 AI발 메모리 수요가 상승하는 흐름 자체를 되돌리지는 못할 것으로 보고 있다. 데이터센터 건설을 둘러싼 각종 절차가 강화되는 등 ‘속도조절’에 들어갈 수는 있어도 AI 투자 기조는 지속될 것이란 전망이다.한 업계 관계자는 “AI 에이전트에서 피지컬AI, 로봇에까지 AI 산업이 계속 확장되면 그 근간이 되는 데이터센터와 컴퓨팅 역량 구축도 더욱 고도화될 것”이라며 “메모리 3사가 생산능력 확대를 위한 증설에 경쟁적으로 나서는 것도 이 때문”이라고 말했다. 다른 업계 관계자도 “미·중의 AI 주도권 다툼이 치열한 상황에서 미국이 AI 인프라 구축 자체를 멈출 가능성은 매우 낮다”면서 “다만 불확실성이 커지면서 주가 급락 등 일시적으로 시장 불안이 나타날 수는 있을 것”이라고 말했다.
+            - generic [ref=f16e107]:
+              - img "미국 텍사스주 테일러시에 건설 중인 삼성전자 반도체 공장 전경. 삼성전자 제공" [ref=f16e110]
+              - emphasis [ref=f16e111]: 미국 텍사스주 테일러시에 건설 중인 삼성전자 반도체 공장 전경. 삼성전자 제공
+          - paragraph [ref=f16e113]:
+            - generic [ref=f16e114]: 김유진 기자 yjkim@kyunghyang.com
+          - paragraph [ref=f16e117]: Copyright ⓒ 경향신문. All rights reserved. 무단 전재 및 재배포 금지.
+          - link [ref=f16e119] [cursor=pointer]:
+            - /url: "#"
+            - text: 이 기사는 언론사에서
+            - emphasis [ref=f16e120]: IT
+            - text: ","
+            - emphasis [ref=f16e121]: 경제
+            - text: 섹션으로 분류했습니다.
+          - generic [ref=f16e123]:
+            - heading "기자 프로필" [level=4] [ref=f16e124]
+            - generic [ref=f16e128]:
+              - generic [ref=f16e131]:
+                - generic [ref=f16e132]:
+                  - link [ref=f16e133] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/032/56114
+                    - img "김유진 기자" [ref=f16e135]
+                  - generic [ref=f16e136]:
+                    - link "김유진 기자":
+                      - /url: https://media.naver.com/journalist/032/56114
+                      - emphasis [ref=f16e139] [cursor=pointer]: 김유진 기자
+                    - generic [ref=f16e140]: 경향신문
+                - link "구독" [ref=f16e142] [cursor=pointer]:
+                  - /url: "#"
+              - list [ref=f16e145]:
+                - listitem [ref=f16e146]:
+                  - link "트럼프 ‘지쳤다’ 보도에 격분 “유세 취소 번복”···기자 향해 “역겹다, 몸 관리 좀 해라” 독설도" [ref=f16e147] [cursor=pointer]:
+                    - /url: /article/032/0003479806?type=journalists
+                - listitem [ref=f16e148]:
+                  - link "‘깜짝 방한’ 샘 올트먼 “AI 쓰는 세상에선 이거면 돼”···삼성 경영진에 전달한 선물은" [ref=f16e149] [cursor=pointer]:
+                    - /url: /article/032/0003479802?type=journalists
+          - generic [ref=f16e152]:
+            - link [ref=f16e153] [cursor=pointer]:
+              - /url: "#"
+              - img "경향신문" [ref=f16e156]
+              - generic [ref=f16e157]:
+                - paragraph [ref=f16e158]: 구독
+                - paragraph [ref=f16e159]:
+                  - generic [ref=f16e160]:
+                    - strong [ref=f16e161]: 경향신문 구독하고
+                    - text: 메인에서 바로 만나보세요!
+            - link "언론사홈" [ref=f16e162] [cursor=pointer]:
+              - /url: https://media.naver.com/press/032
+          - generic [ref=f16e163]:
+            - heading [level=3] [ref=f16e164]:
+              - link "경향신문" [ref=f16e165] [cursor=pointer]:
+                - /url: http://www.khan.co.kr/
+              - text: 주요뉴스
+              - generic [ref=f16e167]:
+                - text: 해당 언론사에서 선정하며
+                - emphasis [ref=f16e168]: 언론사(아웃링크)
+                - text: 로 이동합니다.
+            - list [ref=f16e169]:
+              - listitem [ref=f16e170]:
+                - link "\"트럼프 범죄 일가·측근 최우선 조사\"···의회 장악한 민주당 첫 경고장" [ref=f16e171] [cursor=pointer]:
+                  - /url: https://www.khan.co.kr/article/202611051356001/?utm_source=naver&utm_medium=portal_news&utm_campaign=related_news_khan
+              - listitem [ref=f16e172]:
+                - link "국힘 김태호 \"한동훈 전격 복당 추진해야\"···당내선 \"그런 말할 때 아냐\" 반발도" [ref=f16e173] [cursor=pointer]:
+                  - /url: https://www.khan.co.kr/article/202611051110011/?utm_source=naver&utm_medium=portal_news&utm_campaign=related_news_khan
+              - listitem [ref=f16e174]:
+                - link "나이키 로고가 '우상숭배 상징'이라고? …\"입지도, 사지도, 팔지도 마\" 리비아 금지령 근거 따져보니 [이윤정 기자의 소소월드]" [ref=f16e175] [cursor=pointer]:
+                  - /url: https://www.khan.co.kr/article/202611051019001/?utm_source=naver&utm_medium=portal_news&utm_campaign=related_news_khan
+              - listitem [ref=f16e176]:
+                - link "\"머스크, 선거 최대 패배자\"···거액 후원 후보 낙선에 데이터센터 사업도 불똥" [ref=f16e177] [cursor=pointer]:
+                  - /url: https://www.khan.co.kr/article/202611050828001/?utm_source=naver&utm_medium=portal_news&utm_campaign=related_news_khan
+              - listitem [ref=f16e178]:
+                - link "\"동덕여대 칼부림\" 347만원, \"한화팬 유혈사태\" 175만원···경찰, 공중협박 4건에 손해배상 청구" [ref=f16e179] [cursor=pointer]:
+                  - /url: https://www.khan.co.kr/article/202611051200001/?utm_source=naver&utm_medium=portal_news&utm_campaign=related_news_khan
+          - list [ref=f16e181]:
+            - listitem [ref=f16e182]:
+              - link "매일 라이브 경향티비, 재밌고 효과빠른 시사 소화제!" [ref=f16e184] [cursor=pointer]:
+                - /url: https://www.khan.co.kr/introduce/kyunghyangtv/?utm_source=naver&utm_medium=referral&utm_campaign=promotion&utm_source=naver&utm_medium=referral&utm_campaign=promotion
+            - listitem [ref=f16e185]:
+              - link "더보기｜이 뉴스, 여기서 끝나지 않습니다 → 점선면" [ref=f16e187] [cursor=pointer]:
+                - /url: https://www.khan.co.kr/newsletter/cube?utm_source=naver&utm_medium=referral&utm_campaign=promotion
+          - generic [ref=f16e188]:
+            - heading [level=2] [ref=f16e190]:
+              - emphasis [ref=f16e191]: 경향신문
+              - text: 언론사가 직접 선정한 이슈
+            - generic [ref=f16e192]:
+              - list [ref=f16e195]:
+                - listitem [ref=f16e196]:
+                  - generic [ref=f16e197]:
+                    - generic [ref=f16e200]:
+                      - generic [ref=f16e201]: 이슈NOW
+                      - generic [ref=f16e202]:
+                        - link "소방서장 아들 CPR 구조" [ref=f16e203] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3196
+                        - link "화제 속으로" [ref=f16e204] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3196
+                        - generic [ref=f16e205]: NEW
+                    - generic [ref=f16e208]:
+                      - button "AI 요약 도움말" [ref=f16e210] [cursor=pointer]:
+                        - text: AI 요약
+                        - generic [ref=f16e211]: 도움말
+                      - link "김제소방서장 심정지 극복 업무 복귀 아들 심폐소생술 및 119 응급처치 도움" [ref=f16e212] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/3196
+                - listitem [ref=f16e213]:
+                  - generic [ref=f16e214]:
+                    - generic [ref=f16e217]:
+                      - generic [ref=f16e218]: 이슈NOW
+                      - generic [ref=f16e219]:
+                        - link "이란 핵 협상안 전달" [ref=f16e220] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/2463
+                        - link "미국·이란 전쟁" [ref=f16e221] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/2463
+                        - generic [ref=f16e222]: NEW
+                    - generic [ref=f16e225]:
+                      - button "AI 요약 도움말" [ref=f16e227] [cursor=pointer]:
+                        - text: AI 요약
+                        - generic [ref=f16e228]: 도움말
+                      - link "카타르 중재 7개 조건 이행 요구 원유 제재 유예 및 동결 자산 반환 포함" [ref=f16e229] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/2463
+                - listitem [ref=f16e230]:
+                  - generic [ref=f16e231]:
+                    - generic [ref=f16e234]:
+                      - generic [ref=f16e235]: 이슈NOW
+                      - generic [ref=f16e236]:
+                        - link "패션업계 AI 모델 확산" [ref=f16e237] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3175
+                        - link "생활의 지혜" [ref=f16e238] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3175
+                        - generic [ref=f16e239]: NEW
+                    - generic [ref=f16e242]:
+                      - button "AI 요약 도움말" [ref=f16e244] [cursor=pointer]:
+                        - text: AI 요약
+                        - generic [ref=f16e245]: 도움말
+                      - link "콘텐츠 제작 비용 50% 절감 및 기간 단축 모델 일자리 감소 우려 권리 보호 필요" [ref=f16e246] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/3175
+                - listitem [ref=f16e247]:
+                  - generic [ref=f16e248]:
+                    - generic [ref=f16e251]:
+                      - generic [ref=f16e252]: 이슈NOW
+                      - generic [ref=f16e253]:
+                        - link "미 민주당 상·하원 압승" [ref=f16e254] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3180
+                        - link "미국 중간선거" [ref=f16e255] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/3180
+                        - generic [ref=f16e256]: NEW
+                    - generic [ref=f16e259]:
+                      - button "AI 요약 도움말" [ref=f16e261] [cursor=pointer]:
+                        - text: AI 요약
+                        - generic [ref=f16e262]: 도움말
+                      - link "트럼프 레임덕 우려 속 자국 우선주의 지속 한국 안보·통상 불확실성 증대" [ref=f16e263] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/3180
+                - listitem [ref=f16e264]:
+                  - generic [ref=f16e265]:
+                    - generic [ref=f16e268]:
+                      - generic [ref=f16e269]: 이슈NOW
+                      - generic [ref=f16e270]:
+                        - link "이 대통령 유튜브 소통" [ref=f16e271] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/1499
+                        - link "이재명 정부" [ref=f16e272] [cursor=pointer]:
+                          - /url: https://media.naver.com/issue/032/1499
+                    - generic [ref=f16e274]:
+                      - button "AI 요약 도움말" [ref=f16e276] [cursor=pointer]:
+                        - text: AI 요약
+                        - generic [ref=f16e277]: 도움말
+                      - link "김어준 알고리즘 주장 반박 국무회의 생중계 및 SNS 직접 소통 지속" [ref=f16e278] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/1499
+              - button "다음" [ref=f16e279] [cursor=pointer]
+          - generic [ref=f16e281]:
+            - generic [ref=f16e282]:
+              - strong [ref=f16e283]: 이 기사를 추천합니다
+              - button "기사 추천 안내" [ref=f16e284] [cursor=pointer]
+            - generic [ref=f16e285]:
+              - menu:
+                - menuitem "쏠쏠정보 0":
+                  - button "쏠쏠정보 0"
+                - menuitem "흥미진진 0":
+                  - button "흥미진진 0"
+                - menuitem "공감백배 0":
+                  - button "공감백배 0"
+                - menuitem "분석탁월 0":
+                  - button "분석탁월 0"
+                - menuitem "후속강추 0":
+                  - button "후속강추 0"
+      - generic [ref=f16e287]:
+        - heading "가치있는 소비, 해피빈 펀딩" [level=4] [ref=f16e288]
+        - generic [ref=f16e289]:
+          - link [ref=f16e290] [cursor=pointer]:
+            - /url: https://happybean.naver.com/fundings/detail/F2996
+            - img "섬네일 이미지" [ref=f16e291]
+          - link [ref=f16e292] [cursor=pointer]:
+            - /url: https://happybean.naver.com/fundings/detail/F2996
+            - strong [ref=f16e293]: 제주 바다와 밭의 제철 재료로 만든 반찬&볶음고추장
+            - paragraph [ref=f16e294]: 한 계절의 수고와 정성을 오래 전하고 싶은 작은 가게, 펀딩으로 응원해요
+      - generic [ref=f16e295]:
+        - generic [ref=f16e296]:
+          - generic [ref=f16e298]:
+            - generic [ref=f16e300]:
+              - heading [level=2] [ref=f16e302]:
+                - emphasis [ref=f16e303]: 경향신문
+                - text: 많이 본 뉴스
+              - text: 오전 9시~10시까지 집계한 결과입니다.
+            - list [ref=f16e304]:
+              - listitem [ref=f16e305]:
+                - link "1위 [속보]코스피, 8% 폭락에 서킷브레이커…5000선 붕괴" [ref=f16e306] [cursor=pointer]:
+                  - /url: /article/032/0003481067?ntype=RANKING
+                  - generic [ref=f16e307]: 1위
+                  - generic [ref=f16e311]: "[속보]코스피, 8% 폭락에 서킷브레이커…5000선 붕괴"
+              - listitem [ref=f16e314]:
+                - link "2위 [속보]코스피, 서킷브레이커 이어 매도 사이드카…5000선 턱걸이" [ref=f16e315] [cursor=pointer]:
+                  - /url: /article/032/0003481070?ntype=RANKING
+                  - generic [ref=f16e316]: 2위
+                  - generic [ref=f16e320]: "[속보]코스피, 서킷브레이커 이어 매도 사이드카…5000선 턱걸이"
+              - listitem [ref=f16e323]:
+                - link "3위 강유정 “대통령, 매체 파워 가장 높은 메신저 중 한 분…유튜브 라이브 고려할 수도”" [ref=f16e324] [cursor=pointer]:
+                  - /url: /article/032/0003481061?ntype=RANKING
+                  - generic [ref=f16e325]: 3위
+                  - generic [ref=f16e329]: 강유정 “대통령, 매체 파워 가장 높은 메신저 중 한 분…유튜브 라이브 고려할 수도”
+              - listitem [ref=f16e332]:
+                - link "4위 네타냐후 심판 현실화 하나···아랍계 정당 모두 ‘아이젠코트 지지’" [ref=f16e333] [cursor=pointer]:
+                  - /url: /article/032/0003481049?ntype=RANKING
+                  - generic [ref=f16e334]: 4위
+                  - generic [ref=f16e338]: 네타냐후 심판 현실화 하나···아랍계 정당 모두 ‘아이젠코트 지지’
+              - listitem [ref=f16e341]:
+                - link "5위 [속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박" [ref=f16e342] [cursor=pointer]:
+                  - /url: /article/032/0003481016?ntype=RANKING
+                  - generic [ref=f16e343]: 5위
+                  - generic [ref=f16e347]: "[속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박"
+              - listitem [ref=f16e350]:
+                - link "6위 “때리려면 다리를 때려요, 안 아프니까”···장애인들의 ‘매운맛’ 코미디" [ref=f16e351] [cursor=pointer]:
+                  - /url: /article/032/0003481041?ntype=RANKING
+                  - generic [ref=f16e352]: 6위
+                  - generic [ref=f16e356]: “때리려면 다리를 때려요, 안 아프니까”···장애인들의 ‘매운맛’ 코미디
+            - link "랭킹 뉴스 더보기" [ref=f16e360] [cursor=pointer]:
+              - /url: https://media.naver.com/press/032/ranking
+          - generic [ref=f16e363]:
+            - generic [ref=f16e364]:
+              - generic [ref=f16e366]:
+                - heading "이슈 NOW" [level=2] [ref=f16e367]
+                - button "안내" [ref=f16e368] [cursor=pointer]
+              - link "내 구독 이슈" [ref=f16e371] [cursor=pointer]:
+                - /url: https://media.naver.com/channel/issueSetting
+            - generic [ref=f16e372]:
+              - tablist [ref=f16e375]:
+                - tab "미국" [selected] [ref=f16e376] [cursor=pointer]
+                - tab "인공지능" [ref=f16e377] [cursor=pointer]
+                - tab "AI" [ref=f16e378] [cursor=pointer]
+                - tab "삼성전자" [ref=f16e379] [cursor=pointer]
+                - tab "트럼프" [ref=f16e380] [cursor=pointer]
+                - tab "증시" [ref=f16e381] [cursor=pointer]
+                - tab "코스닥" [ref=f16e382] [cursor=pointer]
+                - tab "이란" [ref=f16e383] [cursor=pointer]
+                - tab "지방선거" [ref=f16e384] [cursor=pointer]
+                - tab "이재명대통령" [ref=f16e385] [cursor=pointer]
+              - button "다음" [ref=f16e386] [cursor=pointer]
+            - tabpanel [ref=f16e388]:
+              - generic [ref=f16e389]:
+                - link "# 미국" [ref=f16e390] [cursor=pointer]:
+                  - /url: https://media.naver.com/issue/tag/26
+                  - generic [ref=f16e391]: "#"
+                  - heading "미국" [level=4] [ref=f16e392]
+                - generic [ref=f16e393]:
+                  - generic [ref=f16e394]: 22개 언론사
+                  - generic [ref=f16e395]: 30,913개 기사
+              - list [ref=f16e396]:
+                - listitem [ref=f16e397]:
+                  - generic [ref=f16e398]:
+                    - generic [ref=f16e399]:
+                      - link [ref=f16e400] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/469/158
+                        - strong [ref=f16e402]: 트럼프 2기
+                      - button "구독" [ref=f16e403] [cursor=pointer]
+                    - link "트럼프, 선거 참패에도 '300% 관세 폭탄' 경고" [ref=f16e405] [cursor=pointer]:
+                      - /url: https://n.news.naver.com/article/469/0000963985?iid=158
+                - listitem [ref=f16e408]:
+                  - generic [ref=f16e409]:
+                    - generic [ref=f16e410]:
+                      - link [ref=f16e411] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/032/2463
+                        - strong [ref=f16e413]: 미국·이란 전쟁
+                      - button "구독" [ref=f16e414] [cursor=pointer]
+                    - link "이란, 미국에 핵 협상안 전달…“7개 조건 먼저 이행”" [ref=f16e416] [cursor=pointer]:
+                      - /url: https://n.news.naver.com/article/032/0003481065?iid=2463
+                - listitem [ref=f16e419]:
+                  - generic [ref=f16e420]:
+                    - generic [ref=f16e421]:
+                      - link [ref=f16e422] [cursor=pointer]:
+                        - /url: https://media.naver.com/issue/022/2912
+                        - strong [ref=f16e424]: 美슐랭
+                      - button "구독" [ref=f16e425] [cursor=pointer]
+                    - link "트럼프가 韓 LNG 투자 내세워 지원한 알래스카 상원 선거 초접전…미시시피도 개표 계속 [美슐랭]" [ref=f16e427] [cursor=pointer]:
+                      - /url: https://n.news.naver.com/article/022/0004173002?iid=2912
+          - generic [ref=f16e430]:
+            - generic [ref=f16e433]:
+              - heading "함께 볼만한 기자" [level=2] [ref=f16e434]
+              - button "안내" [ref=f16e435] [cursor=pointer]
+            - list [ref=f16e437]:
+              - listitem [ref=f16e438]:
+                - link "\"내 목소리 지킨다\"...'딥페이크 방지' 신호 개발 동영상 02:22 \"내 목소리 지킨다\"...'딥페이크 방지' 신호 개발" [ref=f16e439] [cursor=pointer]:
+                  - /url: /article/052/0002426368?type=journalists
+                  - generic [ref=f16e441]:
+                    - img "\"내 목소리 지킨다\"...'딥페이크 방지' 신호 개발" [ref=f16e442]
+                    - generic [ref=f16e443]:
+                      - emphasis [ref=f16e444]: 동영상
+                      - text: 02:22
+                  - generic [ref=f16e445]: "\"내 목소리 지킨다\"...'딥페이크 방지' 신호 개발"
+                - generic [ref=f16e448]:
+                  - link "김은별 기자 김은별 기자" [ref=f16e449] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/052/82592
+                    - img "김은별 기자" [ref=f16e451]
+                    - generic [ref=f16e452]: 김은별 기자
+                  - button "구독" [ref=f16e453] [cursor=pointer]
+              - listitem [ref=f16e455]:
+                - link "엘앤에프, 내년 영업익 1.2배 증가 전망…\"46파이·LFP 본격 성장\" 엘앤에프, 내년 영업익 1.2배 증가 전망…\"46파이·LFP 본격 성장\"" [ref=f16e456] [cursor=pointer]:
+                  - /url: /article/092/0002444137?type=journalists
+                  - img "엘앤에프, 내년 영업익 1.2배 증가 전망…\"46파이·LFP 본격 성장\"" [ref=f16e459]
+                  - generic [ref=f16e460]: 엘앤에프, 내년 영업익 1.2배 증가 전망…"46파이·LFP 본격 성장"
+                - generic [ref=f16e463]:
+                  - link "김윤희 기자 김윤희 기자" [ref=f16e464] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/092/42796
+                    - img "김윤희 기자" [ref=f16e466]
+                    - generic [ref=f16e467]: 김윤희 기자
+                  - button "구독" [ref=f16e468] [cursor=pointer]
+              - listitem [ref=f16e470]:
+                - link "부산불꽃축제 앞두고...KT, 무선망 보강하고 기지국 설치 부산불꽃축제 앞두고...KT, 무선망 보강하고 기지국 설치" [ref=f16e471] [cursor=pointer]:
+                  - /url: /article/011/0004679423?type=journalists
+                  - img "부산불꽃축제 앞두고...KT, 무선망 보강하고 기지국 설치" [ref=f16e474]
+                  - generic [ref=f16e475]: 부산불꽃축제 앞두고...KT, 무선망 보강하고 기지국 설치
+                - generic [ref=f16e478]:
+                  - link "김기혁 기자 김기혁 기자" [ref=f16e479] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/011/55479
+                    - img "김기혁 기자" [ref=f16e481]
+                    - generic [ref=f16e482]: 김기혁 기자
+                  - button "구독" [ref=f16e483] [cursor=pointer]
+              - listitem [ref=f16e485]:
+                - link "1위 항암제 특허 풀린다…42조 시장 쟁탈전 1위 항암제 특허 풀린다…42조 시장 쟁탈전" [ref=f16e486] [cursor=pointer]:
+                  - /url: /article/015/0005350304?type=journalists
+                  - img "1위 항암제 특허 풀린다…42조 시장 쟁탈전" [ref=f16e489]
+                  - generic [ref=f16e490]: 1위 항암제 특허 풀린다…42조 시장 쟁탈전
+                - generic [ref=f16e493]:
+                  - link "김유림 기자 김유림 기자" [ref=f16e494] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/015/78823
+                    - img "김유림 기자" [ref=f16e496]
+                    - generic [ref=f16e497]: 김유림 기자
+                  - button "구독" [ref=f16e498] [cursor=pointer]
+              - listitem [ref=f16e500]:
+                - link "10g '근육 옷감'이 15kg 번쩍… 국내 기술로 개발한 '입는 로봇' 나온다 10g '근육 옷감'이 15kg 번쩍… 국내 기술로 개발한 '입는 로봇' 나온다" [ref=f16e501] [cursor=pointer]:
+                  - /url: /article/469/0000963814?type=journalists
+                  - img "10g '근육 옷감'이 15kg 번쩍… 국내 기술로 개발한 '입는 로봇' 나온다" [ref=f16e504]
+                  - generic [ref=f16e505]: 10g '근육 옷감'이 15kg 번쩍… 국내 기술로 개발한 '입는 로봇' 나온다
+                - generic [ref=f16e508]:
+                  - link "양진하 기자 양진하 기자" [ref=f16e509] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/469/12987
+                    - img "양진하 기자" [ref=f16e511]
+                    - generic [ref=f16e512]: 양진하 기자
+                  - button "구독" [ref=f16e513] [cursor=pointer]
+              - listitem [ref=f16e515]:
+                - link "“탐지부터 수정안까지 AI가”…AWS, AI 보안 서비스 '컨티뉴엄' 출시 “탐지부터 수정안까지 AI가”…AWS, AI 보안 서비스 '컨티뉴엄' 출시" [ref=f16e516] [cursor=pointer]:
+                  - /url: /article/138/0002247452?type=journalists
+                  - img "“탐지부터 수정안까지 AI가”…AWS, AI 보안 서비스 '컨티뉴엄' 출시" [ref=f16e519]
+                  - generic [ref=f16e520]: “탐지부터 수정안까지 AI가”…AWS, AI 보안 서비스 '컨티뉴엄' 출시
+                - generic [ref=f16e523]:
+                  - link "박재현 기자 박재현 기자" [ref=f16e524] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/138/83005
+                    - img "박재현 기자" [ref=f16e526]
+                    - generic [ref=f16e527]: 박재현 기자
+                  - button "구독" [ref=f16e528] [cursor=pointer]
+          - generic [ref=f16e530]:
+            - generic [ref=f16e533]:
+              - heading "함께 볼만한 뉴스" [level=2] [ref=f16e534]
+              - button "안내" [ref=f16e535] [cursor=pointer]
+            - list [ref=f16e537]:
+              - listitem [ref=f16e538]:
+                - link "美 민주당 중간선거 승리에 AI 업계 긴장…데이터센터·AI 안전 규제 강화 전망 디지털데일리" [ref=f16e539] [cursor=pointer]:
+                  - /url: /article/138/0002247482
+                  - generic [ref=f16e540]:
+                    - generic [ref=f16e541]: 美 민주당 중간선거 승리에 AI 업계 긴장…데이터센터·AI 안전 규제 강화 전망
+                    - generic [ref=f16e543]: 디지털데일리
+              - listitem [ref=f16e545]:
+                - link "'트럼프호' 탈출 러시 시작되나…유력 대권주자 루비오 사임설 연합뉴스" [ref=f16e546] [cursor=pointer]:
+                  - /url: /article/001/0016425238
+                  - generic [ref=f16e547]:
+                    - generic [ref=f16e548]: "'트럼프호' 탈출 러시 시작되나…유력 대권주자 루비오 사임설"
+                    - generic [ref=f16e550]: 연합뉴스
+              - listitem [ref=f16e552]:
+                - link "中 YMTC, 7조원 규모 IPO 잠정 중단…증시 침체에 반도체 자립 전략 차질 우려 조선비즈" [ref=f16e553] [cursor=pointer]:
+                  - /url: /article/366/0001202870
+                  - generic [ref=f16e554]:
+                    - generic [ref=f16e555]: 中 YMTC, 7조원 규모 IPO 잠정 중단…증시 침체에 반도체 자립 전략 차질 우려
+                    - generic [ref=f16e557]: 조선비즈
+              - listitem [ref=f16e559]:
+                - link "[AI는 지금] \"경쟁사 AI도 돈 된다\"…코히어, 딥시크·오픈AI 품은 속내는 지디넷코리아" [ref=f16e560] [cursor=pointer]:
+                  - /url: /article/092/0002444030
+                  - generic [ref=f16e561]:
+                    - generic [ref=f16e562]: "[AI는 지금] \"경쟁사 AI도 돈 된다\"…코히어, 딥시크·오픈AI 품은 속내는"
+                    - generic [ref=f16e564]: 지디넷코리아
+          - list [ref=f16e567]:
+            - listitem [ref=f16e568]:
+              - link "\"11년간 대한항공 안 탔다\"…기내 난동 후 바비킴 괴롭히는 '좌석 트라우마' [헬스톡] 파이낸셜뉴스 파이낸셜뉴스" [ref=f16e569] [cursor=pointer]:
+                - /url: /article/014/0005599895
+                - generic [ref=f16e572]:
+                  - generic [ref=f16e573]: "\"11년간 대한항공 안 탔다\"…기내 난동 후 바비킴 괴롭히는 '좌석 트라우마' [헬스톡]"
+                  - generic [ref=f16e575]:
+                    - img "파이낸셜뉴스" [ref=f16e577]
+                    - generic [ref=f16e578]: 파이낸셜뉴스
+            - listitem [ref=f16e579]:
+              - link "나스닥 5.5% 급락…엔비디아·AMD 등 AI 인프라주 동반 약세 디지털데일리 디지털데일리" [ref=f16e580] [cursor=pointer]:
+                - /url: /article/138/0002247481
+                - generic [ref=f16e583]:
+                  - generic [ref=f16e584]: 나스닥 5.5% 급락…엔비디아·AMD 등 AI 인프라주 동반 약세
+                  - generic [ref=f16e586]:
+                    - img "디지털데일리" [ref=f16e588]
+                    - generic [ref=f16e589]: 디지털데일리
+            - listitem [ref=f16e590]:
+              - link "LG CNS가 DBS 다음 타자로 디지털자산 플랫폼 '기틀' 내건 이유 블로터 블로터" [ref=f16e591] [cursor=pointer]:
+                - /url: /article/293/0000092752
+                - generic [ref=f16e594]:
+                  - generic [ref=f16e595]: LG CNS가 DBS 다음 타자로 디지털자산 플랫폼 '기틀' 내건 이유
+                  - generic [ref=f16e597]:
+                    - img "블로터" [ref=f16e599]
+                    - generic [ref=f16e600]: 블로터
+          - list [ref=f16e602]:
+            - listitem [ref=f16e603]:
+              - link "푸틴, ‘도스토옙스키 번역’ 김정아에 ‘푸시킨 메달’ 수여 조선일보" [ref=f16e604] [cursor=pointer]:
+                - /url: /article/023/0004008110
+                - generic [ref=f16e605]:
+                  - generic [ref=f16e606]: 푸틴, ‘도스토옙스키 번역’ 김정아에 ‘푸시킨 메달’ 수여
+                  - generic [ref=f16e608]: 조선일보
+            - listitem [ref=f16e610]:
+              - link "3분기 D램 시장 매출 전년比 369% 증가… 삼성전자, 점유율 38% 1위 조선비즈" [ref=f16e611] [cursor=pointer]:
+                - /url: /article/366/0001202862
+                - generic [ref=f16e612]:
+                  - generic [ref=f16e613]: 3분기 D램 시장 매출 전년比 369% 증가… 삼성전자, 점유율 38% 1위
+                  - generic [ref=f16e615]: 조선비즈
+            - listitem [ref=f16e617]:
+              - link "오픈AI, ‘이미지 2.6’ 공개…생성 속도 50%↑ 이데일리" [ref=f16e618] [cursor=pointer]:
+                - /url: /article/018/0006404162
+                - generic [ref=f16e619]:
+                  - generic [ref=f16e620]: 오픈AI, ‘이미지 2.6’ 공개…생성 속도 50%↑
+                  - generic [ref=f16e622]: 이데일리
+            - listitem [ref=f16e624]:
+              - link "\"제발 유리 좀 찾아주세요\"...30대 韓 여성, 대낮 휴양지서 사라져 한달째 실종 파이낸셜뉴스" [ref=f16e625] [cursor=pointer]:
+                - /url: /article/014/0005600310
+                - generic [ref=f16e626]:
+                  - generic [ref=f16e627]: "\"제발 유리 좀 찾아주세요\"...30대 韓 여성, 대낮 휴양지서 사라져 한달째 실종"
+                  - generic [ref=f16e629]: 파이낸셜뉴스
+          - list [ref=f16e632]:
+            - listitem [ref=f16e633]:
+              - link "넷마블 “AI 업무환경으로 내년 신작 13종 출시” 매일경제 매일경제" [ref=f16e634] [cursor=pointer]:
+                - /url: /article/009/0005759647
+                - generic [ref=f16e637]:
+                  - generic [ref=f16e638]: 넷마블 “AI 업무환경으로 내년 신작 13종 출시”
+                  - generic [ref=f16e640]:
+                    - img "매일경제" [ref=f16e642]
+                    - generic [ref=f16e643]: 매일경제
+            - listitem [ref=f16e644]:
+              - link "카카오, AI 투자 부담 줄이고 수익화 속도…GPU는 클라우드로(종합) 뉴스1 뉴스1" [ref=f16e645] [cursor=pointer]:
+                - /url: /article/421/0009271946
+                - generic [ref=f16e648]:
+                  - generic [ref=f16e649]: 카카오, AI 투자 부담 줄이고 수익화 속도…GPU는 클라우드로(종합)
+                  - generic [ref=f16e651]:
+                    - img "뉴스1" [ref=f16e653]
+                    - generic [ref=f16e654]: 뉴스1
+            - listitem [ref=f16e655]:
+              - link "술안주로 최곤데 이제 못 먹는다고? “한 마리도 안 잡혀”…충격 근황 전해졌다 [월드픽] 서울신문 서울신문" [ref=f16e656] [cursor=pointer]:
+                - /url: /article/081/0003696394
+                - generic [ref=f16e659]:
+                  - generic [ref=f16e660]: 술안주로 최곤데 이제 못 먹는다고? “한 마리도 안 잡혀”…충격 근황 전해졌다 [월드픽]
+                  - generic [ref=f16e662]:
+                    - img "서울신문" [ref=f16e664]
+                    - generic [ref=f16e665]: 서울신문
+          - list [ref=f16e667]:
+            - listitem [ref=f16e668]:
+              - link "[인터뷰] \"AI 코딩, 마지막 20%가 어렵다\"…인프라지스틱스가 제시한 개발 해법 지디넷코리아 지디넷코리아" [ref=f16e669] [cursor=pointer]:
+                - /url: /article/092/0002444003
+                - generic [ref=f16e672]:
+                  - generic [ref=f16e673]: "[인터뷰] \"AI 코딩, 마지막 20%가 어렵다\"…인프라지스틱스가 제시한 개발 해법"
+                  - generic [ref=f16e675]:
+                    - img "지디넷코리아" [ref=f16e677]
+                    - generic [ref=f16e678]: 지디넷코리아
+            - listitem [ref=f16e679]:
+              - link "네이버 쇼핑 후기까지 대신 쓰는 AI ‘피클’…검색 넘어 일 처리한다 이데일리 이데일리" [ref=f16e680] [cursor=pointer]:
+                - /url: /article/018/0006404552
+                - generic [ref=f16e683]:
+                  - generic [ref=f16e684]: 네이버 쇼핑 후기까지 대신 쓰는 AI ‘피클’…검색 넘어 일 처리한다
+                  - generic [ref=f16e686]:
+                    - img "이데일리" [ref=f16e688]
+                    - generic [ref=f16e689]: 이데일리
+            - listitem [ref=f16e690]:
+              - link "대통령이 ‘떨어졌다’고 한 곳 빼고 다 올랐다…서울 집값 91주째 상승 국민일보 국민일보" [ref=f16e691] [cursor=pointer]:
+                - /url: /article/005/0001883416
+                - generic [ref=f16e694]:
+                  - generic [ref=f16e695]: 대통령이 ‘떨어졌다’고 한 곳 빼고 다 올랐다…서울 집값 91주째 상승
+                  - generic [ref=f16e697]:
+                    - img "국민일보" [ref=f16e699]
+                    - generic [ref=f16e700]: 국민일보
+          - list [ref=f16e702]:
+            - listitem [ref=f16e703]:
+              - link "정치" [ref=f16e704] [cursor=pointer]:
+                - /url: https://news.naver.com/section/100
+            - listitem [ref=f16e706]:
+              - link "경제" [ref=f16e707] [cursor=pointer]:
+                - /url: https://news.naver.com/section/101
+            - listitem [ref=f16e709]:
+              - link "사회" [ref=f16e710] [cursor=pointer]:
+                - /url: https://news.naver.com/section/102
+            - listitem [ref=f16e712]:
+              - link "생활/문화" [ref=f16e713] [cursor=pointer]:
+                - /url: https://news.naver.com/section/103
+            - listitem [ref=f16e715]:
+              - link "세계" [ref=f16e716] [cursor=pointer]:
+                - /url: https://news.naver.com/section/104
+            - listitem [ref=f16e718]:
+              - link "IT/과학" [ref=f16e719] [cursor=pointer]:
+                - /url: https://news.naver.com/section/105
+            - listitem [ref=f16e721]:
+              - link "오피니언" [ref=f16e722] [cursor=pointer]:
+                - /url: https://news.naver.com/opinion/home
+            - listitem [ref=f16e724]:
+              - link "랭킹" [ref=f16e725] [cursor=pointer]:
+                - /url: https://m.news.naver.com/rankingList
+            - listitem [ref=f16e727]:
+              - link "신문보기" [ref=f16e728] [cursor=pointer]:
+                - /url: https://news.naver.com/newspaper/home
+            - listitem [ref=f16e730]:
+              - link "프리미엄" [ref=f16e731] [cursor=pointer]:
+                - /url: https://contents.premium.naver.com
+        - generic [ref=f16e733]:
+          - generic [ref=f16e734]:
+            - generic [ref=f16e737]:
+              - heading "구독이 늘어난 기자" [level=2] [ref=f16e738]
+              - button "안내" [ref=f16e739] [cursor=pointer]
+            - list [ref=f16e741]:
+              - listitem [ref=f16e742]:
+                - link "“학생 수당 지키자” 덴마크서도 4만명 수업 거부 거리로 “학생 수당 지키자” 덴마크서도 4만명 수업 거부 거리로" [ref=f16e743] [cursor=pointer]:
+                  - /url: /article/032/0003480997?type=journalists
+                  - img "“학생 수당 지키자” 덴마크서도 4만명 수업 거부 거리로" [ref=f16e746]
+                  - generic [ref=f16e747]: “학생 수당 지키자” 덴마크서도 4만명 수업 거부 거리로
+                - generic [ref=f16e750]:
+                  - link "백민정 기자 백민정 기자" [ref=f16e751] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/032/82001
+                    - img "백민정 기자" [ref=f16e753]
+                    - generic [ref=f16e754]: 백민정 기자
+                  - button "구독" [ref=f16e755] [cursor=pointer]
+              - listitem [ref=f16e757]:
+                - link "이 대통령, 오늘 동티모르 대통령과 정상회담‥협력 확대 논의 이 대통령, 오늘 동티모르 대통령과 정상회담‥협력 확대 논의" [ref=f16e758] [cursor=pointer]:
+                  - /url: /article/214/0001533888?type=journalists
+                  - img "이 대통령, 오늘 동티모르 대통령과 정상회담‥협력 확대 논의" [ref=f16e761]
+                  - generic [ref=f16e762]: 이 대통령, 오늘 동티모르 대통령과 정상회담‥협력 확대 논의
+                - generic [ref=f16e765]:
+                  - link "윤상문 기자 윤상문 기자" [ref=f16e766] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/214/71631
+                    - img "윤상문 기자" [ref=f16e768]
+                    - generic [ref=f16e769]: 윤상문 기자
+                  - button "구독" [ref=f16e770] [cursor=pointer]
+              - listitem [ref=f16e772]:
+                - link "SK하이닉스, '턱밑 추격' 마이크론 따돌렸다...1위 삼성전자 SK하이닉스, '턱밑 추격' 마이크론 따돌렸다...1위 삼성전자" [ref=f16e773] [cursor=pointer]:
+                  - /url: /article/243/0000105261?type=journalists
+                  - img "SK하이닉스, '턱밑 추격' 마이크론 따돌렸다...1위 삼성전자" [ref=f16e776]
+                  - generic [ref=f16e777]: SK하이닉스, '턱밑 추격' 마이크론 따돌렸다...1위 삼성전자
+                - generic [ref=f16e780]:
+                  - link "정지은 기자 정지은 기자" [ref=f16e781] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/243/83623
+                    - img "정지은 기자" [ref=f16e783]
+                    - generic [ref=f16e784]: 정지은 기자
+                  - button "구독" [ref=f16e785] [cursor=pointer]
+              - listitem [ref=f16e787]:
+                - link "\"링컨이 와도 못 이겨\" 공화 폭발…한몸 밴스마저 '급소' 찔렀다 동영상 02:15 \"링컨이 와도 못 이겨\" 공화 폭발…한몸 밴스마저 '급소' 찔렀다" [ref=f16e788] [cursor=pointer]:
+                  - /url: /article/437/0000519348?type=journalists
+                  - generic [ref=f16e790]:
+                    - img "\"링컨이 와도 못 이겨\" 공화 폭발…한몸 밴스마저 '급소' 찔렀다" [ref=f16e791]
+                    - generic [ref=f16e792]:
+                      - emphasis [ref=f16e793]: 동영상
+                      - text: 02:15
+                  - generic [ref=f16e794]: "\"링컨이 와도 못 이겨\" 공화 폭발…한몸 밴스마저 '급소' 찔렀다"
+                - generic [ref=f16e797]:
+                  - link "정강현 기자 정강현 기자" [ref=f16e798] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/437/35683
+                    - img "정강현 기자" [ref=f16e800]
+                    - generic [ref=f16e801]: 정강현 기자
+                  - button "구독" [ref=f16e802] [cursor=pointer]
+              - listitem [ref=f16e804]:
+                - link "\"고인, 한국 무사히 돌아오도록\"…볼리비아서 숨진 여행유튜버, 가족이 전한 부탁 \"고인, 한국 무사히 돌아오도록\"…볼리비아서 숨진 여행유튜버, 가족이 전한 부탁" [ref=f16e805] [cursor=pointer]:
+                  - /url: /article/088/0001038822?type=journalists
+                  - img "\"고인, 한국 무사히 돌아오도록\"…볼리비아서 숨진 여행유튜버, 가족이 전한 부탁" [ref=f16e808]
+                  - generic [ref=f16e809]: "\"고인, 한국 무사히 돌아오도록\"…볼리비아서 숨진 여행유튜버, 가족이 전한 부탁"
+                - generic [ref=f16e812]:
+                  - link "이혜진 기자 이혜진 기자" [ref=f16e813] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/088/82301
+                    - img "이혜진 기자" [ref=f16e815]
+                    - generic [ref=f16e816]: 이혜진 기자
+                  - button "구독" [ref=f16e817] [cursor=pointer]
+              - listitem [ref=f16e819]:
+                - link "英총리, 내년 G20 정상회의에 “푸틴 초청 안해…시진핑은 환영” 英총리, 내년 G20 정상회의에 “푸틴 초청 안해…시진핑은 환영”" [ref=f16e820] [cursor=pointer]:
+                  - /url: /article/025/0003563268?type=journalists
+                  - img "英총리, 내년 G20 정상회의에 “푸틴 초청 안해…시진핑은 환영”" [ref=f16e823]
+                  - generic [ref=f16e824]: 英총리, 내년 G20 정상회의에 “푸틴 초청 안해…시진핑은 환영”
+                - generic [ref=f16e827]:
+                  - link "한영혜 기자 한영혜 기자" [ref=f16e828] [cursor=pointer]:
+                    - /url: https://media.naver.com/journalist/025/25652
+                    - img "한영혜 기자" [ref=f16e830]
+                    - generic [ref=f16e831]: 한영혜 기자
+                  - button "구독" [ref=f16e832] [cursor=pointer]
+          - generic [ref=f16e834]:
+            - generic [ref=f16e836]:
+              - heading [level=2] [ref=f16e838]:
+                - emphasis [ref=f16e839]: 경향신문
+                - text: 댓글 많은 뉴스
+              - text: 오전 7시~10시까지 집계한 결과입니다.
+            - list [ref=f16e840]:
+              - listitem [ref=f16e841]:
+                - link "1위 [속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박" [ref=f16e842] [cursor=pointer]:
+                  - /url: /article/032/0003481016?ntype=RANKING
+                  - generic [ref=f16e843]: 1위
+                  - generic [ref=f16e847]: "[속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박"
+              - listitem [ref=f16e850]:
+                - link "2위 강유정 “대통령, 매체 파워 가장 높은 메신저 중 한 분…유튜브 라이브 고려할 수도”" [ref=f16e851] [cursor=pointer]:
+                  - /url: /article/032/0003481061?ntype=RANKING
+                  - generic [ref=f16e852]: 2위
+                  - generic [ref=f16e856]: 강유정 “대통령, 매체 파워 가장 높은 메신저 중 한 분…유튜브 라이브 고려할 수도”
+              - listitem [ref=f16e859]:
+                - link "3위 [속보]코스피, 8% 폭락에 서킷브레이커…5000선 붕괴" [ref=f16e860] [cursor=pointer]:
+                  - /url: /article/032/0003481067?ntype=RANKING
+                  - generic [ref=f16e861]: 3위
+                  - generic [ref=f16e865]: "[속보]코스피, 8% 폭락에 서킷브레이커…5000선 붕괴"
+              - listitem [ref=f16e868]:
+                - link "4위 명찰 패용 지시에 갑질, 호화 연찬회…충북 기초의회 의원님들 왜 이러시나" [ref=f16e869] [cursor=pointer]:
+                  - /url: /article/032/0003481045?ntype=RANKING
+                  - generic [ref=f16e870]: 4위
+                  - generic [ref=f16e874]: 명찰 패용 지시에 갑질, 호화 연찬회…충북 기초의회 의원님들 왜 이러시나
+              - listitem [ref=f16e877]:
+                - link "5위 [속보]코스피, 서킷브레이커 이어 매도 사이드카…5000선 턱걸이" [ref=f16e878] [cursor=pointer]:
+                  - /url: /article/032/0003481070?ntype=RANKING
+                  - generic [ref=f16e879]: 5위
+                  - generic [ref=f16e883]: "[속보]코스피, 서킷브레이커 이어 매도 사이드카…5000선 턱걸이"
+              - listitem [ref=f16e886]:
+                - link "6위 이재명 대통령 장남, 주진우 국민의힘 의원 명예훼손으로 고소···“특혜 골프는 사실 아냐, 의혹 제기 선 넘은 것”" [ref=f16e887] [cursor=pointer]:
+                  - /url: /article/032/0003481006?ntype=RANKING
+                  - generic [ref=f16e888]: 6위
+                  - generic [ref=f16e892]: 이재명 대통령 장남, 주진우 국민의힘 의원 명예훼손으로 고소···“특혜 골프는 사실 아냐, 의혹 제기 선 넘은 것”
+            - link "랭킹 뉴스 더보기" [ref=f16e896] [cursor=pointer]:
+              - /url: https://media.naver.com/press/032/ranking?type=comment
+          - list [ref=f16e899]:
+            - listitem [ref=f16e900]:
+              - link "무상교체냐 165만원이냐…'크렉게이트' 아이폰 듀오, 교체 기준 ‘깜깜’ 뉴스1" [ref=f16e901] [cursor=pointer]:
+                - /url: /article/421/0009273370
+                - generic [ref=f16e902]:
+                  - generic [ref=f16e903]: 무상교체냐 165만원이냐…'크렉게이트' 아이폰 듀오, 교체 기준 ‘깜깜’
+                  - generic [ref=f16e905]: 뉴스1
+            - listitem [ref=f16e907]:
+              - link "우체국, 연최고 3.95% 정기예금 출시…거래실적 조건 없다 머니투데이" [ref=f16e908] [cursor=pointer]:
+                - /url: /article/008/0005437034
+                - generic [ref=f16e909]:
+                  - generic [ref=f16e910]: 우체국, 연최고 3.95% 정기예금 출시…거래실적 조건 없다
+                  - generic [ref=f16e912]: 머니투데이
+            - listitem [ref=f16e914]:
+              - link "\"주워온 자식인가 싶다\"…그리, 김구라 믿었다가 낭패 본 사연 한국경제" [ref=f16e915] [cursor=pointer]:
+                - /url: /article/015/0005350999
+                - generic [ref=f16e916]:
+                  - generic [ref=f16e917]: "\"주워온 자식인가 싶다\"…그리, 김구라 믿었다가 낭패 본 사연"
+                  - generic [ref=f16e919]: 한국경제
+            - listitem [ref=f16e921]:
+              - link "“장투하라더니, 이게 뭡니까?” -50% 된 개미들…존리에게 따져 물어보니 서울경제" [ref=f16e922] [cursor=pointer]:
+                - /url: /article/011/0004679350
+                - generic [ref=f16e923]:
+                  - generic [ref=f16e924]: “장투하라더니, 이게 뭡니까?” -50% 된 개미들…존리에게 따져 물어보니
+                  - generic [ref=f16e926]: 서울경제
+          - list [ref=f16e929]:
+            - listitem [ref=f16e930]:
+              - link "美민주, 트럼프 일가 ‘부패 의혹’ 정조준…코인·주식 등 전방위 조사 나선다 데일리안 데일리안" [ref=f16e931] [cursor=pointer]:
+                - /url: /article/119/0003151984
+                - generic [ref=f16e934]:
+                  - generic [ref=f16e935]: 美민주, 트럼프 일가 ‘부패 의혹’ 정조준…코인·주식 등 전방위 조사 나선다
+                  - generic [ref=f16e937]:
+                    - img "데일리안" [ref=f16e939]
+                    - generic [ref=f16e940]: 데일리안
+            - listitem [ref=f16e941]:
+              - link "[속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박 경향신문 경향신문" [ref=f16e942] [cursor=pointer]:
+                - /url: /article/032/0003481016
+                - generic [ref=f16e945]:
+                  - generic [ref=f16e946]: "[속보] 이 대통령 “‘알고리즘에 갇혔다’ 주장 있는데, 갇히지 않는다”…첫 유튜브 방송에서 김어준 주장 반박"
+                  - generic [ref=f16e948]:
+                    - img "경향신문" [ref=f16e950]
+                    - generic [ref=f16e951]: 경향신문
+            - listitem [ref=f16e952]:
+              - link "[美블루쓰나미]'참패 트럼프' 다시 관세 압박 가능성…韓에 포화 퍼붓나 아시아경제 아시아경제" [ref=f16e953] [cursor=pointer]:
+                - /url: /article/277/0005838547
+                - generic [ref=f16e956]:
+                  - generic [ref=f16e957]: "[美블루쓰나미]'참패 트럼프' 다시 관세 압박 가능성…韓에 포화 퍼붓나"
+                  - generic [ref=f16e959]:
+                    - img "아시아경제" [ref=f16e961]
+                    - generic [ref=f16e962]: 아시아경제
+          - list [ref=f16e964]:
+            - listitem [ref=f16e965]:
+              - link "\"머스크 홀로 6천억\" 총 8천억 부었다…공화당 밀다 참패 SBS SBS" [ref=f16e966] [cursor=pointer]:
+                - /url: /article/055/0001400912
+                - generic [ref=f16e969]:
+                  - generic [ref=f16e970]: "\"머스크 홀로 6천억\" 총 8천억 부었다…공화당 밀다 참패"
+                  - generic [ref=f16e972]:
+                    - img "SBS" [ref=f16e974]
+                    - generic [ref=f16e975]: SBS
+            - listitem [ref=f16e976]:
+              - link "유치원생에 물려 파상풍 주사 맞았는데…‘아동학대’로 고소 당해 동아일보 동아일보" [ref=f16e977] [cursor=pointer]:
+                - /url: /article/020/0003760398
+                - generic [ref=f16e980]:
+                  - generic [ref=f16e981]: 유치원생에 물려 파상풍 주사 맞았는데…‘아동학대’로 고소 당해
+                  - generic [ref=f16e983]:
+                    - img "동아일보" [ref=f16e985]
+                    - generic [ref=f16e986]: 동아일보
+            - listitem [ref=f16e987]:
+              - link "“작업장 위험 미리 차단” LG, AI 기반 안전혁신 공유 헤럴드경제 헤럴드경제" [ref=f16e988] [cursor=pointer]:
+                - /url: /article/016/0002719343
+                - generic [ref=f16e991]:
+                  - generic [ref=f16e992]: “작업장 위험 미리 차단” LG, AI 기반 안전혁신 공유
+                  - generic [ref=f16e994]:
+                    - img "헤럴드경제" [ref=f16e996]
+                    - generic [ref=f16e997]: 헤럴드경제
+          - list [ref=f16e999]:
+            - listitem [ref=f16e1000]:
+              - link "최태원, 美 중간선거 뒤 증시 급락에 \"도대체 그게 말이 되냐\" [현장] 데일리안 데일리안" [ref=f16e1001] [cursor=pointer]:
+                - /url: /article/119/0003151937
+                - generic [ref=f16e1004]:
+                  - generic [ref=f16e1005]: 최태원, 美 중간선거 뒤 증시 급락에 "도대체 그게 말이 되냐" [현장]
+                  - generic [ref=f16e1007]:
+                    - img "데일리안" [ref=f16e1009]
+                    - generic [ref=f16e1010]: 데일리안
+            - listitem [ref=f16e1011]:
+              - link "양치 안 하고 아침 물부터 마셨는데…입속 세균 삼켜도 괜찮을까 세계일보 세계일보" [ref=f16e1012] [cursor=pointer]:
+                - /url: /article/022/0004172943
+                - generic [ref=f16e1015]:
+                  - generic [ref=f16e1016]: 양치 안 하고 아침 물부터 마셨는데…입속 세균 삼켜도 괜찮을까
+                  - generic [ref=f16e1018]:
+                    - img "세계일보" [ref=f16e1020]
+                    - generic [ref=f16e1021]: 세계일보
+            - listitem [ref=f16e1022]:
+              - link "'AI 믿고 기다렸더니'…목표가 4만7천원→4만3천원 '허탈' [주식R] 한국경제TV 한국경제TV" [ref=f16e1023] [cursor=pointer]:
+                - /url: /article/215/0001271848
+                - generic [ref=f16e1026]:
+                  - generic [ref=f16e1027]: "'AI 믿고 기다렸더니'…목표가 4만7천원→4만3천원 '허탈' [주식R]"
+                  - generic [ref=f16e1029]:
+                    - img "한국경제TV" [ref=f16e1031]
+                    - generic [ref=f16e1032]: 한국경제TV
+          - generic [ref=f16e1033]:
+            - heading [level=2] [ref=f16e1037]:
+              - emphasis [ref=f16e1038]: 경향신문
+              - text: 헤드라인
+            - list [ref=f16e1039]:
+              - listitem [ref=f16e1040]:
+                - link "[속보]코스피, 서킷브레이커 이어 매도 사이드카…5000선 턱걸이" [ref=f16e1041] [cursor=pointer]:
+                  - /url: /article/032/0003481070
+              - listitem [ref=f16e1047]:
+                - link "이 대통령 지지율 41%, 2%p 상승···민주당 36%·국힘 28%[한국갤럽]" [ref=f16e1048] [cursor=pointer]:
+                  - /url: /article/032/0003481082
+              - listitem [ref=f16e1054]:
+                - link "김민석 “상처받은 모든 분, 당원 여러분께 죄송”…신천지 의혹 제기 재차 사과" [ref=f16e1055] [cursor=pointer]:
+                  - /url: /article/032/0003481083
+              - listitem [ref=f16e1061]:
+                - link "선거 결과에 2800조원 증발, 당선 소식엔 사상 최고치…정치가 시장을 흔들 때 [이윤정 기자의 소소월드]" [ref=f16e1062] [cursor=pointer]:
+                  - /url: /article/032/0003481079
+              - listitem [ref=f16e1068]:
+                - link "운전석도 뒷좌석도 ‘상석’…칼 간 BMW7 시리즈, 남은 숙제는 AI 비서[타보니]" [ref=f16e1069] [cursor=pointer]:
+                  - /url: /article/032/0003481062
+              - listitem [ref=f16e1075]:
+                - link "선거 참패 아랑곳 않는 트럼프…증시 폭락은 ‘민주당 탓’, 관세는 ‘최대 300%’" [ref=f16e1076] [cursor=pointer]:
+                  - /url: /article/032/0003481071
+    - generic: mobile
+  - contentinfo [ref=f16e1084]:
+    - paragraph [ref=f16e1085]:
+      - generic [ref=f16e1086]:
+        - link "로그인" [ref=f16e1088] [cursor=pointer]:
+          - /url: https://nid.naver.com/nidlogin.login?svctype=262144
+        - link "전체서비스" [ref=f16e1090] [cursor=pointer]:
+          - /url: https://m.naver.com/services.html?f=svc.news
+      - generic [ref=f16e1091]:
+        - link "서비스안내" [ref=f16e1093] [cursor=pointer]:
+          - /url: https://news.naver.com/ombudsman
+        - link "오류신고" [ref=f16e1095] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/news/news_001.naver
+        - link "고객센터" [ref=f16e1097] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/news/news_007.naver
+      - generic [ref=f16e1098]:
+        - 'link "기사배열 책임자 : 김수향" [ref=f16e1099] [cursor=pointer]':
+          - /url: https://news.naver.com/ombudsman/edit
+        - generic [ref=f16e1100]: "청소년 보호 책임자 : 이정규"
+      - generic [ref=f16e1101]: 각 언론사가 직접 콘텐츠를 편집합니다. ⓒ 경향신문
+      - generic [ref=f16e1102]: 이 콘텐츠의 저작권은 저작권자 또는 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.
+      - link "NAVER" [ref=f16e1104] [cursor=pointer]:
+        - /url: https://www.navercorp.com
