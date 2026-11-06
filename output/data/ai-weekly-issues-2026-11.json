@@ -1,0 +1,57 @@
+{
+  "title": "이번 주 AI 주요 이슈 (2026.11.1~11.6)",
+  "color": "#1F4E79",
+  "blocks": [
+    {"type": "paragraph", "text": "작성일: 2026-11-06 · 조사 범위: 2026-10-31~11-06 공개 기사 (Chrome 브라우저로 기사 본문 열람)"},
+    {"type": "heading", "text": "요약", "level": 1},
+    {"type": "bullets", "items": [
+      "11월 3일 미국 중간선거에서 AI 데이터센터 규제 공약이 대거 승리했다. 10개 주 41개 데이터센터 관련 투표안 중 약 24개가 제한·차단 쪽으로 통과한 것으로 집계됐다 [1].",
+      "11월 5일 증시가 급락했다. 나스닥 100 지수는 6.3% 하락해 2.3조 달러가, S&P 500은 4.4% 하락해 2.8조 달러가 증발했다 [2]. BBC는 나스닥 종합지수 하락 폭을 5.5% 이상, 시가총액 손실을 약 2.5조 달러로 전했다 [3].",
+      "엔비디아는 9.2% 하락해 2025년 4월 이후 하루 최대 낙폭을 기록했고, 필라델피아 반도체 지수는 12.3% 하락해 2020년 3월 이후 최악의 하루였다 [2].",
+      "Anthropic IPO 로드쇼 일정에 의문이 제기됐다. 일부 투자자는 최근 거론된 1.5조 달러 기업가치를 상단으로 본다 (Reuters 단독 보도, 단일 출처) [4].",
+      "METR은 Anthropic의 모델 역량 향상 속도가 2024년 3월~2025년 10월 대비 약 2배라고 평가했다. 불확실성이 크다고 밝히면서 근거 상당 부분이 Anthropic에 의해 비공개 처리됐다고 공개했다 [5].",
+      "OpenAI는 지역사회와의 협약(National Community Compact)과 컴퓨트 캠퍼스 정책 청사진을 발표했다 [6]."
+    ]},
+    {"type": "heading", "text": "1. 정치·규제: 선거가 AI 인프라 확장에 제동", "level": 1},
+    {"type": "paragraph", "text": "Axios에 따르면 이번 선거에서 유권자들은 약 10조 달러 규모로 추산되는 AI 인프라 투자 확대에 강한 불신을 드러냈다. 텍사스 주지사에 당선된 Gina Hinojosa는 주 의회가 물, 전력, 대기, 재산권 영향에 관한 입법을 마칠 때까지 데이터센터 건설 중단을 유지하겠다고 공약했다. SemiAnalysis는 텍사스가 2028년 미국 신규 데이터센터 용량의 41%를 차지할 것으로 추산하며, 2028년 용량의 약 3분의 2가 지연될 수 있다고 분석했다 [1]."},
+    {"type": "paragraph", "text": "NBC News는 데이터센터 억제를 공약한 후보 수백 명이 당선됐고, 텍사스·오하이오·미시간·조지아가 특히 우려 지역이라고 전했다 [2]. BBC는 Bernie Sanders 상원의원이 전국 데이터센터 모라토리엄을 촉구했다고 보도했다 [3]."},
+    {"type": "paragraph", "text": "같은 주 Google은 학교용 AI 정책을 두고 정치권의 반발을 받았다. 뉴욕타임스 보도를 계기로 Sanders 의원과 Zohran Mamdani 뉴욕시장이 비판하자 Google은 학교가 Gemini와 검색 사용 여부를 통제할 수 있다고 해명했다 [7]."},
+    {"type": "heading", "text": "2. 시장: AI 관련주 동반 급락", "level": 1},
+    {"type": "paragraph", "text": "NBC News는 이번 급락의 직접 계기가 선거 결과와 함께 Qualcomm·Arm의 실적 발표였다고 설명했다. Arm은 13%, Qualcomm은 9.5% 하락했다 [2]. BBC는 AMD와 Micron이 17% 이상, Intel이 10.3% 하락했다고 전했다 [3]. 아시아에서는 Kospi가 8% 하락해 거래가 일시 중단됐고 SK하이닉스와 삼성전자가 9% 이상 하락했다 [2]."},
+    {"type": "paragraph", "text": "시장 전문가 Ed Yardeni는 이를 거품 붕괴가 아니라 거품에서 바람이 빠지는 과정으로 평가했다 [2]. Reuters는 CoreWeave 등 AI 인프라 기업의 신용부도스왑(CDS)이 사상 최고치를 기록했다고 보도했다 [4]."},
+    {"type": "heading", "text": "3. 기업 동향: Anthropic IPO와 OpenAI의 지역사회 약속", "level": 1},
+    {"type": "paragraph", "text": "Reuters는 Anthropic IPO 잠재 투자자들이 다음 주로 계획된 로드쇼의 11월 상장 일정 소화 가능성에 의문을 제기했다고 단독 보도했다. 투자자들은 더 매력적인 가치 산정을 요구하고 있으며, 갱신된 S-1에 10월 매출이 공란으로 남아 있어 성장 둔화 여부를 확인하려 한다고 전했다 [4]. 이 내용은 Reuters 한 곳의 보도에 의존한다 (단일 출처)."},
+    {"type": "paragraph", "text": "OpenAI는 11월 5일 지역사회 협약을 발표했다. 향후 자사가 소유·운영하는 모든 컴퓨트 캠퍼스에서 전기와 인프라 비용을 전액 부담하고, 물·전력 사용량을 공개하며, 공무원과의 비밀유지계약(NDA)을 쓰지 않겠다는 내용이다. 조지아주 Effingham 카운티 캠퍼스는 Georgia Power가 최대 1,000메가와트까지 공급을 줄일 수 있는 조건으로 계약했다 [6]. OpenAI 공동창업자 Greg Brockman은 데이터센터에 대한 반응에 모두가 놀랐다고 말했다 [3]."},
+    {"type": "heading", "text": "4. AI 안전: R&D 가속에 대한 독립 평가", "level": 1},
+    {"type": "paragraph", "text": "METR은 2026년 8월 12일부터 10월 29일까지 Anthropic에서 고접근 평가를 수행했다. 2025년 10월 이후 Anthropic 모델의 벤치마크 점수(AECI)는 과거 추세 대비 1.9배(95% 신뢰구간 1.5~2.8배) 빠르게 상승했다. 평가 방식에 따라 1.1~2.9배까지 달라질 수 있다 [5]."},
+    {"type": "paragraph", "text": "METR은 현재 가속의 약 80%가 AI 활용에서 비롯됐다고 추정하되 불확실성이 크다고 밝혔다. 또한 향후 12개월 안에 뚜렷한 병목은 발견하지 못했다고 평가했다. 다만 Anthropic이 핵심 증거 다수를 비공개 처리해서 대중이 METR의 판단에 크게 의존해야 한다는 한계를 스스로 명시했다 [5]."},
+    {"type": "heading", "text": "주요 이슈 비교표", "level": 1},
+    {"type": "table", "header": true, "rows": [
+      ["분야", "핵심 사실", "수치", "출처"],
+      ["선거·규제", "데이터센터 제한 투표안 다수 통과", "41개 중 약 24개", "[1]"],
+      ["증시", "나스닥 100 하락", "-6.3%, 2.3조 달러", "[2]"],
+      ["증시", "S&P 500 하락", "-4.4%, 2.8조 달러", "[2]"],
+      ["반도체", "엔비디아 하락", "-9.2%", "[2]"],
+      ["반도체", "필라델피아 반도체 지수", "-12.3%", "[2]"],
+      ["AI 안전", "Anthropic 역량 향상 가속", "약 1.9배", "[5]"],
+      ["기업", "OpenAI 지역사회 협약", "전력·인프라 비용 전액 부담", "[6]"]
+    ]},
+    {"type": "heading", "text": "시사점", "level": 1},
+    {"type": "bullets", "items": [
+      "이번 주 AI 이슈의 중심은 기술 성능보다 정치·규제 리스크가 AI 인프라 투자와 주가에 미치는 영향으로 옮겨갔다는 점이다. 이는 위 기사들을 종합한 해석이다.",
+      "데이터센터 입지 규제가 현실화하면 전력·물·지역 동의가 AI 사업의 핵심 비용 요소가 될 가능성이 크다. OpenAI의 협약은 이런 흐름에 대한 선제 대응으로 읽힌다.",
+      "AI 개발 속도가 빨라진다는 평가(METR)와 투자 회수 불확실성(시장 하락)이 동시에 나타나고 있어, 기술 진전과 시장 평가가 엇갈리는 국면이다.",
+      "일부 수치는 보도마다 지수 기준이 달라(나스닥 100 vs 종합지수) 직접 비교하면 안 된다. 향후 며칠간 후속 보도로 수치가 수정될 수 있다."
+    ]},
+    {"type": "heading", "text": "출처", "level": 1},
+    {"type": "numbered", "items": [
+      "Voters deliver \"AI earthquake,\" rebuking tech and billionaires, Axios (2026-11-04). https://www.axios.com/2026/11/04/ai-data-center-election-slowdown",
+      "Stocks plunge as election outcome and AI worries crush tech shares, NBC News (2026-11-06 업데이트). https://www.nbcnews.com/business/markets/tech-stocks-plunge-ai-midterms-rcna607650",
+      "Major tech stocks plunge as US midterms add to fears of AI slowdown, BBC (2026-11-06). https://www.bbc.com/news/articles/cmn04705rd8jo",
+      "EXCLUSIVE: AI backlash could threaten Anthropic IPO timing, potential investors say, Reuters (2026-11-05). https://www.reuters.com/world/ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say-2026-11-05/",
+      "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026, METR (2026-11-05). https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/ (본문 일부만 열람: 전체 73,891자 중 앞부분 50,000자)",
+      "Setting a new standard for responsible AI infrastructure, OpenAI (2026-11-05). https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/",
+      "Google responds to outrage over removing search in schools that ban AI, CNBC (2026-11-03). https://www.cnbc.com/2026/11/03/google-responds-to-outrage-over-removing-search-in-schools-that-ban-ai.html"
+    ]}
+  ]
+}
