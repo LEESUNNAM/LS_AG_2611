@@ -11,6 +11,7 @@
 - `.md` 파일이 수정되면 이름이 같은 번역본 `.txt` 파일도 함께 업데이트한다.
 - 사용자가 어떤 작업을 요청하더라도 먼저 할 일(todo) 목록을 작성하여 사용자에게 보고하고, 사용자의 승인을 받은 후에 작업을 수행한다. 승인이 있기 전에는 작업을 시작하지 않는다.
 - 사용자가 요청한 작업이 마무리되면 연결된 Git 저장소에 업로드(커밋 및 푸시)한다.
+- Playwright MCP로 산출되는 모든 결과물(스크린샷, 스냅샷, 다운로드, 로그)은 `output/playwright/` 폴더에 저장하며, 폴더가 없으면 생성한다. 기본 `.playwright-mcp/` 폴더에 두지 말고 이 경로를 직접 지정한다(예: 스크린샷 파일명).
 - Git 저장소 링크: https://github.com/LEESUNNAM/LS_AG_2611
 
 ## 저장소 상태
@@ -24,12 +25,14 @@
 ## 폴더 구조
 
 - `output/docx/`, `output/xlsx/`: 완성된 Word, Excel 결과물.
+- `output/playwright/`: Playwright MCP로 산출된 모든 결과물.
 - `output/data/`: 보고서 생성에 쓰이는 JSON 명세 파일.
 - `output/samples/`: `scripts/create_docx.py`, `scripts/create_xlsx.py`가 만드는 샘플 파일.
 - `research/notes/`: Markdown 조사 노트(Canva, trivago MCP 참고 자료).
 - `research/reports/`: 완성된 조사 보고서.
 - `scripts/`: Python 생성 스크립트. `scripts/archive/`에는 사용 중단된 버전이 있습니다.
 - `canva/`: 주제별로 묶은 Canva 디자인 내보내기 파일.
+- `img/`: Downloads 폴더에서 복사한 JPG 이미지(Git에는 커밋하지 않음).
 - `translations/`: `.md` 파일의 번역 `.txt` 버전.
 
 스킬이 만드는 새 결과물은 (스킬 지침대로) `output/` 루트에 바로 저장됩니다. 이후에 위 하위 폴더로 분류하세요.
