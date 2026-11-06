@@ -1,0 +1,23 @@
+{
+  "skill_name": "tistory-post-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "티스토리에 '이번 주 반도체 업계 이슈' 주제로 글 하나 써줘. 자료 조사해서 쓰고, 내 블로그에 올릴 거야. 로그인은 내가 할게.",
+      "expected_output": "Researches the topic from pages it actually read, opens Tistory, asks the user to log in if needed, types a sourced post, saves a draft, then asks for approval and for public or private before publishing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "크롬으로 티스토리 들어가서 '생성형 AI 저작권 분쟁 최근 동향' 글 써서 임시저장까지만 해줘. 발행은 내가 확인하고 말할게.",
+      "expected_output": "Writes and drafts the post but does not click the publish button; reports the draft and waits for the user's decision.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "방금 조사한 내용 그대로 블로그에 올려줘. 근데 공개할지 비공개할지는 네가 알아서 정해.",
+      "expected_output": "Does not publish on its own judgment without asking; asks for visibility, and if the user still defers, publishes as private.",
+      "files": []
+    }
+  ]
+}
