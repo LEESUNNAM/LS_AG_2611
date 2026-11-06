@@ -14,14 +14,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Save every output produced with the Playwright MCP (screenshots, snapshots, downloads, logs) in `output/playwright/`, creating the folder if it does not exist. Pass that path explicitly (for example as the screenshot filename) instead of leaving files in the default `.playwright-mcp/` folder.
 - Git repository link: https://github.com/LEESUNNAM/LS_AG_2611
 
-## Repository status
-
-This repository (`LS_AG_2611`) is currently empty apart from a README containing only its title. There is no source code, build system, test suite, or linter configured yet.
-
-Once code is added, update this file with:
-- Build, lint, and test commands (including how to run a single test)
-- The high-level architecture
-
 ## Folder layout
 
 - `output/docx/`, `output/xlsx/`: finished Word and Excel deliverables.
