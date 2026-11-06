@@ -462,6 +462,8 @@ def cmd_pptx_template(args, spec):
     from pptx.oxml.ns import qn
     from pptx.util import Inches, Pt
 
+    if args.template_style == "reference":
+        return cmd_pptx_reference(args, spec)
     st, L = TEMPLATE_STYLE, spec["_labels"]
     tpl = Path(args.template)
     if not tpl.exists():
@@ -622,6 +624,231 @@ def cmd_pptx_template(args, spec):
 
 
 # --------------------------------------------------------------------------- #
+# pptx in the look of references/이레퍼런스.pptx (--template-style reference)
+# --------------------------------------------------------------------------- #
+# Values read from that deck: steel-blue accent 7CA0BB, dark blue 214058, text 212121,
+# gradient background E6EEF4 -> FFFFFF, a header bar (picture) with a dark label at the
+# top-left, a skyline picture on the cover and closing slides, 20 x 11.25 inch canvas.
+REFERENCE_STYLE = {
+    "accent": "7CA0BB", "dark": "214058", "text": "212121", "muted": "595959",
+    "grad_from": "E6EEF4", "grad_to": "FFFFFF", "card_line": "D5E1EB",
+    "font": "맑은 고딕",
+}
+
+
+def cmd_pptx_reference(args, spec):
+    import io
+    from lxml import etree
+    from pptx import Presentation
+    from pptx.dml.color import RGBColor
+    from pptx.enum.shapes import MSO_SHAPE
+    from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
+    from pptx.oxml.ns import qn
+    from pptx.util import Inches, Pt
+
+    st, L = REFERENCE_STYLE, spec["_labels"]
+    tpl = Path(args.template)
+    if not tpl.exists():
+        sys.exit(f"template not found: {tpl}")
+    prs = Presentation(tpl)
+    W, H = prs.slide_width / 914400, prs.slide_height / 914400
+    rgb = RGBColor.from_string
+
+    def pic(slide_no, name):
+        for sh in prs.slides[slide_no - 1].shapes:
+            if sh.name == name and sh.shape_type == 13:
+                return sh.image.blob
+        sys.exit(f"template picture not found: slide {slide_no} {name}")
+
+    art = {"skyline": pic(1, "Picture 2"), "bar": pic(3, "Picture 3"), "label": pic(3, "Picture 4"),
+           "end_skyline": pic(14, "Picture 2")}
+
+    id_list = prs.slides._sldIdLst
+    for sid in list(id_list):  # the template's own slides are replaced
+        prs.part.drop_rel(sid.rId)
+        id_list.remove(sid)
+    blank = next((l for l in prs.slide_layouts if l.name.upper() == "BLANK"), prs.slide_layouts[0])
+    page = {"n": 0}
+
+    def run_style(run, size, color, bold=False):
+        run.font.name = st["font"]
+        run.font.size = Pt(size)
+        run.font.bold = bold
+        run.font.color.rgb = rgb(color)
+        rPr = run._r.get_or_add_rPr()
+        for tag in ("a:ea", "a:cs"):
+            etree.SubElement(rPr, qn(tag)).set("typeface", st["font"])
+
+    def text(slide, x, y, w, h, paras, size, color, bold=False, align=PP_ALIGN.LEFT,
+             anchor=MSO_ANCHOR.TOP, bullet=False, space=10, spacing=1.0):
+        box = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
+        tf = box.text_frame
+        tf.word_wrap = True
+        tf.vertical_anchor = anchor
+        paras = [paras] if isinstance(paras, str) else paras
+        for i, para in enumerate(paras):
+            p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+            p.alignment = align
+            p.space_after = Pt(space)
+            p.line_spacing = spacing
+            r = p.add_run()
+            r.text = ("• " + para) if bullet else para
+            run_style(r, size, color, bold)
+        return box
+
+    def picture(slide, key, x, y, w, h=None):
+        kw = {"width": Inches(w)}
+        if h:
+            kw["height"] = Inches(h)
+        return slide.shapes.add_picture(io.BytesIO(art[key]), Inches(x), Inches(y), **kw)
+
+    def card(slide, x, y, w, h):
+        shp = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x), Inches(y), Inches(w), Inches(h))
+        shp.adjustments[0] = 0.04
+        shp.fill.solid()
+        shp.fill.fore_color.rgb = rgb("FFFFFF")
+        shp.line.color.rgb = rgb(st["card_line"])
+        shp.line.width = Pt(1.5)
+        shp.shadow.inherit = False
+        return shp
+
+    def pill(slide, cx, y, label, size=20):
+        w = max(4.4, len(label) * size / 72 * 0.9 + 1.0)
+        shp = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(cx - w / 2), Inches(y), Inches(w), Inches(0.65))
+        shp.adjustments[0] = 0.5
+        shp.fill.solid()
+        shp.fill.fore_color.rgb = rgb(st["accent"])
+        shp.line.fill.background()
+        shp.shadow.inherit = False
+        tf = shp.text_frame
+        tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+        p = tf.paragraphs[0]
+        p.alignment = PP_ALIGN.CENTER
+        r = p.add_run()
+        r.text = label
+        run_style(r, size, "FFFFFF", True)
+        return shp
+
+    def gradient_bg(slide):
+        bg = slide.background.fill
+        bg.gradient()
+        bg.gradient_angle = 90
+        stops = bg.gradient_stops
+        stops[0].color.rgb = rgb(st["grad_from"])
+        stops[0].position = 0
+        stops[1].color.rgb = rgb(st["grad_to"])
+        stops[1].position = 1
+
+    label = spec.get("subtitle", "") or spec["title"]
+
+    def new_slide(section):
+        s = prs.slides.add_slide(blank)
+        page["n"] += 1
+        gradient_bg(s)
+        picture(s, "bar", 0.39, 0.35, 19.22, 0.65)
+        picture(s, "label", 0.39, 0.35, 2.64, 0.65)
+        text(s, 0.39, 0.45, 2.64, 0.45, spec["title"][:10], 17, "FEFCF8", True, align=PP_ALIGN.CENTER)
+        text(s, 7.2, 0.46, 12.0, 0.4, f"{spec['title']}   |   {section}", 17, st["dark"], align=PP_ALIGN.RIGHT)
+        text(s, 0.6, 10.5, 18.8, 0.4, f"{label}   ·   {page['n']}", 13, st["accent"], align=PP_ALIGN.CENTER)
+        return s
+
+    def heading(slide, txt):
+        size = fit_font_size([txt], W - 2.0, 1.2, 45, 28, line_gap=1.1, para_gap_pt=0)
+        text(slide, 1.0, 1.35, W - 2.0, 1.2, txt, size, st["text"], True, align=PP_ALIGN.CENTER)
+
+    def bullet_slide(section, items, base=28):
+        s = new_slide(section)
+        heading(s, section)
+        card(s, 0.75, 2.8, W - 1.5, 7.4)
+        size = fit_font_size(items, W - 3.0, 6.4, base, 16)
+        text(s, 1.5, 3.2, W - 3.0, 6.6, items, size, st["text"], bullet=True, space=16)
+        return s
+
+    n = len(spec["articles"])
+
+    # Cover
+    s = prs.slides.add_slide(blank)
+    page["n"] += 1
+    s.background.fill.solid()
+    s.background.fill.fore_color.rgb = rgb("FFFFFF")
+    picture(s, "skyline", -0.68, 7.24, 20.94, 4.03)
+    text(s, 1.0, 1.5, W - 2.0, 0.5, label.upper(), 20, st["muted"], align=PP_ALIGN.CENTER)
+    size = fit_font_size([spec["title"]], W - 2.4, 3.0, 85, 40, line_gap=1.1, para_gap_pt=0)
+    text(s, 1.2, 2.3, W - 2.4, 3.0, spec["title"], size, st["accent"], True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, 1.2, 5.4, W - 2.4, 0.7, f"{L['date']}: {spec.get('date', '')}  ·  {L['scope']}: {n}{L['count']}",
+         30, st["text"], True, align=PP_ALIGN.CENTER)
+    pill(s, W / 2, 6.35, label)
+
+    if spec.get("summary"):
+        bullet_slide(L["summary"], spec["summary"])
+
+    for th in spec.get("themes", []):
+        s = new_slide(L["summary"])
+        heading(s, th["heading"])
+        card(s, 0.75, 2.8, W - 1.5, 7.4)
+        size = fit_font_size([th["text"]], W - 3.0, 6.4, 30, 16)
+        text(s, 1.5, 3.3, W - 3.0, 6.6, th["text"], size, st["text"], spacing=1.2)
+
+    tb = spec.get("table")
+    if tb and tb.get("rows"):
+        s = new_slide(L["table"])
+        heading(s, L["table"])
+        rows, cols = len(tb["rows"]) + 1, len(tb["header"])
+        gf = s.shapes.add_table(rows, cols, Inches(0.75), Inches(2.9), Inches(W - 1.5), Inches(min(1.1 * rows, 7.2)))
+        for r, row in enumerate([tb["header"]] + tb["rows"]):
+            for c, val in enumerate(row):
+                cell = gf.table.cell(r, c)
+                cell.fill.solid()
+                cell.fill.fore_color.rgb = rgb(st["dark"] if r == 0 else (st["grad_from"] if r % 2 == 0 else "FFFFFF"))
+                cell.vertical_anchor = MSO_ANCHOR.MIDDLE
+                cell.text_frame.word_wrap = True
+                run = cell.text_frame.paragraphs[0].add_run()
+                run.text = str(val)
+                run_style(run, 18, "FFFFFF" if r == 0 else st["text"], bold=(r == 0))
+
+    for i, a in enumerate(spec["articles"], 1):
+        s = new_slide(f"{L['sources']} {i}" if False else f"ARTICLE {i:02d}")
+        shot = cropped_image(spec, a.get("screenshot"), 8.7 / 7.4)
+        card(s, 0.75, 2.8, 9.2 if shot else W - 1.5, 7.4)
+        tw = 8.2 if shot else W - 2.5
+        text(s, 1.1, 3.0, tw, 0.5, f"ARTICLE {i:02d}", 20, st["accent"], True)
+        t_size = fit_font_size([a["title"]], tw, 1.7, 32, 22, line_gap=1.15, para_gap_pt=0)
+        text(s, 1.1, 3.5, tw, 1.7, a["title"], t_size, st["text"], True, spacing=0.95)
+        text(s, 1.1, 5.3, tw, 0.4, f"{a.get('publisher', '')}  ·  {a.get('date', '')}", 15, st["muted"])
+        bsize = fit_font_size(a.get("summary", []), tw, 3.3, 22, 14, para_gap_pt=8)
+        text(s, 1.1, 5.85, tw, 3.4, a.get("summary", []), bsize, st["text"], bullet=True, space=8)
+        if a.get("keywords"):
+            text(s, 1.1, 9.3, tw, 0.4, f"{L['keywords']}: " + ", ".join(a["keywords"]), 15, st["dark"], True)
+        text(s, 1.1, 9.75, tw, 0.35, a.get("url", ""), 9, st["muted"])
+        if shot:
+            s.shapes.add_picture(str(shot), Inches(10.3), Inches(2.8), width=Inches(8.7))
+
+    if spec.get("takeaways"):
+        bullet_slide(L["takeaways"], spec["takeaways"])
+
+    srcs = [f"[{i}] {t}" for i, t in enumerate(sources(spec), 1)]
+    s = new_slide(L["sources"])
+    heading(s, L["sources"])
+    card(s, 0.75, 2.8, W - 1.5, 7.4)
+    text(s, 1.5, 3.2, W - 3.0, 6.6, srcs, fit_font_size(srcs, W - 3.0, 6.4, 20, 11, para_gap_pt=8),
+         st["text"], space=8)
+
+    # Closing
+    s = prs.slides.add_slide(blank)
+    gradient_bg(s)
+    picture(s, "end_skyline", -1.12, 5.5, 21.76, 7.21)
+    closing = "감사합니다" if spec["_lang"] == "ko" else "Thank you"
+    text(s, 0.94, 1.6, W - 2.0, 2.0, closing, 70, st["text"], True)
+    text(s, 0.94, 3.9, W - 2.0, 1.0, f"{label}  ·  {spec.get('date', '')}", 23, st["text"])
+    pill(s, 3.3, 5.0, spec.get("source_label", "news.naver.com"))
+
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    prs.save(out)
+    print(f"saved: {out} ({len(prs.slides)} slides, reference style)")
+
+
+# --------------------------------------------------------------------------- #
 # read / colors
 # --------------------------------------------------------------------------- #
 def cmd_read(args):
@@ -679,6 +906,8 @@ def main():
     p.add_argument("spec")
     p.add_argument("-o", "--output", required=True)
     p.add_argument("--template", help="a .pptx template; its last slides (credits) are kept")
+    p.add_argument("--template-style", choices=["slidescarnival", "reference"], default="slidescarnival",
+                   help="'reference' reproduces the look of references/이레퍼런스.pptx and drops all template slides")
     p.add_argument("--keep-last", type=int, default=1,
                    help="template slides to keep at the end (default 1: the credits slide)")
     p.set_defaults(fn=cmd_pptx)
